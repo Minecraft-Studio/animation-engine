@@ -1,0 +1,13 @@
+execute if entity @s[tag=anim_menu2] run data merge entity @s {CustomName:'{"text":"[OFF]","color":"gray"}'}
+execute if entity @s[tag=anim_menu3] run data merge entity @s {CustomName:'{"text":"[North]","color":"gray"}'}
+execute if entity @s[tag=anim_menu4] run data merge entity @s {CustomName:'{"text":"[East]","color":"gray"}'}
+execute if entity @s[tag=anim_menu5] run data merge entity @s {CustomName:'{"text":"[South]","color":"gray"}'}
+execute if entity @s[tag=anim_menu6] run data merge entity @s {CustomName:'{"text":"[West]","color":"gray"}'}
+execute if entity @s[tag=anim_menu7] run data merge entity @s {CustomName:'{"text":"[Follow]","color":"gray"}'}
+execute if entity @s[tag=anim_menu8] run data merge entity @s {CustomName:'{"text":"[Back]","color":"red"}'}
+execute if entity @s[tag=anim_menu2] if score $sett_link _anim matches 0 run data merge entity @s {CustomName:'{"text":"[OFF]","color":"green"}'}
+execute if entity @s[tag=anim_menu3] if score $sett_link _anim matches 1 run data merge entity @s {CustomName:'{"text":"[North]","color":"green"}'}
+execute if entity @s[tag=anim_menu4] if score $sett_link _anim matches 2 run data merge entity @s {CustomName:'{"text":"[East]","color":"green"}'}
+execute if entity @s[tag=anim_menu5] if score $sett_link _anim matches 3 run data merge entity @s {CustomName:'{"text":"[South]","color":"green"}'}
+execute if entity @s[tag=anim_menu6] if score $sett_link _anim matches 4 run data merge entity @s {CustomName:'{"text":"[West]","color":"green"}'}
+execute if entity @s[tag=anim_menu7] if score $sett_link _anim matches 5 run data merge entity @s {CustomName:'{"text":"[Follow]","color":"green"}'}

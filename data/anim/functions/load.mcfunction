@@ -1,0 +1,1 @@
+execute unless data storage anim:anim {ver:0.2} run function anim:install
