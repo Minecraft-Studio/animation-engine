@@ -185,4 +185,37 @@ summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBase
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Compile]","color":"yellow"}',Tags:["anim_menu","anim_menu91"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Show Menu]","color":"blue"}',Tags:["anim_menu","anim_menu92"]}
 
+#score setter for editor
+scoreboard objectives add _anim_editor_col dummy
+scoreboard objectives add _anim_editor_row dummy
+
+execute as @e[type=armor_stand,tag=anim_editor_c0] run scoreboard players set @s _anim_editor_col 0
+execute as @e[type=armor_stand,tag=anim_editor_c1] run scoreboard players set @s _anim_editor_col 1
+execute as @e[type=armor_stand,tag=anim_editor_c2] run scoreboard players set @s _anim_editor_col 2
+execute as @e[type=armor_stand,tag=anim_editor_c3] run scoreboard players set @s _anim_editor_col 3
+execute as @e[type=armor_stand,tag=anim_editor_c4] run scoreboard players set @s _anim_editor_col 4
+execute as @e[type=armor_stand,tag=anim_editor_c5] run scoreboard players set @s _anim_editor_col 5
+execute as @e[type=armor_stand,tag=anim_editor_c6] run scoreboard players set @s _anim_editor_col 6
+execute as @e[type=armor_stand,tag=anim_editor_c7] run scoreboard players set @s _anim_editor_col 7
+execute as @e[type=armor_stand,tag=anim_editor_c8] run scoreboard players set @s _anim_editor_col 8
+execute as @e[type=armor_stand,tag=anim_editor_c9] run scoreboard players set @s _anim_editor_col 9
+execute as @e[type=armor_stand,tag=anim_editor_c10] run scoreboard players set @s _anim_editor_col 10
+execute as @e[type=armor_stand,tag=anim_editor_c11] run scoreboard players set @s _anim_editor_col 11
+execute as @e[type=armor_stand,tag=anim_editor_c12] run scoreboard players set @s _anim_editor_col 12
+execute as @e[type=armor_stand,tag=anim_editor_c13] run scoreboard players set @s _anim_editor_col 13
+execute as @e[type=armor_stand,tag=anim_editor_c14] run scoreboard players set @s _anim_editor_col 14
+execute as @e[type=armor_stand,tag=anim_editor_c15] run scoreboard players set @s _anim_editor_col 15
+execute as @e[type=armor_stand,tag=anim_editor_c16] run scoreboard players set @s _anim_editor_col 16
+execute as @e[type=armor_stand,tag=anim_editor_c17] run scoreboard players set @s _anim_editor_col 17
+execute as @e[type=armor_stand,tag=anim_editor_c18] run scoreboard players set @s _anim_editor_col 18
+execute as @e[type=armor_stand,tag=anim_editor_c19] run scoreboard players set @s _anim_editor_col 19
+
+execute as @e[type=armor_stand,tag=anim_editor_r1] run scoreboard players set @s _anim_editor_row 1
+execute as @e[type=armor_stand,tag=anim_editor_r2] run scoreboard players set @s _anim_editor_row 2
+execute as @e[type=armor_stand,tag=anim_editor_r3] run scoreboard players set @s _anim_editor_row 3
+execute as @e[type=armor_stand,tag=anim_editor_r4] run scoreboard players set @s _anim_editor_row 4
+execute as @e[type=armor_stand,tag=anim_editor_r5] run scoreboard players set @s _anim_editor_row 5
+execute as @e[type=armor_stand,tag=anim_editor_r6] run scoreboard players set @s _anim_editor_row 6
+execute as @e[type=armor_stand,tag=anim_editor_r7] run scoreboard players set @s _anim_editor_row 7
+
 data remove storage anim:editor keyframes
