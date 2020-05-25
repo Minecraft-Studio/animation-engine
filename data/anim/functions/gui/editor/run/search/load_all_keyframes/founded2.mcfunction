@@ -29,3 +29,4 @@ execute if score @s _anim_edit_color matches 12 run tag @s add anim_editor12
 execute if score @s _anim_edit_color matches 13 run tag @s add anim_editor13
 execute if score @s _anim_edit_color matches 14 run tag @s add anim_editor14
 tag @s remove anim_editor0
+scoreboard objectives remove _anim_edit_color

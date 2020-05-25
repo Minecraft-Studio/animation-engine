@@ -15,3 +15,4 @@ scoreboard players remove $_page _anim 19
 
 scoreboard players reset $_sign_placed _anim
 function anim:gui/editor/run/refresh_page
+function anim:gui/editor/run/search/load_all_keyframes/start

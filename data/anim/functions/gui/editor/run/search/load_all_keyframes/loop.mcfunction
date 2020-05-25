@@ -6,4 +6,5 @@ execute if score $_search_t _anim >= $_page _anim if score $_search_t _anim <= $
 # rest data
 data remove storage anim:editor search[0]
 scoreboard players reset $_tick_save _anim
+execute unless data storage anim:editor search[] as @e[type=armor_stand,tag=anim_editor] run function anim:gui/editor/reset
 execute if data storage anim:editor search[] run function anim:gui/editor/run/search/load_all_keyframes/loop
