@@ -14,5 +14,13 @@ execute as @p[tag=anim_user] at @s if score $_sign_placed _anim matches 1 run se
 scoreboard players remove $_page _anim 19
 
 scoreboard players reset $_sign_placed _anim
+
+scoreboard players operation $_tmp_old_pg_ _anim = $_tmp_old_pg _anim
+scoreboard players operation $_tmp_old_pg_ _anim -= $_page _anim
+scoreboard players operation $_sel_col _anim += $_tmp_old_pg_ _anim
+scoreboard players reset $_tmp_old_pg_ _anim
+scoreboard players reset $_tmp_old_pg _anim
+execute unless score $_sel_col _anim matches 1..20 run scoreboard players reset $_sel_row _anim
+execute unless score $_sel_col _anim matches 1..20 run scoreboard players reset $_sel_col _anim
 function anim:gui/editor/run/refresh_page
 function anim:gui/editor/run/search/load_all_keyframes/start

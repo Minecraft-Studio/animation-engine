@@ -1,3 +1,7 @@
+#Save
+execute as @e[type=armor_stand,tag=anim_menu,tag=anim_editor,tag=anim_editor_sel,limit=1] run function anim:gui/editor/run/save_keyframe
+
+#refresh page
 execute as @p[tag=anim_user] at @s if block ~ ~ ~ air run scoreboard players set $_sign_placed _anim 1
 
 execute as @p[tag=anim_user] at @s unless entity @e[type=armor_stand,tag=anim_menu86,limit=1,tag=anim_sel_menu] if block ~ ~ ~ air run setblock ~ ~ ~ oak_sign{Text1:'{"score":{"name":"$_page","objective":"_anim"},"color":"gray"}'}
