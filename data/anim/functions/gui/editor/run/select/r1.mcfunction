@@ -25,4 +25,5 @@ execute if entity @s[tag=anim_editor_c18] run scoreboard players set $_sel_col _
 execute if entity @s[tag=anim_editor_c19] run scoreboard players set $_sel_col _anim 19
 tag @s add anim_editor_sel
 execute if entity @s[tag=anim_editor0] run function anim:gui/editor/run/text/load_empty
+execute if entity @s[tag=!anim_editor0] run function anim:gui/editor/run/search/load_keyframe/start
 execute if entity @s[tag=!anim_editor0] run function anim:gui/editor/run/text/tab/rotate

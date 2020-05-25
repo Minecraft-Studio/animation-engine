@@ -1,8 +1,3 @@
-scoreboard players operation $_key_row _anim = @e[type=armor_stand,tag=anim_editor_sel] _anim_editor_row
-scoreboard players operation $_key_col _anim = @e[type=armor_stand,tag=anim_editor_sel] _anim_editor_col
-scoreboard players operation $_key_col _anim += $_page _anim
-function anim:gui/editor/run/search/load_keyframe/start
-
 execute if score $_tab _anim matches 1 run function anim:gui/editor/run/text/tab/rotate_1
 execute if score $_tab _anim matches 2 run function anim:gui/editor/run/text/tab/rotate_2
 execute if score $_tab _anim matches 3 run function anim:gui/editor/run/text/tab/rotate_3
