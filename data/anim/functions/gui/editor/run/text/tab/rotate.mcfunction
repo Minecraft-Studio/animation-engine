@@ -6,7 +6,7 @@ execute if score $_tab _anim matches 5 run function anim:gui/editor/run/text/tab
 execute if score $_tab _anim matches 6 run function anim:gui/editor/run/text/tab/rotate_6
 execute unless score $_tab _anim matches 1..6 run function anim:gui/editor/run/text/tab/rotate_1
 
-execute as @e[type=armor_stand,tag=anim_menu,tag=!anim_editor1,tag=!anim_editor2,tag=!anim_editor3,tag=!anim_editor4,tag=!anim_editor5,tag=!anim_editor6,tag=!anim_editor7,tag=!anim_editor8,tag=!anim_editor9,tag=!anim_editor10,tag=!anim_editor11,tag=!anim_editor12,tag=!anim_editor13,tag=!anim_editor14] run tag @s add anim_editor0
+execute as @e[type=armor_stand,tag=anim_editor,tag=anim_menu,tag=!anim_editor1,tag=!anim_editor2,tag=!anim_editor3,tag=!anim_editor4,tag=!anim_editor5,tag=!anim_editor6,tag=!anim_editor7,tag=!anim_editor8,tag=!anim_editor9,tag=!anim_editor10,tag=!anim_editor11,tag=!anim_editor12,tag=!anim_editor13,tag=!anim_editor14] run tag @s add anim_editor0
 execute unless score $_new_key _anim matches 1 if score $_set_keyframe _anim matches 1 as @e[type=armor_stand,tag=anim_editor_sel,tag=anim_menu,tag=anim_editor0] run tag @s add anim_editor1
 execute unless score $_new_key _anim matches 1 if score $_set_keyframe _anim matches 2 as @e[type=armor_stand,tag=anim_editor_sel,tag=anim_menu,tag=anim_editor0] run tag @s add anim_editor2
 execute unless score $_new_key _anim matches 1 if score $_set_keyframe _anim matches 3 as @e[type=armor_stand,tag=anim_editor_sel,tag=anim_menu,tag=anim_editor0] run tag @s add anim_editor3

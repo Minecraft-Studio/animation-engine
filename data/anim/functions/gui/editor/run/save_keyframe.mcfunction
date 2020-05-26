@@ -1,8 +1,7 @@
 #save
 # if exists, find it and modify it:
 # (loop for search)
-data modify storage anim:editor search set from storage anim:editor keyframes
-function anim:gui/editor/run/search/save_keyframe/loop
+function anim:gui/editor/run/search/save_keyframe/start
 data modify storage anim:editor keyframes set from storage anim:editor result
 data remove storage anim:editor result
 
