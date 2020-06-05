@@ -14,6 +14,8 @@ execute facing entity @p[tag=anim_user] eyes positioned ^0.125 ^ ^ run tp @e[typ
 execute facing entity @p[tag=anim_user] eyes positioned ^0.5 ^ ^ run tp @e[type=armor_stand,tag=anim_menu88] ~ ~-0.6 ~
 execute facing entity @p[tag=anim_user] eyes positioned ^2.0 ^ ^ run tp @e[type=armor_stand,tag=anim_menu87] ~ ~-0.6 ~
 execute facing entity @p[tag=anim_user] eyes positioned ^1.3 ^ ^ run tp @e[type=armor_stand,tag=anim_menu91] ~ ~-0.6 ~
+execute facing entity @p[tag=anim_user] eyes positioned ^1.6 ^ ^ run tp @e[type=armor_stand,tag=anim_menu93] ~ ~-0.9 ~
+execute facing entity @p[tag=anim_user] eyes positioned ^1.6 ^ ^ run tp @e[type=armor_stand,tag=anim_menu94] ~ ~-1.2 ~
 
 execute facing entity @p[tag=anim_user] eyes positioned ^-1.5 ^ ^ run tp @e[type=armor_stand,tag=anim_menu89] ~ ~-0.9 ~
 execute facing entity @p[tag=anim_user] eyes positioned ^-0.175 ^ ^ run tp @e[type=armor_stand,tag=anim_menu92] ~ ~-0.9 ~
