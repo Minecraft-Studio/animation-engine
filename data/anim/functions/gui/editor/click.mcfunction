@@ -11,5 +11,5 @@ execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu89] run fun
 
 execute as @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu92] run function anim:gui/editor/run/text/tab/rotate
 
-execute as @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r1] run function anim:gui/editor/run/select/r1
+execute as @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r1] run function anim:gui/editor/run/select/sel1
 
