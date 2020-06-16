@@ -11,6 +11,8 @@ summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,C
 summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'{"text":"[West]","color":"gray"}',Tags:["anim_menu","anim_menu6"]}
 summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'{"text":"[Follow]","color":"gray"}',Tags:["anim_menu","anim_menu7"]}
 summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'{"text":"[Back]","color":"red"}',Tags:["anim_menu","anim_menu8"]}
+summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'{"text":"Err","color":"red"}',Tags:["anim_menu","anim_menu9"]}
+summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'{"text":"Create backups before compiling:","color":"aqua"}',Tags:["anim_menu","anim_menu10"]}
 execute if score $sett_link _anim matches 0 run data merge entity @e[type=armor_stand,tag=anim_menu2,limit=1] {CustomName:'{"text":"[OFF]","color":"green"}'}
 execute if score $sett_link _anim matches 1 run data merge entity @e[type=armor_stand,tag=anim_menu3,limit=1] {CustomName:'{"text":"[North]","color":"green"}'}
 execute if score $sett_link _anim matches 2 run data merge entity @e[type=armor_stand,tag=anim_menu4,limit=1] {CustomName:'{"text":"[East]","color":"green"}'}
