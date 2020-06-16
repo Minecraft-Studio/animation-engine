@@ -182,9 +182,9 @@ summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBase
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":">>>","color":"#ffb900"}',Tags:["anim_menu","anim_menu88"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Delete]","color":"red"}',Tags:["anim_menu","anim_menu89"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Close]","color":"red"}',Tags:["anim_menu","anim_menu90"]}
-summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Sort]","color":"green"}',Tags:["anim_menu","anim_menu91"]}
+summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Compile]","color":"yellow"}',Tags:["anim_menu","anim_menu91"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Show Menu]","color":"blue"}',Tags:["anim_menu","anim_menu92"]}
-summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Copy]","color":"yellow"}',Tags:["anim_menu","anim_menu93"]}
+summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Copy]","color":"green"}',Tags:["anim_menu","anim_menu93"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Paste]","color":"aqua"}',Tags:["anim_menu","anim_menu94"]}
 
 #score setter for editor
