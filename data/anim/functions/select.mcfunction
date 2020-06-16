@@ -1,5 +1,4 @@
 scoreboard players set $menu_look _anim 0
-execute as @p[tag=anim_user] at @s positioned ^ ^ ^1 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
 execute as @p[tag=anim_user] at @s positioned ^ ^ ^2 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
 execute as @p[tag=anim_user] at @s positioned ^ ^ ^3 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
 execute as @p[tag=anim_user] at @s positioned ^ ^ ^4 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
