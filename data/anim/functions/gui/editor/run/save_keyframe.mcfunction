@@ -5,30 +5,36 @@ function anim:gui/editor/run/search/save_keyframe/start
 data modify storage anim:editor keyframes set from storage anim:editor result
 data remove storage anim:editor result
 #check if it's empty
-execute if score $_search_found _anim matches 1 store result score $_tmp_empty_k _anim run data get storage anim:editor current_keyframe.rotate.head
-execute if score $_tmp_empty_k _anim matches 0 run scoreboard players set $_tmp_empty_kc _anim 1
-execute if score $_search_found _anim matches 1 store result score $_tmp_empty_k _anim run data get storage anim:editor current_keyframe.rotate.body
-execute if score $_tmp_empty_k _anim matches 0 run scoreboard players set $_tmp_empty_kc _anim 1
-execute if score $_search_found _anim matches 1 store result score $_tmp_empty_k _anim run data get storage anim:editor current_keyframe.rotate.r_arm
-execute if score $_tmp_empty_k _anim matches 0 run scoreboard players set $_tmp_empty_kc _anim 1
-execute if score $_search_found _anim matches 1 store result score $_tmp_empty_k _anim run data get storage anim:editor current_keyframe.rotate.l_arm
-execute if score $_tmp_empty_k _anim matches 0 run scoreboard players set $_tmp_empty_kc _anim 1
-execute if score $_search_found _anim matches 1 store result score $_tmp_empty_k _anim run data get storage anim:editor current_keyframe.rotate.r_leg
-execute if score $_tmp_empty_k _anim matches 0 run scoreboard players set $_tmp_empty_kc _anim 1
-execute if score $_search_found _anim matches 1 store result score $_tmp_empty_k _anim run data get storage anim:editor current_keyframe.rotate.l_leg
-execute if score $_tmp_empty_k _anim matches 0 run scoreboard players set $_tmp_empty_kc _anim 1
-execute if score $_search_found _anim matches 1 store result score $_tmp_empty_k _anim run data get storage anim:editor current_keyframe.rotate.pos
-execute if score $_tmp_empty_k _anim matches 0 run scoreboard players set $_tmp_empty_kc _anim 1
-execute if score $_search_found _anim matches 1 store result score $_tmp_empty_k _anim run data get storage anim:editor current_keyframe.rotate.extra
-execute if score $_tmp_empty_k _anim matches 0 run scoreboard players set $_tmp_empty_kc _anim 1
-execute if score $_tmp_empty_kc _anim matches 1 run function anim:gui/editor/run/search/delete_keyframe/start
-scoreboard players reset $_tmp_empty_kc _anim
-scoreboard players reset $_tmp_empty_k _anim
+execute store result score $_emp_head _anim run data get storage anim:editor current_keyframe.rotate.head
+execute store result score $_emp_body _anim run data get storage anim:editor current_keyframe.rotate.body
+execute store result score $_emp_r_arm _anim run data get storage anim:editor current_keyframe.rotate.r_arm
+execute store result score $_emp_l_arm _anim run data get storage anim:editor current_keyframe.rotate.l_arm
+execute store result score $_emp_r_leg _anim run data get storage anim:editor current_keyframe.rotate.r_leg
+execute store result score $_emp_l_leg _anim run data get storage anim:editor current_keyframe.rotate.l_leg
+execute store result score $_emp_pos _anim run data get storage anim:editor current_keyframe.rotate.pos
+execute store result score $_emp_extra _anim run data get storage anim:editor current_keyframe.rotate.extra
+# set value $_keyframe_empty _anim to 1 if the keyframe data is empty
+execute if score $_emp_head _anim matches 0 if score $_emp_body _anim matches 0 if score $_emp_r_arm _anim matches 0 if score $_emp_l_arm _anim matches 0 if score $_emp_r_leg _anim matches 0 if score $_emp_l_leg _anim matches 0 if score $_emp_pos _anim matches 0 if score $_emp_extra _anim matches 0 run scoreboard players set $_keyframe_empty _anim 1
+# if empty, delete it
+execute if score $_search_found _anim matches 1 if score $_keyframe_empty _anim matches 1 run function anim:gui/editor/run/search/delete_keyframe/start
 
-# if doesn't exists, create new:
-execute unless score $_search_found _anim matches 1 run function anim:gui/editor/run/new/keyframe
-scoreboard players reset $_search_found _anim
+#if doesn't exists and it's not empty, create new (if it wasn't found):
+tellraw @p ["",{"nbt":"current_keyframe","storage":"anim:editor"}]
+tellraw @a ["",{"text":"$_keyframe_empty: "},{"score":{"name":"$_keyframe_empty","objective":"_anim"}}]
+execute if score $_search_found _anim matches 0 unless score $_keyframe_empty _anim matches 1 run function anim:gui/editor/run/new/keyframe
 
 #reset
+scoreboard players reset $_search_found _anim
+scoreboard players reset $_emp_head _anim
+scoreboard players reset $_emp_body _anim
+scoreboard players reset $_emp_r_arm _anim
+scoreboard players reset $_emp_l_arm _anim
+scoreboard players reset $_emp_r_leg _anim
+scoreboard players reset $_emp_l_leg _anim
+scoreboard players reset $_emp_pos _anim
+scoreboard players reset $_emp_extra _anim
+scoreboard players reset $_keyframe_empty _anim
+data remove storage anim:editor current_keyframe
+
 tag @s remove anim_editor_sel
 function anim:gui/editor/reset
