@@ -6,5 +6,5 @@ summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,C
 summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'{"text":"[Create a new model]","color":"green"}',Tags:["anim_menu","anim_menu2"]}
 summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'{"text":"[Select a existing model]","color":"yellow"}',Tags:["anim_menu","anim_menu3"]}
 summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'{"text":"[Close Menu]","color":"red"}',Tags:["anim_menu","anim_menu4"]}
-summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'["",{"text":"Animation Engine","color":"gray","underlined":true},{"text":" v0.3a","color":"aqua"}]',Tags:["anim_menu","anim_menu5","anim_menu_unsel"]}
+summon armor_stand ~ ~ ~ {Marker:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:'["",{"text":"Animation Engine","color":"gray","underlined":true},{"text":" v0.8.4a","color":"aqua"}]',Tags:["anim_menu","anim_menu5","anim_menu_unsel"]}
 kill @e[type=armor_stand,tag=anim_new]
