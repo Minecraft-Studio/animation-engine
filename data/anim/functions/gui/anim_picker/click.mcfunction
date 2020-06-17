@@ -1,5 +1,5 @@
 
-execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu2] as @e[type=armor_stand,tag=anim_menu_main] at @p[tag=anim_user] run function anim:gui/settings/load
+execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu2] run function anim:gui/settings/load
 execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu7] as @e[type=armor_stand,tag=anim_menu_main] at @p[tag=anim_user] run function anim:gui/new/load
 execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu13] run function anim:gui/anim_picker/run/change_list
 execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu6] run function anim:gui/anim_picker/run/next

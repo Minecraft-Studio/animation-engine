@@ -29,6 +29,7 @@ execute if entity @s[tag=anim_menu84] run data merge entity @s {CustomName:'{"te
 execute if entity @s[tag=anim_menu85] run data merge entity @s {CustomName:'{"text":"|<","color":"white"}'}
 execute if entity @s[tag=anim_menu88] run data merge entity @s {CustomName:'{"text":">>>","color":"white"}'}
 execute if entity @s[tag=anim_menu86] run function anim:gui/editor/run/refresh_page
+execute if entity @s[tag=anim_menu_1] run data merge entity @s {CustomName:'{"text":"[Settings]","color":"white"}'}
 execute if entity @s[tag=anim_menu89] run data merge entity @s {CustomName:'{"text":"[Delete]","color":"white"}'}
 execute if entity @s[tag=anim_menu90] run data merge entity @s {CustomName:'{"text":"[Close]","color":"white"}'}
 execute if entity @s[tag=anim_menu91] run data merge entity @s {CustomName:'{"text":"[Compile]","color":"white"}'}
