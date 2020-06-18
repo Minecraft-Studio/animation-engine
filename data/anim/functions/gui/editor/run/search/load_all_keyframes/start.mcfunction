@@ -23,3 +23,5 @@ tag @e[type=armor_stand,tag=anim_editor] remove anim_editor14
 tag @e[type=armor_stand,tag=anim_editor] remove anim_editor_sel
 
 function anim:gui/editor/run/search/load_all_keyframes/loop
+
+execute as @e[type=armor_stand,tag=anim_editor] if score @s _anim_editor_col = $_sel_col _anim if score @s _anim_editor_row = $_sel_row _anim run function anim:gui/editor/run/search/load_keyframe/start

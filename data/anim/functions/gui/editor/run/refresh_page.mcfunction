@@ -1,10 +1,10 @@
 #Save
 execute if score $_tmp_old_pg _anim matches 0.. run scoreboard players operation $_tmp_new_pg _anim = $_page _anim
 execute if score $_tmp_old_pg _anim matches 0.. run scoreboard players operation $_page _anim = $_tmp_old_pg _anim
-execute if score $_tmp_old_pg _anim matches 0.. as @e[type=armor_stand,tag=anim_menu,tag=anim_editor,tag=anim_editor_sel,limit=1] run function anim:gui/editor/run/save_keyframe
+#execute if score $_tmp_old_pg _anim matches 0.. as @e[type=armor_stand,tag=anim_menu,tag=anim_editor,tag=anim_editor_sel,limit=1] run function anim:gui/editor/run/save_keyframe
 execute if score $_tmp_old_pg _anim matches 0.. run scoreboard players operation $_page _anim = $_tmp_new_pg _anim
 scoreboard players reset $_tmp_new_pg _anim
-execute unless score $_tmp_old_pg _anim matches 0.. as @e[type=armor_stand,tag=anim_menu,tag=anim_editor,tag=anim_editor_sel,limit=1] run function anim:gui/editor/run/save_keyframe
+#execute unless score $_tmp_old_pg _anim matches 0.. as @e[type=armor_stand,tag=anim_menu,tag=anim_editor,tag=anim_editor_sel,limit=1] run function anim:gui/editor/run/save_keyframe
 
 #refresh page
 execute as @p[tag=anim_user] at @s if block ~ ~ ~ air run scoreboard players set $_sign_placed _anim 1

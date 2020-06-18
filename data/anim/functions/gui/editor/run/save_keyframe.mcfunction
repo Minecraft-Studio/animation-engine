@@ -32,7 +32,9 @@ scoreboard players reset $_emp_l_leg _anim
 scoreboard players reset $_emp_pos _anim
 scoreboard players reset $_emp_extra _anim
 scoreboard players reset $_keyframe_empty _anim
-data remove storage anim:editor current_keyframe
+# doesn't reset if $_no_deselect _anim is set to 1
+execute if score $_no_deselect _anim matches 1 run data remove storage anim:editor current_keyframe
+scoreboard players reset $_no_deselect _anim
 
 tag @s remove anim_editor_sel
 function anim:gui/editor/reset
