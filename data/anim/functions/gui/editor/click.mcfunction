@@ -16,3 +16,4 @@ execute as @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r1] run functio
 execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu93] run function anim:gui/editor/run/copy_keyframe
 execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu94] run function anim:gui/editor/run/paste_keyframe
 
+execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu91] run function anim:gui/editor/run/search/compile/start
