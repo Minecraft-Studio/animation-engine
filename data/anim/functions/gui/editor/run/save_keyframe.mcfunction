@@ -64,24 +64,24 @@ execute if data storage anim:editor current_keyframe.rotate.l_leg.z run scoreboa
 execute if data storage anim:editor current_keyframe.position.x run scoreboard players set @s _anim_edit_color 7
 execute if data storage anim:editor current_keyframe.position.y run scoreboard players set @s _anim_edit_color 7
 execute if data storage anim:editor current_keyframe.position.z run scoreboard players set @s _anim_edit_color 7
-execute if data storage anim:editor current_keyframe.rotate.head.x if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 8
-execute if data storage anim:editor current_keyframe.rotate.head.y if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 8
-execute if data storage anim:editor current_keyframe.rotate.head.z if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 8
-execute if data storage anim:editor current_keyframe.rotate.body.x if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 9
-execute if data storage anim:editor current_keyframe.rotate.body.y if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 9
-execute if data storage anim:editor current_keyframe.rotate.body.z if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 9
-execute if data storage anim:editor current_keyframe.rotate.r_arm.x if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 10
-execute if data storage anim:editor current_keyframe.rotate.r_arm.y if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 10
-execute if data storage anim:editor current_keyframe.rotate.r_arm.z if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 10
-execute if data storage anim:editor current_keyframe.rotate.l_arm.x if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 11
-execute if data storage anim:editor current_keyframe.rotate.l_arm.y if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 11
-execute if data storage anim:editor current_keyframe.rotate.l_arm.z if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 11
-execute if data storage anim:editor current_keyframe.rotate.r_leg.x if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 12
-execute if data storage anim:editor current_keyframe.rotate.r_leg.y if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 12
-execute if data storage anim:editor current_keyframe.rotate.r_leg.z if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 12
-execute if data storage anim:editor current_keyframe.rotate.l_leg.x if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 13
-execute if data storage anim:editor current_keyframe.rotate.l_leg.y if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 13
-execute if data storage anim:editor current_keyframe.rotate.l_leg.z if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 13
+execute if data storage anim:editor current_keyframe.rotate.head.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 8
+execute if data storage anim:editor current_keyframe.rotate.head.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 8
+execute if data storage anim:editor current_keyframe.rotate.head.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 8
+execute if data storage anim:editor current_keyframe.rotate.body.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 9
+execute if data storage anim:editor current_keyframe.rotate.body.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 9
+execute if data storage anim:editor current_keyframe.rotate.body.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 9
+execute if data storage anim:editor current_keyframe.rotate.r_arm.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 10
+execute if data storage anim:editor current_keyframe.rotate.r_arm.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 10
+execute if data storage anim:editor current_keyframe.rotate.r_arm.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 10
+execute if data storage anim:editor current_keyframe.rotate.l_arm.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 11
+execute if data storage anim:editor current_keyframe.rotate.l_arm.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 11
+execute if data storage anim:editor current_keyframe.rotate.l_arm.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 11
+execute if data storage anim:editor current_keyframe.rotate.r_leg.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 12
+execute if data storage anim:editor current_keyframe.rotate.r_leg.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 12
+execute if data storage anim:editor current_keyframe.rotate.r_leg.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 12
+execute if data storage anim:editor current_keyframe.rotate.l_leg.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 13
+execute if data storage anim:editor current_keyframe.rotate.l_leg.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 13
+execute if data storage anim:editor current_keyframe.rotate.l_leg.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 13
 execute if score @s _anim_edit_color matches 1 run tag @s add anim_editor1
 execute if score @s _anim_edit_color matches 2 run tag @s add anim_editor2
 execute if score @s _anim_edit_color matches 3 run tag @s add anim_editor3
