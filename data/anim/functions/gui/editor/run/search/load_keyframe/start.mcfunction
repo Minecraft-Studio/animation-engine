@@ -5,3 +5,4 @@ scoreboard players operation $_key_col _anim += $_page _anim
 data modify storage anim:editor search set from storage anim:editor keyframes
 data remove storage anim:editor current_keyframe
 function anim:gui/editor/run/search/load_keyframe/loop
+execute as @e[tag=anim_editor_sel] run function anim:gui/editor/select
