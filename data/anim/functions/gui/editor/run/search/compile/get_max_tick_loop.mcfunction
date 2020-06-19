@@ -16,8 +16,8 @@ execute if score $_comp_m_t _anim matches 0 run scoreboard players set $_keyfram
 execute unless score $_keyframe_empty _anim matches 1 if score $_comp_m_t _anim > $comp_max_t _anim run scoreboard players operation $comp_max_t _anim = $_comp_m_t _anim
 execute unless score $_keyframe_empty _anim matches 1 run data modify storage anim:editor result append from storage anim:editor search[0]
 execute unless score $_keyframe_empty _anim matches 1 run scoreboard players add $comp_keyf _anim 1
-execute if score $_keyframe_empty _anim matches 0 run scoreboard players add $comp_del_keyf _anim 1
-execute if score $_keyframe_empty _anim matches 0 run tellraw @p[tag=anim_user] ["",{"text":"Deleted a bad keyframe ","color":"red"},{"text":"[Data]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"nbt":"search[0]","storage":"anim:editor","color":"gray"}]}}]
+execute if score $_keyframe_empty _anim matches 1 run scoreboard players add $comp_del_keyf _anim 1
+execute if score $_keyframe_empty _anim matches 1 run tellraw @p[tag=anim_user] ["",{"text":"Deleted a bad keyframe ","color":"red"},{"text":"[Data]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"nbt":"search[0]","storage":"anim:editor","color":"gray"}]}}]
 data remove storage anim:editor search[0]
 #continue the loop
 execute if data storage anim:editor search[] run function anim:gui/editor/run/search/compile/get_max_tick_loop
