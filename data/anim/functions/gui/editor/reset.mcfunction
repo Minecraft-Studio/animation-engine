@@ -4,7 +4,7 @@ execute if entity @s[tag=anim_editor2,tag=!anim_editor_sel] run data merge entit
 execute if entity @s[tag=anim_editor3,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"dark_purple"}'}
 execute if entity @s[tag=anim_editor4,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"light_purple"}'}
 execute if entity @s[tag=anim_editor5,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"dark_green"}'}
-execute if entity @s[tag=anim_editor6,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"light_green"}'}
+execute if entity @s[tag=anim_editor6,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"green"}'}
 execute if entity @s[tag=anim_editor7,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"#FFFF55"}'}
 execute if entity @s[tag=anim_editor8,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"#FFAA55"}'}
 execute if entity @s[tag=anim_editor9,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"#8E8EC6"}'}
