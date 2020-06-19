@@ -82,7 +82,6 @@ execute if data storage anim:editor current_keyframe.rotate.r_leg.z if data stor
 execute if data storage anim:editor current_keyframe.rotate.l_leg.x if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 13
 execute if data storage anim:editor current_keyframe.rotate.l_leg.y if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 13
 execute if data storage anim:editor current_keyframe.rotate.l_leg.z if data storage anim:editor search[0].position run scoreboard players set @s _anim_edit_color 13
-execute unless score @s _anim_edit_color matches 1.. run tag @s add anim_editor1
 execute if score @s _anim_edit_color matches 1 run tag @s add anim_editor1
 execute if score @s _anim_edit_color matches 2 run tag @s add anim_editor2
 execute if score @s _anim_edit_color matches 3 run tag @s add anim_editor3
@@ -97,7 +96,7 @@ execute if score @s _anim_edit_color matches 11 run tag @s add anim_editor11
 execute if score @s _anim_edit_color matches 12 run tag @s add anim_editor12
 execute if score @s _anim_edit_color matches 13 run tag @s add anim_editor13
 execute if score @s _anim_edit_color matches 14 run tag @s add anim_editor14
-tag @s remove anim_editor0
+execute if score @s _anim_edit_color matches 1.. run tag @s remove anim_editor0
 scoreboard objectives remove _anim_edit_color
 
 execute as @e[type=armor_stand,tag=anim_editor] run function anim:gui/editor/reset
