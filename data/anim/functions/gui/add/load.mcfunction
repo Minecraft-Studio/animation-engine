@@ -23,8 +23,8 @@ execute if score $_exists _anim matches 1 run summon armor_stand ~ ~ ~ {Marker:1
 execute unless score $_exists _anim matches 1 as @p[tag=anim_user] at @s run summon armor_stand ^-3 ^ ^3 {Tags:["anim_part","anim_edit","anim_edit_new"],Marker:1b,Invisible:1b}
 execute if score $_exists _anim matches 1 as @e[type=armor_stand,tag=anim_part] if score @s _anim_idb = $_edit_armor_stand _anim if score @s _anim_ida = @e[type=armor_stand,tag=anim_main,tag=anim_sel,limit=1] _anim_ida run tag @s add anim_edit
 
-data remove storage anim:anim name
-tellraw @p[tag=anim_user] ["",{"text":"\n\nGive the armor stand a name: ","color":"aqua"},{"text":"click here","underlined":true,"color":"gray","clickEvent":{"action":"suggest_command","value":"/data modify storage anim:anim name set value "}},{"text":"\n"}]
+data remove storage anim:editor name
+tellraw @p[tag=anim_user] ["",{"text":"\n\nGive the armor stand a name: ","color":"aqua"},{"text":"click here","underlined":true,"color":"gray","clickEvent":{"action":"suggest_command","value":"/data modify storage anim:editor name set value "}},{"text":"\n"}]
 
 #data
 execute if score $_exists _anim matches 1 as @e[type=armor_stand,tag=anim_menu,tag=anim_menu6] at @s run function anim:gui/add/run/hover/reset/1

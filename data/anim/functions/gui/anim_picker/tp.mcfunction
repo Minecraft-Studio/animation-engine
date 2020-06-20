@@ -16,6 +16,6 @@ execute facing entity @p[tag=anim_user] eyes positioned ^1.1 ^ ^ run tp @e[type=
 execute facing entity @p[tag=anim_user] eyes positioned ^0.2 ^ ^ run tp @e[type=armor_stand,tag=anim_menu15] ~ ~-0.6 ~
 
 #tick
-execute if score $name_menu _anim = $show_menu _anim if score $name_id _anim matches 1..2 if data storage anim:anim name run function anim:gui/anim_picker/run/save_name
+execute if score $name_menu _anim = $show_menu _anim if score $name_id _anim matches 1..2 if data storage anim:editor name run function anim:gui/anim_picker/run/save_name
 execute unless entity @e[type=armor_stand,tag=anim_menu,tag=anim_menu_list,tag=anim_sel_menu] run function anim:gui/anim_picker/run/refresh_list
 #execute as @e[type=armor_stand,tag=anim_add,tag=!anim_part,tag=!anim_menu] at @s run function anim:gui/new/run/add_armor_stand
