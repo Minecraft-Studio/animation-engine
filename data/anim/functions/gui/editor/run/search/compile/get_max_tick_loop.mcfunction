@@ -7,8 +7,8 @@ execute store result score $_emp_r_arm _anim run data get storage anim:editor se
 execute store result score $_emp_l_arm _anim run data get storage anim:editor search[0].rotate.l_arm
 execute store result score $_emp_r_leg _anim run data get storage anim:editor search[0].rotate.r_leg
 execute store result score $_emp_l_leg _anim run data get storage anim:editor search[0].rotate.l_leg
-execute store result score $_emp_pos _anim run data get storage anim:editor search[0].rotate.pos
-execute store result score $_emp_extra _anim run data get storage anim:editor search[0].rotate.extra
+execute store result score $_emp_pos _anim run data get storage anim:editor search[0].position
+#execute store result score $_emp_extra _anim run data get storage anim:editor search[0].extra
 # set value $_keyframe_empty _anim to 1 if the keyframe data is empty
 execute if score $_emp_head _anim matches 0 if score $_emp_body _anim matches 0 if score $_emp_r_arm _anim matches 0 if score $_emp_l_arm _anim matches 0 if score $_emp_r_leg _anim matches 0 if score $_emp_l_leg _anim matches 0 if score $_emp_pos _anim matches 0 if score $_emp_extra _anim matches 0 run scoreboard players set $_keyframe_empty _anim 1
 execute if score $_comp_m_t _anim matches 0 run scoreboard players set $_keyframe_empty _anim 1

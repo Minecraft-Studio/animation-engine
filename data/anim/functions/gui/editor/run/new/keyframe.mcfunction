@@ -21,6 +21,11 @@ execute if data storage anim:editor current_keyframe.rotate.r_leg.z run data mod
 execute if data storage anim:editor current_keyframe.rotate.l_leg.x run data modify storage anim:editor keyframes[{new:1b}].rotate.l_leg.x set from storage anim:editor current_keyframe.rotate.l_leg.x
 execute if data storage anim:editor current_keyframe.rotate.l_leg.y run data modify storage anim:editor keyframes[{new:1b}].rotate.l_leg.y set from storage anim:editor current_keyframe.rotate.l_leg.y
 execute if data storage anim:editor current_keyframe.rotate.l_leg.z run data modify storage anim:editor keyframes[{new:1b}].rotate.l_leg.z set from storage anim:editor current_keyframe.rotate.l_leg.z
+execute if data storage anim:editor current_keyframe.position.x run data modify storage anim:editor keyframes[{new:1b}].position.x set from storage anim:editor current_keyframe.position.x
+execute if data storage anim:editor current_keyframe.position.y run data modify storage anim:editor keyframes[{new:1b}].position.y set from storage anim:editor current_keyframe.position.y
+execute if data storage anim:editor current_keyframe.position.z run data modify storage anim:editor keyframes[{new:1b}].position.z set from storage anim:editor current_keyframe.position.z
+execute if data storage anim:editor current_keyframe.extra.rotate run data modify storage anim:editor keyframes[{new:1b}].extra.rotate set from storage anim:editor current_keyframe.extra.rotate
+execute if data storage anim:editor current_keyframe.extra.move run data modify storage anim:editor keyframes[{new:1b}].extra.move set from storage anim:editor current_keyframe.extra.move
 #FIX
 scoreboard players reset $_tick_save _anim
 data remove storage anim:editor keyframes[{new:1b}].new

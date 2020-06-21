@@ -25,7 +25,7 @@ scoreboard players reset $_emp_l_arm _anim
 scoreboard players reset $_emp_r_leg _anim
 scoreboard players reset $_emp_l_leg _anim
 scoreboard players reset $_emp_pos _anim
-scoreboard players reset $_emp_extra _anim
+#scoreboard players reset $_emp_extra _anim
 scoreboard players reset $_keyframe_empty _anim
 scoreboard players reset $_comp_m_t _anim
 data remove storage anim:editor result

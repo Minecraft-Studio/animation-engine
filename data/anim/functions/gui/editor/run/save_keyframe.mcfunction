@@ -11,10 +11,10 @@ execute store result score $_emp_r_arm _anim run data get storage anim:editor cu
 execute store result score $_emp_l_arm _anim run data get storage anim:editor current_keyframe.rotate.l_arm
 execute store result score $_emp_r_leg _anim run data get storage anim:editor current_keyframe.rotate.r_leg
 execute store result score $_emp_l_leg _anim run data get storage anim:editor current_keyframe.rotate.l_leg
-execute store result score $_emp_pos _anim run data get storage anim:editor current_keyframe.rotate.pos
-execute store result score $_emp_extra _anim run data get storage anim:editor current_keyframe.rotate.extra
+execute store result score $_emp_pos _anim run data get storage anim:editor current_keyframe.position
+#execute store result score $_emp_extra _anim run data get storage anim:editor current_keyframe.extra
 # set value $_keyframe_empty _anim to 1 if the keyframe data is empty
-execute if score $_emp_head _anim matches 0 if score $_emp_body _anim matches 0 if score $_emp_r_arm _anim matches 0 if score $_emp_l_arm _anim matches 0 if score $_emp_r_leg _anim matches 0 if score $_emp_l_leg _anim matches 0 if score $_emp_pos _anim matches 0 if score $_emp_extra _anim matches 0 run scoreboard players set $_keyframe_empty _anim 1
+execute if score $_emp_head _anim matches 0 if score $_emp_body _anim matches 0 if score $_emp_r_arm _anim matches 0 if score $_emp_l_arm _anim matches 0 if score $_emp_r_leg _anim matches 0 if score $_emp_l_leg _anim matches 0 if score $_emp_pos _anim matches 0 run scoreboard players set $_keyframe_empty _anim 1
 # if empty, delete it
 execute if score $_search_found _anim matches 1 if score $_keyframe_empty _anim matches 1 run function anim:gui/editor/run/search/delete_keyframe/start
 
@@ -30,7 +30,7 @@ scoreboard players reset $_emp_l_arm _anim
 scoreboard players reset $_emp_r_leg _anim
 scoreboard players reset $_emp_l_leg _anim
 scoreboard players reset $_emp_pos _anim
-scoreboard players reset $_emp_extra _anim
+#scoreboard players reset $_emp_extra _anim
 scoreboard players reset $_keyframe_empty _anim
 # doesn't reset if $_no_deselect _anim is set to 1
 execute if score $_no_deselect _anim matches 1 run data remove storage anim:editor current_keyframe
@@ -40,9 +40,8 @@ tag @s remove anim_editor_sel
 
 #import colors (reference: anim:gui/editor/run/search/load_all_keyframes/founded2)
 scoreboard objectives add _anim_edit_color dummy
-execute if data storage anim:editor current_keyframe.extra.x run scoreboard players set @s _anim_edit_color 14
-execute if data storage anim:editor current_keyframe.extra.y run scoreboard players set @s _anim_edit_color 14
-execute if data storage anim:editor current_keyframe.extra.z run scoreboard players set @s _anim_edit_color 14
+#execute if data storage anim:editor current_keyframe.extra.rotate run scoreboard players set @s _anim_edit_color 14
+#execute if data storage anim:editor current_keyframe.extra.move run scoreboard players set @s _anim_edit_color 14
 execute if data storage anim:editor current_keyframe.rotate.head.x run scoreboard players set @s _anim_edit_color 1
 execute if data storage anim:editor current_keyframe.rotate.head.y run scoreboard players set @s _anim_edit_color 1
 execute if data storage anim:editor current_keyframe.rotate.head.z run scoreboard players set @s _anim_edit_color 1
