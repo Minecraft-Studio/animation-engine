@@ -1,4 +1,4 @@
-execute if entity @s[tag=anim_editor0] run data merge entity @s {CustomName:'{"text":"/","color":"white"}'}
+execute if entity @s[tag=anim_editor0] run data merge entity @s {CustomName:'{"text":"/","color":"#DDDDDD"}'}
 execute if entity @s[tag=anim_editor1,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"#ffa2a2"}'}
 execute if entity @s[tag=anim_editor2,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"#a2a2ff"}'}
 execute if entity @s[tag=anim_editor3,tag=!anim_editor_sel] run data merge entity @s {CustomName:'{"text":"♦","color":"#ffa2ff"}'}
