@@ -1,1 +1,1 @@
-execute unless data storage anim:editor {ver:"v0.8.6a"} run function anim:install
+execute unless data storage anim:editor {ver:"v0.9.0a"} run function anim:install
