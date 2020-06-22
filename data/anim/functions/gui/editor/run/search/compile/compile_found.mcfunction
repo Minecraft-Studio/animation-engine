@@ -21,4 +21,4 @@ execute if score $_comp_value_exists _anim matches 1 if score $_comp_value_add _
 
 execute if data storage anim:editor result_comp_tick run data modify storage anim:editor result_comp append from storage anim:editor result_comp_tick
 
-# FIX: MAKE SURE 0.001 IS POSSIBLE, SET SCORES TIMES 1000
+# FIX: MAKE SURE 0.001 IS POSSIBLE, SET SCORES TIMES 1000 AND SET STORE STORAGE TIMES 0.001
