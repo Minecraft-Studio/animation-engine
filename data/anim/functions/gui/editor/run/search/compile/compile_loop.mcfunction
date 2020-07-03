@@ -16,10 +16,7 @@ execute if data storage anim:editor result_get run say found
 execute unless data storage anim:editor result_get run say not found...?
 execute if data storage anim:editor result_get run function anim:gui/editor/run/search/compile/compile_found
 
-
-
 scoreboard players add $_comp_loop _anim 1
-execute if score $_comp_kleft _anim matches 1.. if score $_get_tick _anim matches 1..10 unless score $_comp_loop _anim > $sett_compile _anim run function anim:gui/editor/run/search/compile/compile_loop
-execute if score $_comp_kleft _anim matches 1.. if score $_get_tick _anim matches 1..10 if score $_comp_loop _anim > $sett_compile _anim run schedule function anim:gui/editor/run/search/compile/compile_loop 1t
-execute if score $_comp_kleft _anim matches 1.. if score $_get_tick _anim matches 1..10 if score $_comp_loop _anim > $sett_compile _anim run scoreboard players set $_comp_loop _anim 1
-#say compile/loop
+execute if score $_comp_kleft _anim matches 1.. unless score $_comp_loop _anim > $sett_compile _anim run function anim:gui/editor/run/search/compile/compile_loop
+execute if score $_comp_kleft _anim matches 1.. if score $_comp_loop _anim > $sett_compile _anim run schedule function anim:gui/editor/run/search/compile/compile_loop 1t
+execute if score $_comp_kleft _anim matches 1.. if score $_comp_loop _anim > $sett_compile _anim run scoreboard players set $_comp_loop _anim 1

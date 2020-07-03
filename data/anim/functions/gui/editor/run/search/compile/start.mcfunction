@@ -37,6 +37,8 @@ scoreboard players set $_get_part _anim 1
 data modify storage anim:editor search_comp set from storage anim:editor keyframes
 data remove storage anim:editor result_comp
 data remove storage anim:editor last_compile_keyframe
+data remove storage anim:editor result_comp_tick_old
+data remove storage anim:editor result_comp_tick
 #  get maximum number of keyframes
 execute store result bossbar minecraft:_anim_prgbar max store result score $_comp_kmax _anim run data get storage anim:editor keyframes
 bossbar set _anim_prgbar color yellow
