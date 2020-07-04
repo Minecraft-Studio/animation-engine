@@ -1,0 +1,3 @@
+data modify entity @e[tag=new_anim,tag=anim,tag=anim_upper_left_leg,limit=1] HandItems[0] set from entity @s SelectedItem
+
+tellraw @s ["",{"text":"What item should be used for the ","color":"aqua"},{"text":"Lower Left Leg","color":"dark_purple"},{"text":"?\n\n ","color":"aqua"},{"text":"[Select holding item]","color":"green","clickEvent":{"action":"run_command","value":"/function anim_edit:create/phase_11"}}]

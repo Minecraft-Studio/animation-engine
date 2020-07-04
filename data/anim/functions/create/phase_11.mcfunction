@@ -1,3 +1,0 @@
-data modify entity @e[tag=new_anim,tag=anim,tag=anim_lower_left_leg,limit=1] HandItems[0] set from entity @s SelectedItem
-
-tellraw @s ["",{"text":"Is that all?\n\n ","color":"aqua"},{"text":"[Yes]","color":"green","clickEvent":{"action":"run_command","value":"/function anim:create/phase_finish"},"hoverEvent":{"action":"show_text","value":["",{"text":"The chat will be cleared, the current\nsettings can be changed later","color":"gray"}]}},{"text":" "},{"text":"[No]","color":"red","clickEvent":{"action":"run_command","value":"/function anim:edit/model/list"}}]

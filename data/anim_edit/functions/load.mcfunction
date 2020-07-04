@@ -1,0 +1,1 @@
+execute unless data storage anim:editor {ver:"v0.9.0a"} run function anim_edit:install
