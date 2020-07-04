@@ -1,5 +1,5 @@
 execute if data storage anim:editor ver run data merge storage anim:editor {ver_update:1b}
-data merge storage anim:editor {ver:"v0.9.0a"}
+data merge storage anim:editor {ver:"v0.9.1a"}
 scoreboard objectives add _anim dummy
 scoreboard objectives add _anim_ida dummy
 scoreboard objectives add _anim_idb dummy
