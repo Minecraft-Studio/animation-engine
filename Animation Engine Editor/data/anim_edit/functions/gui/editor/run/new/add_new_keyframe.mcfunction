@@ -5,4 +5,4 @@ execute if entity @s[tag=anim_editor_r4] run data modify storage anim:editor key
 execute if entity @s[tag=anim_editor_r5] run data modify storage anim:editor keyframes_5 insert 0 value {new:1b}
 execute if entity @s[tag=anim_editor_r6] run data modify storage anim:editor keyframes_6 insert 0 value {new:1b}
 execute if entity @s[tag=anim_editor_r7] run data modify storage anim:editor keyframes_7 insert 0 value {new:1b}
-tellraw @p[tag=anim_user] {"text":"If you see this message, please report it as bug! Function \"add_new_keyframe\" is not supposed to be running.","color":"red"}
+tellraw @p[tag=anim_user] {"text":"If you see this message, please report it as a bug! Function \"add_new_keyframe\" is not supposed to be running.","color":"red"}
