@@ -31,6 +31,7 @@ execute store result storage anim:editor result_comp_tick.extra.move int 1 run d
 
 #Apply everything
 execute store result storage anim:editor result_comp_tick.tick int 1 run scoreboard players get $_get_tick _anim
+execute if data storage anim:editor result_comp_tick_old store result storage anim:editor result_comp_tick.tick_left int 1 run scoreboard players get $_comp_value_tick _anim
 execute if data storage anim:editor result_comp_tick_old run data modify storage anim:editor result_comp append from storage anim:editor result_comp_tick_old
 execute if data storage anim:editor result_comp_tick run data modify storage anim:editor result_comp_tick_old set from storage anim:editor result_comp_tick
 data remove storage anim:editor result_comp_tick

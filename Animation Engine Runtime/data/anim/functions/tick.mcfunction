@@ -1,0 +1,1 @@
+execute as @e[type=armor_stand,tag=anim_part] if score @s _anim matches 1.. run function anim:keyframe_tick
