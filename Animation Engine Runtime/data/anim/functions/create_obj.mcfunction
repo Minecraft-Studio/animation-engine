@@ -19,4 +19,23 @@ scoreboard objectives add _anim_rlx dummy
 scoreboard objectives add _anim_rly dummy
 scoreboard objectives add _anim_rlz dummy
 
+scoreboard objectives add _anim_hx_ease dummy
+scoreboard objectives add _anim_hy_ease dummy
+scoreboard objectives add _anim_hz_ease dummy
+scoreboard objectives add _anim_bx_ease dummy
+scoreboard objectives add _anim_by_ease dummy
+scoreboard objectives add _anim_bz_ease dummy
+scoreboard objectives add _anim_lax_ease dummy
+scoreboard objectives add _anim_lay_ease dummy
+scoreboard objectives add _anim_laz_ease dummy
+scoreboard objectives add _anim_rax_ease dummy
+scoreboard objectives add _anim_ray_ease dummy
+scoreboard objectives add _anim_raz_ease dummy
+scoreboard objectives add _anim_llx_ease dummy
+scoreboard objectives add _anim_lly_ease dummy
+scoreboard objectives add _anim_llz_ease dummy
+scoreboard objectives add _anim_rlx_ease dummy
+scoreboard objectives add _anim_rly_ease dummy
+scoreboard objectives add _anim_rlz_ease dummy
+
 scoreboard objectives add _anim_calc dummy

@@ -19,4 +19,23 @@ scoreboard objectives remove _anim_rlx
 scoreboard objectives remove _anim_rly
 scoreboard objectives remove _anim_rlz
 
+scoreboard objectives remove _anim_hx_ease
+scoreboard objectives remove _anim_hy_ease
+scoreboard objectives remove _anim_hz_ease
+scoreboard objectives remove _anim_bx_ease
+scoreboard objectives remove _anim_by_ease
+scoreboard objectives remove _anim_bz_ease
+scoreboard objectives remove _anim_lax_ease
+scoreboard objectives remove _anim_lay_ease
+scoreboard objectives remove _anim_laz_ease
+scoreboard objectives remove _anim_rax_ease
+scoreboard objectives remove _anim_ray_ease
+scoreboard objectives remove _anim_raz_ease
+scoreboard objectives remove _anim_llx_ease
+scoreboard objectives remove _anim_lly_ease
+scoreboard objectives remove _anim_llz_ease
+scoreboard objectives remove _anim_rlx_ease
+scoreboard objectives remove _anim_rly_ease
+scoreboard objectives remove _anim_rlz_ease
+
 scoreboard objectives remove _anim_calc

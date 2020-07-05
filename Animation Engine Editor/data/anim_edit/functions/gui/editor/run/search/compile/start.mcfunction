@@ -43,6 +43,8 @@ data remove storage anim:editor result_comp_tick
 execute store result bossbar minecraft:_anim_prgbar max store result score $_comp_kmax _anim run data get storage anim:editor keyframes
 bossbar set _anim_prgbar color yellow
 scoreboard players set $20 _anim 20
+scoreboard players set $2 _anim 2
+scoreboard players set $1000 _anim 1000
 
 # loop
 # input: search_comp[]

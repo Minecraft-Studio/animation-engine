@@ -2,6 +2,13 @@
 # 1000, so it can calculate *1000 on scorebaords
 scoreboard players set $_calc_1000 _anim 1000
 
+
+#Extra
+scoreboard players set $_comp_value_exists _anim 0
+# get & apply data
+execute store result storage anim:editor result_comp_tick.extra.rotate int 1 run data get storage anim:editor result_get.extra.rotate
+execute store result storage anim:editor result_comp_tick.extra.move int 1 run data get storage anim:editor result_get.extra.move
+
 #Head x
 scoreboard players set $_comp_value_exists _anim 0
 # get data
@@ -22,12 +29,6 @@ execute if data storage anim:editor result_get.rotate.head.y run scoreboard play
 # apply data
 execute if score $_comp_value_exists _anim matches 1 run function anim_edit:gui/editor/run/search/compile/calc/head/y
 
-
-#Extra
-scoreboard players set $_comp_value_exists _anim 0
-# get & apply data
-execute store result storage anim:editor result_comp_tick.extra.rotate int 1 run data get storage anim:editor result_get.extra.rotate
-execute store result storage anim:editor result_comp_tick.extra.move int 1 run data get storage anim:editor result_get.extra.move
 
 #Apply everything
 execute store result storage anim:editor result_comp_tick.tick int 1 run scoreboard players get $_get_tick _anim
