@@ -1,4 +1,4 @@
-execute facing entity @p[tag=anim_user] eyes positioned ^2.1 ^ ^ run tp @e[type=armor_stand,tag=anim_menu1] ~ ~0.6 ~ 
+execute positioned ^2.1 ^ ^ run tp @e[type=armor_stand,tag=anim_menu1] ~ ~0.6 ~ 
 tp @e[type=armor_stand,tag=anim_menu5] ~ ~0.6 ~
 tp @e[type=armor_stand,tag=anim_menu0] ~ ~0.3 ~
 tp @e[type=armor_stand,tag=anim_menu2] ~ ~ ~

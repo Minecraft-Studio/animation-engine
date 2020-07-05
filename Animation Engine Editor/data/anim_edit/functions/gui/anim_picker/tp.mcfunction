@@ -1,4 +1,4 @@
-execute facing entity @p[tag=anim_user] eyes positioned ^2.0 ^ ^ run tp @e[type=armor_stand,tag=anim_menu2] ~ ~2.4 ~
+execute positioned ^2.0 ^ ^ run tp @e[type=armor_stand,tag=anim_menu2] ~ ~2.4 ~
 tp @e[type=armor_stand,tag=anim_menu0] ~ ~2.4 ~
 tp @e[type=armor_stand,tag=anim_menu1] ~ ~2.1 ~
 tp @e[type=armor_stand,tag=anim_menu3] ~ ~1.8 ~
@@ -9,11 +9,11 @@ tp @e[type=armor_stand,tag=anim_menu9] ~ ~0.6 ~
 tp @e[type=armor_stand,tag=anim_menu10] ~ ~0.3 ~
 tp @e[type=armor_stand,tag=anim_menu11] ~ ~ ~
 tp @e[type=armor_stand,tag=anim_menu12] ~ ~-0.3 ~
-execute facing entity @p[tag=anim_user] eyes positioned ^-1.2 ^ ^ run tp @e[type=armor_stand,tag=anim_menu7] ~ ~-0.6 ~
-execute facing entity @p[tag=anim_user] eyes positioned ^-0.55 ^ ^ run tp @e[type=armor_stand,tag=anim_menu13] ~ ~-0.6 ~
-execute facing entity @p[tag=anim_user] eyes positioned ^1.9 ^ ^ run tp @e[type=armor_stand,tag=anim_menu6] ~ ~-0.6 ~
-execute facing entity @p[tag=anim_user] eyes positioned ^1.1 ^ ^ run tp @e[type=armor_stand,tag=anim_menu14] ~ ~-0.6 ~
-execute facing entity @p[tag=anim_user] eyes positioned ^0.2 ^ ^ run tp @e[type=armor_stand,tag=anim_menu15] ~ ~-0.6 ~
+execute positioned ^-1.2 ^ ^ run tp @e[type=armor_stand,tag=anim_menu7] ~ ~-0.6 ~
+execute positioned ^-0.55 ^ ^ run tp @e[type=armor_stand,tag=anim_menu13] ~ ~-0.6 ~
+execute positioned ^1.9 ^ ^ run tp @e[type=armor_stand,tag=anim_menu6] ~ ~-0.6 ~
+execute positioned ^1.1 ^ ^ run tp @e[type=armor_stand,tag=anim_menu14] ~ ~-0.6 ~
+execute positioned ^0.2 ^ ^ run tp @e[type=armor_stand,tag=anim_menu15] ~ ~-0.6 ~
 
 #tick
 execute if score $name_menu _anim = $show_menu _anim if score $name_id _anim matches 1..2 if data storage anim:editor name run function anim_edit:gui/anim_picker/run/save_name

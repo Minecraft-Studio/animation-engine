@@ -5,6 +5,7 @@ scoreboard objectives add _anim_ida dummy
 scoreboard objectives add _anim_idb dummy
 scoreboard players set $page _anim 1
 execute unless score $sett_link _anim matches 0.. run scoreboard players set $sett_link _anim 5
+execute unless score $sett_look _anim matches 0.. run scoreboard players set $sett_look _anim 1
 execute unless score $sett_def_rotate _anim matches 0.. run scoreboard players set $sett_def_rotate _anim 1
 execute unless score $sett_def_move _anim matches 0.. run scoreboard players set $sett_def_move _anim 1
 execute unless score $sett_compile _anim matches 0.. run scoreboard players set $sett_compile _anim 10
