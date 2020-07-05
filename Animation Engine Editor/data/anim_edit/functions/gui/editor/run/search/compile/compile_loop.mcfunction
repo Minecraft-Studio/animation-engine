@@ -17,8 +17,6 @@ scoreboard players set $_get_part _anim 1
 function anim_edit:gui/editor/run/search/get_tick_data/start
 
 data remove storage anim:editor result_comp_tick
-execute if data storage anim:editor result_get run say found
-execute unless data storage anim:editor result_get run say not found
 execute if data storage anim:editor result_get run function anim_edit:gui/editor/run/search/compile/compile_found
 
 scoreboard players add $_comp_loop _anim 1
