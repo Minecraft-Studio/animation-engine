@@ -13,3 +13,6 @@ tellraw @p[tag=anim_user] {"text":"1\n2\n3\n4"}
 
 #tellraw @p[tag=anim_user] {"text":"\n\n\n"}
 scoreboard players set $_tab _anim 8
+
+#Disable gamerule sendCommandFeedback if setting enabled
+function anim_edit:gamerule

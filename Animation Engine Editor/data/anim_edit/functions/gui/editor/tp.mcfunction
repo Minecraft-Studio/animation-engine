@@ -1,3 +1,4 @@
+
 tp @e[type=armor_stand,tag=anim_menu0] ~ ~2.1 ~
 execute positioned ^1.2 ^ ^ run tp @e[type=armor_stand,tag=anim_menu_1] ~ ~2.1 ~
 execute positioned ^-1.4 ^ ^ run tp @e[type=armor_stand,tag=anim_menu90] ~ ~2.1 ~
@@ -34,6 +35,8 @@ execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r6] positioned 
 execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r7] positioned ~ ~2.1 ~ run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
 execute if entity @e[tag=anim_editor_sel] run function anim_edit:gui/editor/run/current_tick_sel_calc
 execute if entity @e[tag=!anim_sel_menu] run function anim_edit:gui/editor/run/current_tick_sel_calc
+
+execute if entity @e[type=armor_stand,tag=anim_editor_sel] run function anim_edit:gui/editor/run/text/custom_check
 
 execute positioned ^-0.175 ^ ^ run tp @e[type=armor_stand,tag=anim_menu92] ~ ~-0.9 ~
 
