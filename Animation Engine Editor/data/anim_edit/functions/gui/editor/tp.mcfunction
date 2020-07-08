@@ -14,10 +14,24 @@ execute positioned ^0.125 ^ ^ run tp @e[type=armor_stand,tag=anim_menu84] ~ ~-0.
 execute positioned ^0.5 ^ ^ run tp @e[type=armor_stand,tag=anim_menu88] ~ ~-0.6 ~
 execute positioned ^2.0 ^ ^ run tp @e[type=armor_stand,tag=anim_menu87] ~ ~-0.6 ~
 execute positioned ^1.3 ^ ^ run tp @e[type=armor_stand,tag=anim_menu91] ~ ~-0.6 ~
-execute positioned ^1.6 ^ ^ run tp @e[type=armor_stand,tag=anim_menu93] ~ ~-0.9 ~
-execute positioned ^1.6 ^ ^ run tp @e[type=armor_stand,tag=anim_menu94] ~ ~-1.2 ~
 
-execute positioned ^-1.5 ^ ^ run tp @e[type=armor_stand,tag=anim_menu89] ~ ~-0.9 ~
+execute at @e[type=armor_stand,tag=anim_editor_sel,tag=anim_editor_r1] positioned ~ ~0.3 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_editor_sel,tag=anim_editor_r2] positioned ~ ~0.6 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_editor_sel,tag=anim_editor_r3] positioned ~ ~0.9 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_editor_sel,tag=anim_editor_r4] positioned ~ ~1.2 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_editor_sel,tag=anim_editor_r5] positioned ~ ~1.5 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_editor_sel,tag=anim_editor_r6] positioned ~ ~1.8 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_editor_sel,tag=anim_editor_r7] positioned ~ ~2.1 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r1] positioned ~ ~0.3 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r2] positioned ~ ~0.6 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r3] positioned ~ ~0.9 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r4] positioned ~ ~1.2 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r5] positioned ~ ~1.5 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r6] positioned ~ ~1.8 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r7] positioned ~ ~2.1 ~ unless entity @e[tag=anim_menu_endpoint,distance=...8] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute if entity @e[tag=anim_editor_sel] run function anim_edit:gui/editor/run/current_tick_sel_calc
+execute if entity @e[tag=!anim_sel_menu] run function anim_edit:gui/editor/run/current_tick_sel_calc
+
 execute positioned ^-0.175 ^ ^ run tp @e[type=armor_stand,tag=anim_menu92] ~ ~-0.9 ~
 
 execute positioned ^-2.1500 ^ ^ run tp @e[type=armor_stand,tag=anim_menu1] ~ ~1.5 ~
