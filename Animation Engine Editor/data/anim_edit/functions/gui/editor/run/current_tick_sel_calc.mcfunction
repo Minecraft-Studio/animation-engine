@@ -1,6 +1,6 @@
 #Calculate
 scoreboard players operation $_tick_selected _anim = @e[type=armor_stand,tag=anim_editor_sel,limit=1] _anim_editor_col
-scoreboard players operation $_tick_selected _anim = @e[type=armor_stand,tag=anim_sel_menu,limit=1] _anim_editor_col
+scoreboard players operation $_tick_selected _anim = @e[type=armor_stand,tag=anim_sel_menu,scores={_anim_editor_col=1..},limit=1] _anim_editor_col
 scoreboard players operation $_tick_selected_page _anim = $_page _anim
 scoreboard players operation $_tick_selected _anim += $_tick_selected_page _anim
 scoreboard players operation $_tick_selected_insec _anim = $_tick_selected _anim
