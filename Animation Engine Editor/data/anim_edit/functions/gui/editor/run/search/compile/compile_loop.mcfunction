@@ -1,5 +1,4 @@
-#render bossbar, get number of keyframes done / left
-# FIX: PROPER CALC... maybe?
+#bossbar
 execute store result score $_comp_kleft _anim run data get storage anim:editor search_comp
 scoreboard players operation $_comp_kdone _anim = $_comp_kmax _anim
 execute store result bossbar _anim_prgbar value run scoreboard players operation $_comp_kdone _anim -= $_comp_kleft _anim
