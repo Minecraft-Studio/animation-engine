@@ -45,5 +45,6 @@ execute if data storage anim:editor {current_keyframe:{extra:{arms:1}}} run tell
 #tellraw @p[tag=anim_user] {"text":"\n\n\n"}
 scoreboard players set $_tab _anim 8
 
+function anim_edit:gui/editor/run/text/menu
 #Disable gamerule sendCommandFeedback if setting enabled
 function anim_edit:gamerule

@@ -38,68 +38,9 @@ scoreboard players reset $_no_deselect _anim
 
 tag @s remove anim_editor_sel
 
-#import colors (reference: anim:gui/editor/run/search/load_all_keyframes/founded2)
-scoreboard objectives add _anim_edit_color dummy
-execute if data storage anim:editor current_keyframe.extra.head run scoreboard players set @s _anim_edit_color 14
-execute if data storage anim:editor current_keyframe.extra.body run scoreboard players set @s _anim_edit_color 14
-execute if data storage anim:editor current_keyframe.extra.r_arm run scoreboard players set @s _anim_edit_color 14
-execute if data storage anim:editor current_keyframe.extra.l_arm run scoreboard players set @s _anim_edit_color 14
-execute if data storage anim:editor current_keyframe.extra.legg run scoreboard players set @s _anim_edit_color 14
-execute if data storage anim:editor current_keyframe.extra.boots run scoreboard players set @s _anim_edit_color 14
-execute if data storage anim:editor current_keyframe.rotate.head.x run scoreboard players set @s _anim_edit_color 1
-execute if data storage anim:editor current_keyframe.rotate.head.y run scoreboard players set @s _anim_edit_color 1
-execute if data storage anim:editor current_keyframe.rotate.head.z run scoreboard players set @s _anim_edit_color 1
-execute if data storage anim:editor current_keyframe.rotate.body.x run scoreboard players set @s _anim_edit_color 2
-execute if data storage anim:editor current_keyframe.rotate.body.y run scoreboard players set @s _anim_edit_color 2
-execute if data storage anim:editor current_keyframe.rotate.body.z run scoreboard players set @s _anim_edit_color 2
-execute if data storage anim:editor current_keyframe.rotate.r_arm.x run scoreboard players set @s _anim_edit_color 3
-execute if data storage anim:editor current_keyframe.rotate.r_arm.y run scoreboard players set @s _anim_edit_color 3
-execute if data storage anim:editor current_keyframe.rotate.r_arm.z run scoreboard players set @s _anim_edit_color 3
-execute if data storage anim:editor current_keyframe.rotate.l_arm.x run scoreboard players set @s _anim_edit_color 4
-execute if data storage anim:editor current_keyframe.rotate.l_arm.y run scoreboard players set @s _anim_edit_color 4
-execute if data storage anim:editor current_keyframe.rotate.l_arm.z run scoreboard players set @s _anim_edit_color 4
-execute if data storage anim:editor current_keyframe.rotate.r_leg.x run scoreboard players set @s _anim_edit_color 5
-execute if data storage anim:editor current_keyframe.rotate.r_leg.y run scoreboard players set @s _anim_edit_color 5
-execute if data storage anim:editor current_keyframe.rotate.r_leg.z run scoreboard players set @s _anim_edit_color 5
-execute if data storage anim:editor current_keyframe.rotate.l_leg.x run scoreboard players set @s _anim_edit_color 6
-execute if data storage anim:editor current_keyframe.rotate.l_leg.y run scoreboard players set @s _anim_edit_color 6
-execute if data storage anim:editor current_keyframe.rotate.l_leg.z run scoreboard players set @s _anim_edit_color 6
-execute if data storage anim:editor current_keyframe.position.x run scoreboard players set @s _anim_edit_color 7
-execute if data storage anim:editor current_keyframe.position.y run scoreboard players set @s _anim_edit_color 7
-execute if data storage anim:editor current_keyframe.position.z run scoreboard players set @s _anim_edit_color 7
-execute if data storage anim:editor current_keyframe.rotate.head.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 8
-execute if data storage anim:editor current_keyframe.rotate.head.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 8
-execute if data storage anim:editor current_keyframe.rotate.head.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 8
-execute if data storage anim:editor current_keyframe.rotate.body.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 9
-execute if data storage anim:editor current_keyframe.rotate.body.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 9
-execute if data storage anim:editor current_keyframe.rotate.body.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 9
-execute if data storage anim:editor current_keyframe.rotate.r_arm.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 10
-execute if data storage anim:editor current_keyframe.rotate.r_arm.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 10
-execute if data storage anim:editor current_keyframe.rotate.r_arm.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 10
-execute if data storage anim:editor current_keyframe.rotate.l_arm.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 11
-execute if data storage anim:editor current_keyframe.rotate.l_arm.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 11
-execute if data storage anim:editor current_keyframe.rotate.l_arm.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 11
-execute if data storage anim:editor current_keyframe.rotate.r_leg.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 12
-execute if data storage anim:editor current_keyframe.rotate.r_leg.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 12
-execute if data storage anim:editor current_keyframe.rotate.r_leg.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 12
-execute if data storage anim:editor current_keyframe.rotate.l_leg.x if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 13
-execute if data storage anim:editor current_keyframe.rotate.l_leg.y if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 13
-execute if data storage anim:editor current_keyframe.rotate.l_leg.z if data storage anim:editor current_keyframe.position run scoreboard players set @s _anim_edit_color 13
-execute if score @s _anim_edit_color matches 1 run tag @s add anim_editor1
-execute if score @s _anim_edit_color matches 2 run tag @s add anim_editor2
-execute if score @s _anim_edit_color matches 3 run tag @s add anim_editor3
-execute if score @s _anim_edit_color matches 4 run tag @s add anim_editor4
-execute if score @s _anim_edit_color matches 5 run tag @s add anim_editor5
-execute if score @s _anim_edit_color matches 6 run tag @s add anim_editor6
-execute if score @s _anim_edit_color matches 7 run tag @s add anim_editor7
-execute if score @s _anim_edit_color matches 8 run tag @s add anim_editor8
-execute if score @s _anim_edit_color matches 9 run tag @s add anim_editor9
-execute if score @s _anim_edit_color matches 10 run tag @s add anim_editor10
-execute if score @s _anim_edit_color matches 11 run tag @s add anim_editor11
-execute if score @s _anim_edit_color matches 12 run tag @s add anim_editor12
-execute if score @s _anim_edit_color matches 13 run tag @s add anim_editor13
-execute if score @s _anim_edit_color matches 14 run tag @s add anim_editor14
-execute if score @s _anim_edit_color matches 1.. run tag @s remove anim_editor0
-scoreboard objectives remove _anim_edit_color
-
-execute as @e[type=armor_stand,tag=anim_editor] run function anim_edit:gui/editor/reset
+#Reload all keyframes
+scoreboard players operation $_old_sel_col _anim = $_sel_col _anim
+scoreboard players reset $_sel_col _anim
+function anim_edit:gui/editor/run/search/load_all_keyframes/start
+scoreboard players operation $_sel_col _anim = $_old_sel_col _anim
+scoreboard players reset $_old_sel_col _anim

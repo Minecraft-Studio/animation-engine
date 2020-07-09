@@ -31,5 +31,6 @@ execute if data storage anim:editor current_keyframe.extra.boots run tellraw @p[
 
 scoreboard players set $_tab _anim 9
 
+function anim_edit:gui/editor/run/text/menu
 #Disable gamerule sendCommandFeedback if setting enabled
 function anim_edit:gamerule

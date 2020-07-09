@@ -3,5 +3,6 @@ tellraw @p[tag=anim_user] ["",{"text":"Rotate","color":"gray","clickEvent":{"act
 tellraw @p[tag=anim_user] {"text":""}
 scoreboard players set $_tab _anim 7
 
+function anim_edit:gui/editor/run/text/menu
 #Disable gamerule sendCommandFeedback if setting enabled
 function anim_edit:gamerule
