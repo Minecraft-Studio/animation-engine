@@ -33,8 +33,9 @@ execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r4] positioned 
 execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r5] positioned ~ ~1.5 ~ run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
 execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r6] positioned ~ ~1.8 ~ run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
 execute at @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r7] positioned ~ ~2.1 ~ run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
+execute unless entity @e[tag=anim_editor_sel,tag=anim_sel_menu] run data modify entity @e[type=armor_stand,tag=anim_menu89,limit=1] CustomName set value '[{"text":"0t ","color":"gold"},{"text":"(0.00s)","color":"yellow"}]'
 execute if entity @e[tag=anim_editor_sel] run function anim_edit:gui/editor/run/current_tick_sel_calc
-execute if entity @e[tag=!anim_sel_menu] run function anim_edit:gui/editor/run/current_tick_sel_calc
+execute if entity @e[tag=anim_editor,tag=anim_sel_menu] run function anim_edit:gui/editor/run/current_tick_sel_calc
 
 execute if entity @e[type=armor_stand,tag=anim_editor_sel] run function anim_edit:gui/editor/run/text/custom_check
 
