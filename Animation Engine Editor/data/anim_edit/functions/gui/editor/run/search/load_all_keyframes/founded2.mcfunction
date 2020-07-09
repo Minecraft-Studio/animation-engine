@@ -1,7 +1,11 @@
 #import data into the editor (calls in founded)
 scoreboard objectives add _anim_edit_color dummy
-#execute if data storage anim:editor search[0].extra.rotate run scoreboard players set @s _anim_edit_color 14
-#execute if data storage anim:editor search[0].extra.move run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor search[0].extra.head run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor search[0].extra.body run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor search[0].extra.r_arm run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor search[0].extra.l_arm run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor search[0].extra.legg run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor search[0].extra.boots run scoreboard players set @s _anim_edit_color 14
 execute if data storage anim:editor search[0].rotate.head.x run scoreboard players set @s _anim_edit_color 1
 execute if data storage anim:editor search[0].rotate.head.y run scoreboard players set @s _anim_edit_color 1
 execute if data storage anim:editor search[0].rotate.head.z run scoreboard players set @s _anim_edit_color 1

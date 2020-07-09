@@ -40,8 +40,12 @@ tag @s remove anim_editor_sel
 
 #import colors (reference: anim:gui/editor/run/search/load_all_keyframes/founded2)
 scoreboard objectives add _anim_edit_color dummy
-#execute if data storage anim:editor current_keyframe.extra.rotate run scoreboard players set @s _anim_edit_color 14
-#execute if data storage anim:editor current_keyframe.extra.move run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor current_keyframe.extra.head run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor current_keyframe.extra.body run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor current_keyframe.extra.r_arm run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor current_keyframe.extra.l_arm run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor current_keyframe.extra.legg run scoreboard players set @s _anim_edit_color 14
+execute if data storage anim:editor current_keyframe.extra.boots run scoreboard players set @s _anim_edit_color 14
 execute if data storage anim:editor current_keyframe.rotate.head.x run scoreboard players set @s _anim_edit_color 1
 execute if data storage anim:editor current_keyframe.rotate.head.y run scoreboard players set @s _anim_edit_color 1
 execute if data storage anim:editor current_keyframe.rotate.head.z run scoreboard players set @s _anim_edit_color 1
