@@ -13,5 +13,3 @@ execute if score $_copy_sel_exists _anim matches 1 run function anim_edit:gui/ed
 execute if score $_copy_sel_exists _anim matches 1 run tellraw @p[tag=anim_user] ["",{"text":"Keyframe ","color":"green"},{"score":{"name":"$_tmp_copy_calc","objective":"_anim"},"color":"dark_green"},{"text":" in part ","color":"green"},{"score":{"name":"$_sel_row","objective":"_anim"},"color":"dark_green"},{"text":" copied to the clipboard! ","color":"green"},{"text":"[Copied Data]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"nbt":"clipboard","storage":"anim:editor","color":"gray"}]}}]
 execute unless score $_copy_sel_exists _anim matches 1 run tellraw @p[tag=anim_user] {"text":"No keyframe is selected","color":"red"}
 scoreboard players reset $_copy_sel_exists _anim
-
-function anim_edit:gamerule

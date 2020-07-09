@@ -12,3 +12,5 @@ bossbar add _anim_prgbar {"text":"Deleting...","color":"red"}
 bossbar set _anim_prgbar color red
 bossbar set _anim_prgbar players @p[tag=anim_user]
 function anim_edit:gui/editor/run/search/delete_keyframe/loop
+#Disable gamerule sendCommandFeedback if setting enabled
+function anim_edit:gamerule

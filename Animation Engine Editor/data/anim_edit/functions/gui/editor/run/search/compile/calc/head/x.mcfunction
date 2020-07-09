@@ -1,4 +1,3 @@
-tellraw @p ["",{"text":" "},{"nbt":"last_compile_keyframe","storage":"anim:editor"}]
 #FIX: Set it per each coordinate instead of for whole keyframe
 execute if data storage anim:editor last_compile_keyframe.rotate.head.x.value store result storage anim:editor result_comp_tick_old.rotate.head.x.type int 1 run data get storage anim:editor result_get.extra.rotate
 execute if data storage anim:editor last_compile_keyframe.rotate.head.x.value store result storage anim:editor temp_get1 int 1 run data get storage anim:editor last_compile_keyframe.rotate.head.x.value 1000

@@ -14,3 +14,4 @@ execute if score $_tmp_clipboard_exists _anim matches 0 run tellraw @p[tag=anim_
 execute if score $_paste_sel_exists _anim matches 0 run tellraw @p[tag=anim_user] {"text":"No keyframe is selected","color":"red"}
 scoreboard players reset $_tmp_clipboard_exists _anim
 scoreboard players reset $_paste_sel_exists _anim
+
