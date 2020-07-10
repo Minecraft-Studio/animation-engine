@@ -7,6 +7,19 @@ scoreboard players set $_calc_1000 _anim 1000
 # get & apply data
 execute store result storage anim:editor result_comp_tick.extra.rotate int 1 run data get storage anim:editor result_get.extra.rotate
 execute store result storage anim:editor result_comp_tick.extra.move int 1 run data get storage anim:editor result_get.extra.move
+execute if data storage anim:editor result_get.extra.invisible store result storage anim:editor result_comp_tick.extra.invisible int 1 run data get storage anim:editor result_get.extra.invisible
+execute if data storage anim:editor result_get.extra.marker store result storage anim:editor result_comp_tick.extra.marker int 1 run data get storage anim:editor result_get.extra.marker
+execute if data storage anim:editor result_get.extra.arms store result storage anim:editor result_comp_tick.extra.arms int 1 run data get storage anim:editor result_get.extra.arms
+execute if data storage anim:editor result_get.extra.small store result storage anim:editor result_comp_tick.extra.small int 1 run data get storage anim:editor result_get.extra.small
+execute if data storage anim:editor result_get.extra.arms run data modify storage anim:editor result_comp_tick.extra.arms set from storage anim:editor result_get.extra.arms
+execute if data storage anim:editor result_get.extra.head run data modify storage anim:editor result_comp_tick.extra.head set from storage anim:editor result_get.extra.head
+execute if data storage anim:editor result_get.extra.body run data modify storage anim:editor result_comp_tick.extra.body set from storage anim:editor result_get.extra.body
+execute if data storage anim:editor result_get.extra.r_arm run data modify storage anim:editor result_comp_tick.extra.r_arm set from storage anim:editor result_get.extra.r_arm
+execute if data storage anim:editor result_get.extra.l_arm run data modify storage anim:editor result_comp_tick.extra.l_arm set from storage anim:editor result_get.extra.l_arm
+execute if data storage anim:editor result_get.extra.legg run data modify storage anim:editor result_comp_tick.extra.legg set from storage anim:editor result_get.extra.legg
+execute if data storage anim:editor result_get.extra.boots run data modify storage anim:editor result_comp_tick.extra.boots set from storage anim:editor result_get.extra.boots
+tellraw @p {"nbt":"result_get.extra","storage":"anim:editor","color":"red"}
+tellraw @p {"nbt":"result_comp_tick.extra","storage":"anim:editor","color":"yellow"}
 
 
 #head x

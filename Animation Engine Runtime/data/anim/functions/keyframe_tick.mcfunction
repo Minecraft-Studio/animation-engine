@@ -1,5 +1,12 @@
 scoreboard players remove @s _anim_tick 1
 
+execute unless data entity @s Pose.Head run data modify entity @s Pose.Head set value [0f,0f,0.0001f]
+execute unless data entity @s Pose.Body run data modify entity @s Pose.Body set value [0f,0f,0.0001f]
+execute unless data entity @s Pose.LeftLeg run data modify entity @s Pose.LeftLeg set value [0f,0f,0.0001f]
+execute unless data entity @s Pose.RightLeg run data modify entity @s Pose.RightLeg set value [0f,0f,0.0001f]
+execute unless data entity @s Pose.LeftArm run data modify entity @s Pose.LeftArm set value [0f,0f,0.0001f]
+execute unless data entity @s Pose.RightArm run data modify entity @s Pose.RightArm set value [0f,0f,0.0001f]
+
 # FIX: Make it more performance: make multiple mcfunctions for each
 # Head
 execute if score @s _anim_hx matches -2147483648..2147483647 run function anim:add/head/x

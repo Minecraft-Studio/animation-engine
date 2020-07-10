@@ -137,5 +137,43 @@ execute store result score @s _anim_calc run data get entity @s ArmorItems[2].ta
 execute if score @s _anim_calc matches 2 store result score @s _anim_rlz_ease run data get entity @s ArmorItems[2].tag.anim[0].rotate.r_leg.z.ease_add 1000
 execute if score @s _anim_calc matches 3 store result score @s _anim_rlz_ease run data get entity @s ArmorItems[2].tag.anim[0].rotate.r_leg.z.ease_add -1000
 
+#Pos
+execute if data entity @s ArmorItems[2].tag.anim[0].position.x.value run data modify entity @s Pose.RightLeg[0] set from entity @s ArmorItems[2].tag.anim[0].position.x.value
+execute if data entity @s ArmorItems[2].tag.anim[0].position.y.value run data modify entity @s Pose.RightLeg[1] set from entity @s ArmorItems[2].tag.anim[0].position.y.value
+execute if data entity @s ArmorItems[2].tag.anim[0].position.z.value run data modify entity @s Pose.RightLeg[2] set from entity @s ArmorItems[2].tag.anim[0].position.z.value
+scoreboard players reset @s _anim_px
+scoreboard players reset @s _anim_py
+scoreboard players reset @s _anim_pz
+scoreboard players reset @s _anim_px_ease
+scoreboard players reset @s _anim_py_ease
+scoreboard players reset @s _anim_pz_ease
+execute store result score @s _anim_px run data get entity @s ArmorItems[2].tag.anim[0].position.x.add 1000
+execute store result score @s _anim_py run data get entity @s ArmorItems[2].tag.anim[0].position.y.add 1000
+execute store result score @s _anim_pz run data get entity @s ArmorItems[2].tag.anim[0].position.z.add 1000
+execute store result score @s _anim_calc run data get entity @s ArmorItems[2].tag.anim[0].position.x.type
+execute if score @s _anim_calc matches 2 store result score @s _anim_px_ease run data get entity @s ArmorItems[2].tag.anim[0].position.x.ease_add 1000
+execute if score @s _anim_calc matches 3 store result score @s _anim_px_ease run data get entity @s ArmorItems[2].tag.anim[0].position.x.ease_add -1000
+execute store result score @s _anim_calc run data get entity @s ArmorItems[2].tag.anim[0].position.y.type
+execute if score @s _anim_calc matches 2 store result score @s _anim_py_ease run data get entity @s ArmorItems[2].tag.anim[0].position.y.ease_add 1000
+execute if score @s _anim_calc matches 3 store result score @s _anim_py_ease run data get entity @s ArmorItems[2].tag.anim[0].position.y.ease_add -1000
+execute store result score @s _anim_calc run data get entity @s ArmorItems[2].tag.anim[0].position.z.type
+execute if score @s _anim_calc matches 2 store result score @s _anim_pz_ease run data get entity @s ArmorItems[2].tag.anim[0].position.z.ease_add 1000
+execute if score @s _anim_calc matches 3 store result score @s _anim_pz_ease run data get entity @s ArmorItems[2].tag.anim[0].position.z.ease_add -1000
+
+#Extra
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.head run data modify entity @s ArmorItems[3] set from entity @s ArmorItems[2].tag.anim[0].extra.head
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.body run data modify entity @s ArmorItems[3].tag.anim set from entity @s ArmorItems[2].tag.anim
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.body run data modify entity @s ArmorItems[2] set from entity @s ArmorItems[2].tag.anim[0].extra.body
+execute if data entity @s ArmorItems[3].tag.anim run data modify entity @s ArmorItems[2].tag.anim set from entity @s ArmorItems[3].tag.anim
+execute if data entity @s ArmorItems[3].tag.anim run data remove entity @s ArmorItems[3].tag.anim
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.legg run data modify entity @s ArmorItems[1] set from entity @s ArmorItems[2].tag.anim[0].extra.legg
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.boots run data modify entity @s ArmorItems[0] set from entity @s ArmorItems[2].tag.anim[0].extra.boots
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.r_arm run data modify entity @s HandItems[0] set from entity @s ArmorItems[2].tag.anim[0].extra.r_arm
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.l_arm run data modify entity @s HandItems[1] set from entity @s ArmorItems[2].tag.anim[0].extra.l_arm
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.invisible run data modify entity @s Invisible set from entity @s ArmorItems[2].tag.anim[0].extra.invisible
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.marker run data modify entity @s Marker set from entity @s ArmorItems[2].tag.anim[0].extra.marker
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.arms run data modify entity @s ShowArms set from entity @s ArmorItems[2].tag.anim[0].extra.arms
+execute if data entity @s ArmorItems[2].tag.anim[0].extra.small run data modify entity @s Small set from entity @s ArmorItems[2].tag.anim[0].extra.small
+
 data remove entity @s ArmorItems[2].tag.anim[0]
 execute store result score @s _anim_tick run data get entity @s ArmorItems[2].tag.anim[0].tick_left
