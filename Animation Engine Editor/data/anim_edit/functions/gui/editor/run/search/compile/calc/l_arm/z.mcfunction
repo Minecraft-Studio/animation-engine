@@ -1,8 +1,6 @@
 #FIX: Set it per each coordinate instead of for whole keyframe
 execute if data storage anim:editor last_compile_keyframe.rotate.l_arm.z.value store result storage anim:editor result_comp_tick_old.rotate.l_arm.z.type int 1 run data get storage anim:editor result_get.extra.rotate
-execute if data storage anim:editor last_compile_keyframe.rotate.l_arm.z.value store result storage anim:editor temp_get1 int 1 run data get storage anim:editor last_compile_keyframe.rotate.l_arm.z.value 1000
-execute if data storage anim:editor last_compile_keyframe.rotate.l_arm.z.value store result score $_comp_calc1 _anim run data get storage anim:editor temp_get1
-execute if data storage anim:editor last_compile_keyframe.rotate.l_arm.z.value run data remove storage anim:editor temp_get1
+execute if data storage anim:editor last_compile_keyframe.rotate.l_arm.z.value store result score $_comp_calc1 _anim run data get storage anim:editor last_compile_keyframe.rotate.l_arm.z.value 1000
 execute if data storage anim:editor last_compile_keyframe.rotate.l_arm.z.value store result score $_comp_calc2 _anim run data get storage anim:editor last_compile_keyframe.rotate.l_arm.z.tick
 execute if data storage anim:editor last_compile_keyframe.rotate.l_arm.z.value run scoreboard players operation $_comp_value_add _anim = $_comp_value _anim
 execute if data storage anim:editor last_compile_keyframe.rotate.l_arm.z.value run scoreboard players operation $_comp_value_add _anim -= $_comp_calc1 _anim
