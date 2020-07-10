@@ -1,6 +1,6 @@
 data modify storage anim:editor current_keyframe.extra.body set from entity @p[tag=anim_user] SelectedItem
-execute unless data entity @p[tag=anim_user] SelectedItem.id run data modify storage anim:editor current_keyframe.extra.body set value "none"
+execute unless data entity @p[tag=anim_user] SelectedItem.id run data modify storage anim:editor current_keyframe.extra.body set value 1
 execute as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = $_sel_ida _anim if score @s _anim_idb = $_sel_part _anim run data modify entity @s ArmorItems[2] set from entity @p[tag=anim_user] SelectedItem
 execute unless data entity @p[tag=anim_user] SelectedItem.id if data storage anim:editor sel_anim_data.body as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = $_sel_ida _anim if score @s _anim_idb = $_sel_part _anim run data modify entity @s ArmorItems[2] set from storage anim:editor sel_anim_data.body
-execute unless data entity @p[tag=anim_user] SelectedItem.id unless data storage anim:editor sel_anim_data.body as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = $_sel_ida _anim if score @s _anim_idb = $_sel_part _anim run data remove entity @s ArmorItems[2]
+execute unless data entity @p[tag=anim_user] SelectedItem.id unless data storage anim:editor sel_anim_data.body as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = $_sel_ida _anim if score @s _anim_idb = $_sel_part _anim run data modify entity @s ArmorItems[2] set value {id:"minecraft:stone",Count:1b}
 function anim_edit:gui/editor/run/text/tab/rotate

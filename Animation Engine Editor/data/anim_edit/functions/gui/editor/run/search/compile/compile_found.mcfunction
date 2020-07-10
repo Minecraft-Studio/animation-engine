@@ -18,9 +18,6 @@ execute if data storage anim:editor result_get.extra.r_arm run data modify stora
 execute if data storage anim:editor result_get.extra.l_arm run data modify storage anim:editor result_comp_tick.extra.l_arm set from storage anim:editor result_get.extra.l_arm
 execute if data storage anim:editor result_get.extra.legg run data modify storage anim:editor result_comp_tick.extra.legg set from storage anim:editor result_get.extra.legg
 execute if data storage anim:editor result_get.extra.boots run data modify storage anim:editor result_comp_tick.extra.boots set from storage anim:editor result_get.extra.boots
-tellraw @p {"nbt":"result_get.extra","storage":"anim:editor","color":"red"}
-tellraw @p {"nbt":"result_comp_tick.extra","storage":"anim:editor","color":"yellow"}
-
 
 #head x
 # get data
@@ -175,8 +172,10 @@ data remove storage anim:editor temp_get1
 # apply data
 execute if data storage anim:editor result_get.rotate.position.z run function anim_edit:gui/editor/run/search/compile/calc/pos/z
 
-
-
+#tick_left calc (also in case if the keyframe only has extra on it)
+execute if data storage anim:editor result_comp_tick_old store result score $_comp_calc2 _anim run data get storage anim:editor result_comp_tick_old.tick
+execute if data storage anim:editor result_comp_tick_old run scoreboard players operation $_comp_value_tick _anim = $_get_tick _anim
+execute if data storage anim:editor result_comp_tick_old run scoreboard players operation $_comp_value_tick _anim -= $_comp_calc2 _anim
 
 #Apply everything
 execute store result storage anim:editor result_comp_tick.tick int 1 run scoreboard players get $_get_tick _anim

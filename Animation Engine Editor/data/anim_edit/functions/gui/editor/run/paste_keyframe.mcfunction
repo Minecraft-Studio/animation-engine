@@ -14,3 +14,4 @@ execute unless score $_paste_sel_exists _anim matches 1 run tellraw @p[tag=anim_
 scoreboard players reset $_tmp_clipboard_exists _anim
 scoreboard players reset $_paste_sel_exists _anim
 
+function anim_edit:gamerule
