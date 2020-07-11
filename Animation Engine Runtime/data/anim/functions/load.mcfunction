@@ -1,1 +1,1 @@
-execute unless data storage anim:runtime {ver:"v1.0.0a1"} run schedule function anim:install 1s
+execute unless data storage anim:runtime {ver:"v1.0a2"} run schedule function anim:install 1s
