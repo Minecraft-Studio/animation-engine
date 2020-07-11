@@ -1,4 +1,5 @@
-scoreboard players remove @s _anim_tick 1
+scoreboard players add @s _anim_tick 1
+scoreboard players remove @s _anim_tick_left 1
 
 execute unless data entity @s Pose.Head run data modify entity @s Pose.Head set value [0f,0f,0.0001f]
 execute unless data entity @s Pose.Body run data modify entity @s Pose.Body set value [0f,0f,0.0001f]
@@ -35,5 +36,5 @@ execute if score @s _anim_rlz matches -2147483648..2147483647 run function anim:
 
 
 #If 0 load next keyframe
-execute if score @s _anim_tick matches ..0 unless data entity @s ArmorItems[2].tag.anim[0] run function anim:end_animation
-execute if score @s _anim_tick matches ..0 if data entity @s ArmorItems[2].tag.anim[0] run function anim:zero_tick
+execute if score @s _anim_tick_left matches ..0 unless data entity @s ArmorItems[2].tag.anim[0] run function anim:end_animation
+execute if score @s _anim_tick_left matches ..0 if data entity @s ArmorItems[2].tag.anim[0] run function anim:zero_tick

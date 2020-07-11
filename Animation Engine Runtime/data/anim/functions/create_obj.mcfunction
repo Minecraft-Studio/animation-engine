@@ -1,4 +1,5 @@
 scoreboard objectives add _anim_tick dummy
+scoreboard objectives add _anim_tick_left dummy
 
 scoreboard objectives add _anim_hx dummy
 scoreboard objectives add _anim_hy dummy

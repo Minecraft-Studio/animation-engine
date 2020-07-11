@@ -193,6 +193,6 @@ execute if data entity @s ArmorItems[2].tag.anim[0].extra.arms run data modify e
 execute if data entity @s ArmorItems[2].tag.anim[0].extra.small run data modify entity @s Small set from entity @s ArmorItems[2].tag.anim[0].extra.small
 
 data remove entity @s ArmorItems[2].tag.anim[0]
-execute store result score @s _anim_tick run data get entity @s ArmorItems[2].tag.anim[0].tick_left
+execute store result score @s _anim_tick_left run data get entity @s ArmorItems[2].tag.anim[0].tick_left
 
 #FIX: set anim_part's body armor as `stone` and `count 1` to be able to paste data into it even through it's empty

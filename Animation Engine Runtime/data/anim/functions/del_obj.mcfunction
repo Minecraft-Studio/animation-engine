@@ -1,4 +1,5 @@
 scoreboard objectives remove _anim_tick
+scoreboard objectives remove _anim_tick_left
 
 scoreboard objectives remove _anim_hx
 scoreboard objectives remove _anim_hy

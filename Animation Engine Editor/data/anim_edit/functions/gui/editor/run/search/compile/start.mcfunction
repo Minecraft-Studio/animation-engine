@@ -1,5 +1,5 @@
 #Save the keyframe
-execute as @e[type=armor_stand,tag=anim_menu,tag=anim_editor,tag=anim_editor_sel,limit=1] run function anim_edit:gui/editor/run/save_keyframe
+execute unless score $_api_endcomp _anim matches 1 as @e[type=armor_stand,tag=anim_menu,tag=anim_editor,tag=anim_editor_sel,limit=1] run function anim_edit:gui/editor/run/save_keyframe
 #Backup, if enabled
 execute if score $sett_bckp _anim matches 1 run function anim_edit:gui/editor/run/backup
 #First step, Sorting: Removes Empty keyframes and sorts all keyframes in the array from tick 0 to max tick in the keyframe
@@ -24,6 +24,17 @@ scoreboard players reset $_emp_l_arm _anim
 scoreboard players reset $_emp_r_leg _anim
 scoreboard players reset $_emp_l_leg _anim
 scoreboard players reset $_emp_pos _anim
+scoreboard players reset $_emp_extra _anim
+scoreboard players reset $_emp_extra1 _anim
+scoreboard players reset $_emp_extra2 _anim
+scoreboard players reset $_emp_extra3 _anim
+scoreboard players reset $_emp_extra4 _anim
+scoreboard players reset $_emp_extra5 _anim
+scoreboard players reset $_emp_extra6 _anim
+scoreboard players reset $_emp_extra7 _anim
+scoreboard players reset $_emp_extra8 _anim
+scoreboard players reset $_emp_extra9 _anim
+scoreboard players reset $_emp_extra0 _anim
 #scoreboard players reset $_emp_extra _anim
 scoreboard players reset $_keyframe_empty _anim
 scoreboard players reset $_comp_m_t _anim
