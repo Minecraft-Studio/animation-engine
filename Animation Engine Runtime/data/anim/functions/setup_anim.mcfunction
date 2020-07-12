@@ -28,6 +28,52 @@ execute if score @s _anim_calc matches -2147483648..2147483647 run data modify e
 execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless data entity @s ArmorItems[{tag:{anim_get:{type:4}}}] run function anim:compiler
 execute store result score @s _anim_hx run data get entity @s ArmorItems[2].tag.anim_result.add 1000
 execute store result score @s _anim_hx_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
+# Head y
+scoreboard players reset @s _anim_calc
+data remove entity @s ArmorItems[2].tag.anim_get
+data remove entity @s ArmorItems[2].tag.anim_result
+execute store result score @s _anim_calc run data get entity @s Pose.Head[1] 1000
+execute if score @s _anim_calc matches -2147483648..2147483647 run data modify entity @s ArmorItems[2].tag.anim_get set from entity @s ArmorItems[2].tag.anim[0].rotate.head.y
+execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless data entity @s ArmorItems[{tag:{anim_get:{type:4}}}] run function anim:compiler
+execute store result score @s _anim_hy run data get entity @s ArmorItems[2].tag.anim_result.add 1000
+execute store result score @s _anim_hy_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
+# Head z
+scoreboard players reset @s _anim_calc
+data remove entity @s ArmorItems[2].tag.anim_get
+data remove entity @s ArmorItems[2].tag.anim_result
+execute store result score @s _anim_calc run data get entity @s Pose.Head[2] 1000
+execute if score @s _anim_calc matches -2147483648..2147483647 run data modify entity @s ArmorItems[2].tag.anim_get set from entity @s ArmorItems[2].tag.anim[0].rotate.head.z
+execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless data entity @s ArmorItems[{tag:{anim_get:{type:4}}}] run function anim:compiler
+execute store result score @s _anim_hz run data get entity @s ArmorItems[2].tag.anim_result.add 1000
+execute store result score @s _anim_hz_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
+
+# Body x
+scoreboard players reset @s _anim_calc
+data remove entity @s ArmorItems[2].tag.anim_get
+data remove entity @s ArmorItems[2].tag.anim_result
+execute store result score @s _anim_calc run data get entity @s Pose.Body[0] 1000
+execute if score @s _anim_calc matches -2147483648..2147483647 run data modify entity @s ArmorItems[2].tag.anim_get set from entity @s ArmorItems[2].tag.anim[0].rotate.body.x
+execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless data entity @s ArmorItems[{tag:{anim_get:{type:4}}}] run function anim:compiler
+execute store result score @s _anim_bx run data get entity @s ArmorItems[2].tag.anim_result.add 1000
+execute store result score @s _anim_bx_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
+# Body y
+scoreboard players reset @s _anim_calc
+data remove entity @s ArmorItems[2].tag.anim_get
+data remove entity @s ArmorItems[2].tag.anim_result
+execute store result score @s _anim_calc run data get entity @s Pose.Body[1] 1000
+execute if score @s _anim_calc matches -2147483648..2147483647 run data modify entity @s ArmorItems[2].tag.anim_get set from entity @s ArmorItems[2].tag.anim[0].rotate.body.y
+execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless data entity @s ArmorItems[{tag:{anim_get:{type:4}}}] run function anim:compiler
+execute store result score @s _anim_by run data get entity @s ArmorItems[2].tag.anim_result.add 1000
+execute store result score @s _anim_by_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
+# Body z
+scoreboard players reset @s _anim_calc
+data remove entity @s ArmorItems[2].tag.anim_get
+data remove entity @s ArmorItems[2].tag.anim_result
+execute store result score @s _anim_calc run data get entity @s Pose.Body[2] 1000
+execute if score @s _anim_calc matches -2147483648..2147483647 run data modify entity @s ArmorItems[2].tag.anim_get set from entity @s ArmorItems[2].tag.anim[0].rotate.body.z
+execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless data entity @s ArmorItems[{tag:{anim_get:{type:4}}}] run function anim:compiler
+execute store result score @s _anim_bz run data get entity @s ArmorItems[2].tag.anim_result.add 1000
+execute store result score @s _anim_bz_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
 
 
 #Apply

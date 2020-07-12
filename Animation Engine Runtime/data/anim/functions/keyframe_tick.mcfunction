@@ -34,6 +34,9 @@ execute if score @s _anim_rlx matches -2147483648..2147483647 run function anim:
 execute if score @s _anim_rly matches -2147483648..2147483647 run function anim:add/r_leg/y
 execute if score @s _anim_rlz matches -2147483648..2147483647 run function anim:add/r_leg/z
 
+# tellraw @p {"nbt":"Pose.Head","entity":"@s","color":"red"}
+# tellraw @p {"score": {"name": "@s","objective": "_anim_tick_left"},"color":"green"}
+
 #If 0 load next keyframe
 execute if score @s _anim_tick_left matches ..0 unless data entity @s ArmorItems[2].tag.anim[0] run function anim:end_animation
 execute if score @s _anim_tick_left matches ..0 if data entity @s ArmorItems[2].tag.anim[0] run function anim:zero_tick
