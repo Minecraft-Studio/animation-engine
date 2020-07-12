@@ -11,6 +11,28 @@ execute if data storage anim:editor key_custom.rotate.head.z store result storag
 execute if data storage anim:editor key_custom.rotate.head.z run function anim_edit:gui/editor/run/text/tab/rotate
 execute if data storage anim:editor key_custom.rotate.head.z run data remove storage anim:editor key_custom.rotate.head.z
 
+#ALL (debug purposes)
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.head.x float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.head.y float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.head.z float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.body.x float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.body.y float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.body.z float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.l_arm.x float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.l_arm.y float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.l_arm.z float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.r_arm.x float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.r_arm.y float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.r_arm.z float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.l_leg.x float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.l_leg.y float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.l_leg.z float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.r_leg.x float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.r_leg.y float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate store result storage anim:editor current_keyframe.rotate.r_leg.z float 1 run data get storage anim:editor key_custom.rotate
+execute if data storage anim:editor key_custom.rotate run function anim_edit:gui/editor/run/text/tab/rotate
+execute if data storage anim:editor key_custom.rotate run data remove storage anim:editor key_custom.rotate
+
 #BODY
 execute if data storage anim:editor key_custom.rotate.body.x store result storage anim:editor current_keyframe.rotate.body.x float 1 run data get storage anim:editor key_custom.rotate.body.x
 execute if data storage anim:editor key_custom.rotate.body.x run function anim_edit:gui/editor/run/text/tab/rotate
