@@ -14,5 +14,5 @@ scoreboard players reset $_comp_value_add _anim
 scoreboard players reset $_comp_value_ease_add2 _anim
 bossbar remove _anim_prgbar
 scoreboard players reset $1000 _anim
-execute unless score $_api_endcomp _anim matches 1.. run tellraw @a {"text":"Compiling keyframes finished!","color":"gold"}
-execute if score $_api_endcomp _anim matches 1 run function anim_edit:gui/editor/run/search/fast_forward_ticks/start
+execute if score $_api_endcomp _anim matches 1.. run tellraw @a {"text":"Compiling keyframes finished!","color":"gold"}
+execute if score $_api_endcomp _anim matches 1..2 run function anim_edit:gui/editor/run/search/fast_forward_ticks/start

@@ -7,3 +7,4 @@ data modify storage anim:editor search set from storage anim:editor keyframes
 data remove storage anim:editor current_keyframe
 function anim_edit:gui/editor/run/search/load_keyframe/loop
 execute as @e[tag=anim_editor_sel] run function anim_edit:gui/editor/select
+execute if score $_api_sel2 _anim matches 1 run function anim_edit:gui/editor/run/select/sel3
