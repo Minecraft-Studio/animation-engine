@@ -190,10 +190,70 @@ execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s
 execute store result score @s _anim_rlz run data get entity @s ArmorItems[2].tag.anim_result.add 1000
 execute store result score @s _anim_rlz_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
 
+#Setup Position
+# Pos x setup
+scoreboard players operation $_ida_lookup _anim = @s _anim_ida
+execute store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[0] 1000
+execute store result score @s _anim_calc7 run data get entity @s Pos[0] 1000
+execute store result score @s _anim_px_value run scoreboard players operation @s _anim_calc7 -= @s _anim_calc
+tellraw @p ["",{"score":{"name": "@s","objective": "_anim_px_value"},"color":"red"}]
+scoreboard players reset $_ida_lookup _anim
+scoreboard players reset @s _anim_calc
+scoreboard players reset @s _anim_calc7
+# Pos y setup
+scoreboard players operation $_ida_lookup _anim = @s _anim_ida
+execute store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[1] 1000
+execute store result score @s _anim_calc7 run data get entity @s Pos[1] 1000
+execute store result score @s _anim_py_value run scoreboard players operation @s _anim_calc7 -= @s _anim_calc
+tellraw @p ["",{"score":{"name": "@s","objective": "_anim_py_value"},"color":"red"}]
+scoreboard players reset $_ida_lookup _anim
+scoreboard players reset @s _anim_calc
+scoreboard players reset @s _anim_calc7
+# Pos z setup
+scoreboard players operation $_ida_lookup _anim = @s _anim_ida
+execute store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[2] 1000
+execute store result score @s _anim_calc7 run data get entity @s Pos[2] 1000
+execute store result score @s _anim_pz_value run scoreboard players operation @s _anim_calc7 -= @s _anim_calc
+tellraw @p ["",{"score":{"name": "@s","objective": "_anim_pz_value"},"color":"red"}]
+scoreboard players reset $_ida_lookup _anim
+scoreboard players reset @s _anim_calc
+scoreboard players reset @s _anim_calc7
+
+
+# Position x
+scoreboard players reset @s _anim_calc
+data remove entity @s ArmorItems[2].tag.anim_get
+data remove entity @s ArmorItems[2].tag.anim_result
+scoreboard players operation @s _anim_calc = @s _anim_px_value
+execute if score @s _anim_calc matches -2147483648..2147483647 run data modify entity @s ArmorItems[2].tag.anim_get set from entity @s ArmorItems[2].tag.anim[0].position.x
+execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless score @s _anim_calc_type matches 4 run function anim:compiler
+execute store result score @s _anim_px run data get entity @s ArmorItems[2].tag.anim_result.add 1000
+execute store result score @s _anim_px_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
+# Position y
+scoreboard players reset @s _anim_calc
+data remove entity @s ArmorItems[2].tag.anim_get
+data remove entity @s ArmorItems[2].tag.anim_result
+scoreboard players operation @s _anim_calc = @s _anim_py_value
+execute if score @s _anim_calc matches -2147483648..2147483647 run data modify entity @s ArmorItems[2].tag.anim_get set from entity @s ArmorItems[2].tag.anim[0].position.y
+execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless score @s _anim_calc_type matches 4 run function anim:compiler
+execute store result score @s _anim_py run data get entity @s ArmorItems[2].tag.anim_result.add 1000
+execute store result score @s _anim_py_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
+# Position z
+scoreboard players reset @s _anim_calc
+data remove entity @s ArmorItems[2].tag.anim_get
+data remove entity @s ArmorItems[2].tag.anim_result
+scoreboard players operation @s _anim_calc = @s _anim_pz_value
+execute if score @s _anim_calc matches -2147483648..2147483647 run data modify entity @s ArmorItems[2].tag.anim_get set from entity @s ArmorItems[2].tag.anim[0].position.z
+execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless score @s _anim_calc_type matches 4 run function anim:compiler
+execute store result score @s _anim_pz run data get entity @s ArmorItems[2].tag.anim_result.add 1000
+execute store result score @s _anim_pz_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
+
+
 #Apply
 scoreboard objectives remove _anim_calc2
 scoreboard objectives remove _anim_calc3
 scoreboard objectives remove _anim_calc4
 scoreboard objectives remove _anim_calc5
 scoreboard objectives remove _anim_calc6
+scoreboard objectives remove _anim_calc7
 scoreboard objectives remove _anim_calc_type

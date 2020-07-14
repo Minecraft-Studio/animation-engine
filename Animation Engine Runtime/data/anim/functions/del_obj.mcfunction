@@ -45,5 +45,9 @@ scoreboard objectives remove _anim_px_ease
 scoreboard objectives remove _anim_py_ease
 scoreboard objectives remove _anim_pz_ease
 
+scoreboard objectives remove _anim_px_value
+scoreboard objectives remove _anim_py_value
+scoreboard objectives remove _anim_pz_value
+
 scoreboard objectives remove _anim_calc
 scoreboard players set $anim_playing _anim 0

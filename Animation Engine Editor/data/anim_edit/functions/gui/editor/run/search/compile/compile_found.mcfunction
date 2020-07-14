@@ -153,24 +153,24 @@ execute if data storage anim:editor result_get.rotate.r_leg.z run function anim_
 
 #position x
 # get data
-execute store result score $_comp_value _anim run data get storage anim:editor result_get.rotate.position.x 1000
+execute store result score $_comp_value _anim run data get storage anim:editor result_get.position.x 1000
 data remove storage anim:editor temp_get1
 # apply data
-execute if data storage anim:editor result_get.rotate.position.x run function anim_edit:gui/editor/run/search/compile/calc/pos/x
+execute if data storage anim:editor result_get.position.x run function anim_edit:gui/editor/run/search/compile/calc/pos/x
 
 #position y
 # get data
-execute store result score $_comp_value _anim run data get storage anim:editor result_get.rotate.position.y 1000
+execute store result score $_comp_value _anim run data get storage anim:editor result_get.position.y 1000
 data remove storage anim:editor temp_get1
 # apply data
-execute if data storage anim:editor result_get.rotate.position.y run function anim_edit:gui/editor/run/search/compile/calc/pos/y
+execute if data storage anim:editor result_get.position.y run function anim_edit:gui/editor/run/search/compile/calc/pos/y
 
 #position z
 # get data
-execute store result score $_comp_value _anim run data get storage anim:editor result_get.rotate.position.z 1000
+execute store result score $_comp_value _anim run data get storage anim:editor result_get.position.z 1000
 data remove storage anim:editor temp_get1
 # apply data
-execute if data storage anim:editor result_get.rotate.position.z run function anim_edit:gui/editor/run/search/compile/calc/pos/z
+execute if data storage anim:editor result_get.position.z run function anim_edit:gui/editor/run/search/compile/calc/pos/z
 
 #tick_left calc (also in case if the keyframe only has extra on it)
 execute if data storage anim:editor result_comp_tick_old store result score $_comp_calc2 _anim run data get storage anim:editor result_comp_tick_old.tick

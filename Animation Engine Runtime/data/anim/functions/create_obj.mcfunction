@@ -45,4 +45,8 @@ scoreboard objectives add _anim_px_ease dummy
 scoreboard objectives add _anim_py_ease dummy
 scoreboard objectives add _anim_pz_ease dummy
 
+scoreboard objectives add _anim_px_value dummy
+scoreboard objectives add _anim_py_value dummy
+scoreboard objectives add _anim_pz_value dummy
+
 scoreboard objectives add _anim_calc dummy
