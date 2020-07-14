@@ -219,7 +219,6 @@ scoreboard players reset $_ida_lookup _anim
 scoreboard players reset @s _anim_calc
 scoreboard players reset @s _anim_calc7
 
-
 # Position x
 scoreboard players reset @s _anim_calc
 data remove entity @s ArmorItems[2].tag.anim_get
@@ -247,7 +246,6 @@ execute if score @s _anim_calc matches -2147483648..2147483647 run data modify e
 execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s ArmorItems[2].tag.anim_get unless score @s _anim_calc_type matches 4 run function anim:compiler
 execute store result score @s _anim_pz run data get entity @s ArmorItems[2].tag.anim_result.add 1000
 execute store result score @s _anim_pz_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
-
 
 #Apply
 scoreboard objectives remove _anim_calc2

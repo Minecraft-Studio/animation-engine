@@ -10,33 +10,33 @@ execute unless data entity @s Pose.RightArm run data modify entity @s Pose.Right
 
 # FIX: Make it more performance: make multiple mcfunctions for each
 # Head
-execute if score @s _anim_hx matches -2147483648..2147483647 run function anim:add/head/x
-execute if score @s _anim_hy matches -2147483648..2147483647 run function anim:add/head/y
-execute if score @s _anim_hz matches -2147483648..2147483647 run function anim:add/head/z
+execute unless score @s _anim_hx matches 0 if score @s _anim_hx matches -2147483648..2147483647 run function anim:add/head/x
+execute unless score @s _anim_hy matches 0 if score @s _anim_hy matches -2147483648..2147483647 run function anim:add/head/y
+execute unless score @s _anim_hz matches 0 if score @s _anim_hz matches -2147483648..2147483647 run function anim:add/head/z
 # Body
-execute if score @s _anim_bx matches -2147483648..2147483647 run function anim:add/body/x
-execute if score @s _anim_by matches -2147483648..2147483647 run function anim:add/body/y
-execute if score @s _anim_bz matches -2147483648..2147483647 run function anim:add/body/z
+execute unless score @s _anim_bx matches 0 if score @s _anim_bx matches -2147483648..2147483647 run function anim:add/body/x
+execute unless score @s _anim_by matches 0 if score @s _anim_by matches -2147483648..2147483647 run function anim:add/body/y
+execute unless score @s _anim_bz matches 0 if score @s _anim_bz matches -2147483648..2147483647 run function anim:add/body/z
 # Left Arm
-execute if score @s _anim_lax matches -2147483648..2147483647 run function anim:add/l_arm/x
-execute if score @s _anim_lay matches -2147483648..2147483647 run function anim:add/l_arm/y
-execute if score @s _anim_laz matches -2147483648..2147483647 run function anim:add/l_arm/z
+execute unless score @s _anim_lax matches 0 if score @s _anim_lax matches -2147483648..2147483647 run function anim:add/l_arm/x
+execute unless score @s _anim_lay matches 0 if score @s _anim_lay matches -2147483648..2147483647 run function anim:add/l_arm/y
+execute unless score @s _anim_laz matches 0 if score @s _anim_laz matches -2147483648..2147483647 run function anim:add/l_arm/z
 # Right Arm
-execute if score @s _anim_rax matches -2147483648..2147483647 run function anim:add/r_arm/x
-execute if score @s _anim_ray matches -2147483648..2147483647 run function anim:add/r_arm/y
-execute if score @s _anim_raz matches -2147483648..2147483647 run function anim:add/r_arm/z
+execute unless score @s _anim_rax matches 0 if score @s _anim_rax matches -2147483648..2147483647 run function anim:add/r_arm/x
+execute unless score @s _anim_ray matches 0 if score @s _anim_ray matches -2147483648..2147483647 run function anim:add/r_arm/y
+execute unless score @s _anim_raz matches 0 if score @s _anim_raz matches -2147483648..2147483647 run function anim:add/r_arm/z
 # Left Leg
-execute if score @s _anim_llx matches -2147483648..2147483647 run function anim:add/l_leg/x
-execute if score @s _anim_lly matches -2147483648..2147483647 run function anim:add/l_leg/y
-execute if score @s _anim_llz matches -2147483648..2147483647 run function anim:add/l_leg/z
+execute unless score @s _anim_llx matches 0 if score @s _anim_llx matches -2147483648..2147483647 run function anim:add/l_leg/x
+execute unless score @s _anim_lly matches 0 if score @s _anim_lly matches -2147483648..2147483647 run function anim:add/l_leg/y
+execute unless score @s _anim_llz matches 0 if score @s _anim_llz matches -2147483648..2147483647 run function anim:add/l_leg/z
 # Right Leg
-execute if score @s _anim_rlx matches -2147483648..2147483647 run function anim:add/r_leg/x
-execute if score @s _anim_rly matches -2147483648..2147483647 run function anim:add/r_leg/y
-execute if score @s _anim_rlz matches -2147483648..2147483647 run function anim:add/r_leg/z
+execute unless score @s _anim_rlx matches 0 if score @s _anim_rlx matches -2147483648..2147483647 run function anim:add/r_leg/x
+execute unless score @s _anim_rly matches 0 if score @s _anim_rly matches -2147483648..2147483647 run function anim:add/r_leg/y
+execute unless score @s _anim_rlz matches 0 if score @s _anim_rlz matches -2147483648..2147483647 run function anim:add/r_leg/z
 # Postion
-execute if score @s _anim_px matches -2147483648..2147483647 run function anim:add/pos/x
-execute if score @s _anim_py matches -2147483648..2147483647 run function anim:add/pos/y
-execute if score @s _anim_pz matches -2147483648..2147483647 run function anim:add/pos/z
+execute unless score @s _anim_px matches 0 if score @s _anim_px matches -2147483648..2147483647 run function anim:add/pos/x
+execute unless score @s _anim_py matches 0 if score @s _anim_py matches -2147483648..2147483647 run function anim:add/pos/y
+execute unless score @s _anim_pz matches 0 if score @s _anim_pz matches -2147483648..2147483647 run function anim:add/pos/z
 
 # tellraw @p {"nbt":"Pose.Head","entity":"@s","color":"red"}
 # tellraw @p {"score": {"name": "@s","objective": "_anim_tick_left"},"color":"green"}
