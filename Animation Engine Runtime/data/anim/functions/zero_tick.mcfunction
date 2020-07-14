@@ -102,7 +102,7 @@ execute store result score @s _anim_rly_ease run data get entity @s ArmorItems[2
 execute store result score @s _anim_rlz_ease run data get entity @s ArmorItems[2].tag.anim[0].rotate.r_leg.z.ease_add 1000
 
 #Pos
-tellraw @p {"nbt":"ArmorItems[2].tag.anim[0]","entity":"@s","color":"aqua"}
+# tellraw @p {"nbt":"ArmorItems[2].tag.anim[0]","entity":"@s","color":"aqua"}
 execute if data entity @s ArmorItems[2].tag.anim[0].position run scoreboard players operation $_ida_lookup _anim = @s _anim_ida
 execute if data entity @s ArmorItems[2].tag.anim[0].position.x.value store result score @s _anim_px_value run data get entity @s ArmorItems[2].tag.anim[0].position.x.value 1000
 execute if data entity @s ArmorItems[2].tag.anim[0].position.x.value store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[0] 1000
@@ -114,7 +114,7 @@ execute if data entity @s ArmorItems[2].tag.anim[0].position.z.value store resul
 execute if data entity @s ArmorItems[2].tag.anim[0].position.z.value store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[2] 1000
 execute if data entity @s ArmorItems[2].tag.anim[0].position.z.value store result entity @s Pos[2] double 0.001 run scoreboard players operation @s _anim_calc += @s _anim_pz_value
 scoreboard players reset $_ida_lookup _anim
-tellraw @p {"nbt":"Pos","entity":"@s","color":"aqua"}
+# tellraw @p {"nbt":"Pos","entity":"@s","color":"aqua"}
 scoreboard players reset @s _anim_px
 scoreboard players reset @s _anim_py
 scoreboard players reset @s _anim_pz

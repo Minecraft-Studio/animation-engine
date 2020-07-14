@@ -196,7 +196,7 @@ scoreboard players operation $_ida_lookup _anim = @s _anim_ida
 execute store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[0] 1000
 execute store result score @s _anim_calc7 run data get entity @s Pos[0] 1000
 execute store result score @s _anim_px_value run scoreboard players operation @s _anim_calc7 -= @s _anim_calc
-tellraw @p ["",{"score":{"name": "@s","objective": "_anim_px_value"},"color":"red"}]
+# tellraw @p ["",{"score":{"name": "@s","objective": "_anim_px_value"},"color":"red"}]
 scoreboard players reset $_ida_lookup _anim
 scoreboard players reset @s _anim_calc
 scoreboard players reset @s _anim_calc7
@@ -205,7 +205,7 @@ scoreboard players operation $_ida_lookup _anim = @s _anim_ida
 execute store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[1] 1000
 execute store result score @s _anim_calc7 run data get entity @s Pos[1] 1000
 execute store result score @s _anim_py_value run scoreboard players operation @s _anim_calc7 -= @s _anim_calc
-tellraw @p ["",{"score":{"name": "@s","objective": "_anim_py_value"},"color":"red"}]
+# tellraw @p ["",{"score":{"name": "@s","objective": "_anim_py_value"},"color":"red"}]
 scoreboard players reset $_ida_lookup _anim
 scoreboard players reset @s _anim_calc
 scoreboard players reset @s _anim_calc7
@@ -214,7 +214,7 @@ scoreboard players operation $_ida_lookup _anim = @s _anim_ida
 execute store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[2] 1000
 execute store result score @s _anim_calc7 run data get entity @s Pos[2] 1000
 execute store result score @s _anim_pz_value run scoreboard players operation @s _anim_calc7 -= @s _anim_calc
-tellraw @p ["",{"score":{"name": "@s","objective": "_anim_pz_value"},"color":"red"}]
+# tellraw @p ["",{"score":{"name": "@s","objective": "_anim_pz_value"},"color":"red"}]
 scoreboard players reset $_ida_lookup _anim
 scoreboard players reset @s _anim_calc
 scoreboard players reset @s _anim_calc7
