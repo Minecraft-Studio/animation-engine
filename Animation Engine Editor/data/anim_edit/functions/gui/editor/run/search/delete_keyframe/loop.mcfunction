@@ -17,8 +17,10 @@ scoreboard players reset $_key_deleted _anim
 data remove storage anim:editor search[0]
 
 # remove the whole keyframes incase the result is empty
-execute unless data storage anim:editor search[] run tellraw @p[tag=anim_user] {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
-execute unless data storage anim:editor search[] run tellraw @p[tag=anim_user] [{"text":"Successfully deleted keyframe ","color":"red"},{"score":{"name":"$_dkey_col","objective":"_anim"},"color":"dark_red"},{"text":" in row ","color":"red"},{"score":{"name":"$_dkey_row","objective":"_anim"},"color":"dark_red"}]
+execute unless data storage anim:editor search[] unless score $_api_enddel _anim matches 1 run tellraw @p[tag=anim_user] {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
+execute unless data storage anim:editor search[] unless score $_api_enddel _anim matches 1 run tellraw @p[tag=anim_user] [{"text":"Successfully deleted keyframe ","color":"red"},{"score":{"name":"$_dkey_col","objective":"_anim"},"color":"dark_red"},{"text":" in row ","color":"red"},{"score":{"name":"$_dkey_row","objective":"_anim"},"color":"dark_red"}]
+execute unless data storage anim:editor search[] if score $_api_enddel _anim matches 1 run tellraw @p[tag=anim_user] [{"text":"Bad Keyframe ","color":"red"},{"score":{"name":"$_dkey_col","objective":"_anim"},"color":"dark_red"},{"text":" in row ","color":"red"},{"score":{"name":"$_dkey_row","objective":"_anim"},"color":"dark_red"},{"text":"deleted"}]
+execute unless data storage anim:editor search[] run scoreboard players reset $_api_enddel _anim
 execute unless data storage anim:editor search[] run data remove storage anim:editor keyframes
 # set the keyframes to result (success if result has something)
 execute unless data storage anim:editor search[] run data modify storage anim:editor keyframes set from storage anim:editor result

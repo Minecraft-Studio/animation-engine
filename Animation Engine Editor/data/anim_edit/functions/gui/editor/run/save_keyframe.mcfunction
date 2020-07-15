@@ -27,6 +27,7 @@ execute if score $_emp_extra1 _anim matches 0 if score $_emp_extra2 _anim matche
 # set value $_keyframe_empty _anim to 1 if the keyframe data is empty
 execute if score $_emp_head _anim matches 0 if score $_emp_body _anim matches 0 if score $_emp_r_arm _anim matches 0 if score $_emp_l_arm _anim matches 0 if score $_emp_r_leg _anim matches 0 if score $_emp_l_leg _anim matches 0 if score $_emp_pos _anim matches 0 if score $_emp_extra _anim matches 0 run scoreboard players set $_keyframe_empty _anim 1
 # if empty, delete it
+execute if score $_search_found _anim matches 1 if score $_keyframe_empty _anim matches 1 run scoreboard players set $_api_enddel _anim 1
 execute if score $_search_found _anim matches 1 if score $_keyframe_empty _anim matches 1 run function anim_edit:gui/editor/run/search/delete_keyframe/start
 
 #if doesn't exists and it's not empty, create new (if it wasn't found):

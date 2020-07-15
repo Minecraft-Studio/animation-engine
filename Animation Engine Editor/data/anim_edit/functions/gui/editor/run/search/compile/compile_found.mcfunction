@@ -150,6 +150,7 @@ data remove storage anim:editor temp_get1
 # apply data
 execute if data storage anim:editor result_get.rotate.r_leg.z run function anim_edit:gui/editor/run/search/compile/calc/r_leg/z
 
+# tellraw vanjmali ["",{"nbt":"result_get.position","storage": "anim:editor"}]
 
 #position x
 # get data
@@ -171,6 +172,8 @@ execute store result score $_comp_value _anim run data get storage anim:editor r
 data remove storage anim:editor temp_get1
 # apply data
 execute if data storage anim:editor result_get.position.z run function anim_edit:gui/editor/run/search/compile/calc/pos/z
+# tellraw vanjmali ["",{"nbt":"result_comp_tick.position","storage": "anim:editor","color":"yellow"}]
+# tellraw vanjmali ["",{"nbt":"result_comp_tick_old.position","storage": "anim:editor","color":"gold"}]
 
 #tick_left calc (also in case if the keyframe only has extra on it)
 execute if data storage anim:editor result_comp_tick_old store result score $_comp_calc2 _anim run data get storage anim:editor result_comp_tick_old.tick
