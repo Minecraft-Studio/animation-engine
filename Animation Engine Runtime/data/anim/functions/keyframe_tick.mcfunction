@@ -8,7 +8,6 @@ execute unless data entity @s Pose.RightLeg run data modify entity @s Pose.Right
 execute unless data entity @s Pose.LeftArm run data modify entity @s Pose.LeftArm set value [0f,0f,0.0001f]
 execute unless data entity @s Pose.RightArm run data modify entity @s Pose.RightArm set value [0f,0f,0.0001f]
 
-# FIX: Make it more performance: make multiple mcfunctions for each
 # Head
 execute unless score @s _anim_hx matches 0 if score @s _anim_hx matches -2147483648..2147483647 run function anim:add/head/x
 execute unless score @s _anim_hy matches 0 if score @s _anim_hy matches -2147483648..2147483647 run function anim:add/head/y
