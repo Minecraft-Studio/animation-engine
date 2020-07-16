@@ -32,4 +32,4 @@ execute if entity @s[tag=anim_menu86] run function anim_edit:gui/editor/run/refr
 execute if entity @s[tag=anim_menu_1] run data merge entity @s {CustomName:'{"text":"[Settings]","color":"gray"}'}
 execute if entity @s[tag=anim_menu90] run data merge entity @s {CustomName:'{"text":"[Close]","color":"red"}'}
 execute if entity @s[tag=anim_menu91] run data merge entity @s {CustomName:'{"text":"[Compile]","color":"yellow"}'}
-execute if entity @s[tag=anim_menu92] run data merge entity @s {CustomName:'{"text":"[Show Menu]","color":"blue"}'}
+execute if entity @s[tag=anim_menu92] run data merge entity @s {CustomName:'{"text":"[Menu]","color":"blue"}'}
