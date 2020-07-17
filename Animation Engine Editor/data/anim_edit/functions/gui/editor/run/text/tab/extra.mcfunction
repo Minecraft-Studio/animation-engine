@@ -10,7 +10,7 @@ tellraw @p[tag=anim_user] {"text":""}
 
 scoreboard players operation $_sel_part _anim = $_sel_row _anim
 scoreboard players operation $_sel_part _anim += $_page_row _anim
-scoreboard players operation $_sel_part _anim -= $1 _anim
+scoreboard players remove $_sel_part _anim 1
 execute unless data storage anim:editor current_keyframe.extra.invisible store result score $_extra_nbt _anim as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = $_sel_ida _anim if score @s _anim_idb = $_sel_part _anim run data get entity @s Invisible
 execute unless data storage anim:editor current_keyframe.extra.invisible if score $_extra_nbt _anim matches 1 run tellraw @p[tag=anim_user] ["",{"text":"Invisible: ","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Makes armor stand turn invisible","color":"gray"}]}},{"text":"[ON]","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/run/text/extra/nbt/invisible"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Toggles invisibility\nCurrently not set to any value","color":"gray"}]}}]
 execute unless data storage anim:editor current_keyframe.extra.invisible if score $_extra_nbt _anim matches 0 run tellraw @p[tag=anim_user] ["",{"text":"Invisible: ","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Makes armor stand turn invisible","color":"gray"}]}},{"text":"[OFF]","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/run/text/extra/nbt/invisible"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Toggles invisibility\nCurrently not set to any value","color":"gray"}]}}]
