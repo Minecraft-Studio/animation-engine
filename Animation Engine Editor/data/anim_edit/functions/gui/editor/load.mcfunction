@@ -1,6 +1,4 @@
 scoreboard players set $show_menu _anim 6
-scoreboard players set $name_menu _anim 6
-scoreboard players set $name_id _anim 0
 scoreboard players set $_page _anim 1
 scoreboard players reset $_done _anim
 kill @e[type=armor_stand,tag=anim_menu,tag=!anim_menu_main]
