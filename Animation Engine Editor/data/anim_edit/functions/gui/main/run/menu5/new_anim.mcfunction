@@ -31,4 +31,6 @@ scoreboard players remove $tmp_value _anim 1
 scoreboard players operation $tmp_value _anim *= $7 _anim
 execute store result storage anim:editor anim_data.id int 1 run scoreboard players operation $animation_id _anim += $tmp_value _anim
 data remove storage anim:editor keyframes
-
+scoreboard players reset $tmp_value _anim
+#>Opens Editor
+function anim_edit:editor

@@ -219,8 +219,5 @@ execute as @e[type=armor_stand,tag=anim_editor_r5] run scoreboard players set @s
 execute as @e[type=armor_stand,tag=anim_editor_r6] run scoreboard players set @s _anim_editor_row 6
 execute as @e[type=armor_stand,tag=anim_editor_r7] run scoreboard players set @s _anim_editor_row 7
 
-#data remove storage anim:editor keyframes
-#TEMP REMOVE. MAKE SURE IT LOADS THE KEYFRAMES
-
 #load all keyframes
 function anim_edit:gui/editor/run/search/load_all_keyframes/start
