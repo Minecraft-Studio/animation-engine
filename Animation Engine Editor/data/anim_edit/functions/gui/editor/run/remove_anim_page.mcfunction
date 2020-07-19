@@ -1,0 +1,1 @@
+scoreboard players remove $anim_page _anim 1
