@@ -1,7 +1,7 @@
 #runs to import data into editor
 # get the column number
 scoreboard players set $_load_col _anim 19
-scoreboard players operation $_load_col_temp _anim = $_page_max _anim
+scoreboard players operation $_load_col_temp _anim = $page_max _anim
 scoreboard players operation $_load_col_temp _anim -= $_search_t _anim
 scoreboard players operation $_load_col _anim -= $_load_col_temp _anim
 scoreboard players reset $_load_col_temp

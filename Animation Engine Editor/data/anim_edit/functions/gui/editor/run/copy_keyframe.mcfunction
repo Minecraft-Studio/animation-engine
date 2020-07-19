@@ -8,7 +8,7 @@ execute as @e[type=armor_stand,tag=anim_editor_sel] if score @s _anim_editor_col
 data remove storage anim:editor clipboard.tick
 data remove storage anim:editor clipboard.part
 execute if score $_copy_sel_exists _anim matches 1 run scoreboard players operation $_tmp_copy_calc _anim = $_sel_col _anim
-execute if score $_copy_sel_exists _anim matches 1 run scoreboard players operation $_tmp_copy_calc _anim += $_page _anim
+execute if score $_copy_sel_exists _anim matches 1 run scoreboard players operation $_tmp_copy_calc _anim += $page _anim
 execute if score $_copy_sel_exists _anim matches 1 run function anim_edit:gui/editor/run/text/tab/rotate
 execute if score $_copy_sel_exists _anim matches 1 run tellraw @p[tag=anim_user] ["",{"text":"Keyframe ","color":"green"},{"score":{"name":"$_tmp_copy_calc","objective":"_anim"},"color":"dark_green"},{"text":" in part ","color":"green"},{"score":{"name":"$_sel_row","objective":"_anim"},"color":"dark_green"},{"text":" copied to the clipboard! ","color":"green"},{"text":"[Copied Data]","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"nbt":"clipboard","storage":"anim:editor","color":"gray"}]}}]
 execute unless score $_copy_sel_exists _anim matches 1 run tellraw @p[tag=anim_user] {"text":"No keyframe is selected","color":"red"}

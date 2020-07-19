@@ -5,7 +5,7 @@ bossbar set _anim_prgbar_fast players @p[tag=anim_user]
 
 #get target tick
 scoreboard players operation $_key_col _anim = @e[tag=anim_editor_sel,limit=1] _anim_editor_col
-execute store result bossbar _anim_prgbar_fast max run scoreboard players operation $_key_col _anim += $_page _anim
+execute store result bossbar _anim_prgbar_fast max run scoreboard players operation $_key_col _anim += $page _anim
 
 #setup
 execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_sel,limit=1] _anim_ida run data modify entity @s ArmorItems[2].tag.anim set from storage anim:editor result_comp

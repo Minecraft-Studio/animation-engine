@@ -1,7 +1,7 @@
 #start the load a specific keyframe, search loop
 scoreboard players operation $_dkey_row _anim = @e[type=armor_stand,tag=anim_editor_sel] _anim_editor_row
 scoreboard players operation $_dkey_col _anim = @e[type=armor_stand,tag=anim_editor_sel] _anim_editor_col
-scoreboard players operation $_dkey_col _anim += $_page _anim
+scoreboard players operation $_dkey_col _anim += $page _anim
 data modify storage anim:editor search set from storage anim:editor keyframes
 execute store result score $_del_kmax _anim run data get storage anim:editor search
 data remove storage anim:editor result

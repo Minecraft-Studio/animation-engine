@@ -8,7 +8,7 @@ bossbar add _anim_prgbar {"text":"Sorting...","color":"green"}
 bossbar set _anim_prgbar color green
 bossbar set _anim_prgbar players @p[tag=anim_user]
 data modify storage anim:editor search set from storage anim:editor keyframes
-scoreboard players operation $comp_page _anim = $_page _anim
+scoreboard players operation $comp_page _anim = $page _anim
 scoreboard players set $comp_max_t _anim 0
 data remove storage anim:editor result
 scoreboard players set $comp_keyf _anim 0
