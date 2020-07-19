@@ -7,5 +7,6 @@ function anim_edit:gui/main/run/menu5/get_anim/start
 data remove storage anim:editor keyframes
 data modify storage anim:editor keyframes set from storage anim:editor anim_data.keyframes
 execute store result score $animation_id _anim run data get storage anim:editor anim_data.id
+scoreboard players reset $selected_animation _anim
 #>Opens Editor
 function anim_edit:editor
