@@ -13,4 +13,4 @@ execute if score $main_page _anim matches ..1 run tellraw @p[tag=anim_user] [{"t
 execute if score $main_page _anim matches 2.. run tellraw @p[tag=anim_user] [{"text":"Page:","color":"yellow"},{"text":" <","clickEvent":{"action": "run_command","value":"/function anim_edit:gui/main/run/page_down"}}," ",{"score":{"name":"$main_page","objective": "_anim"},"color":"white"}," ",{"text":"> ","clickEvent":{"action": "run_command","value":"/function anim_edit:gui/main/run/page_up"}}]
 
 #>Gamerule
-function anim_edit:gamerule/
+function anim_edit:gamerule
