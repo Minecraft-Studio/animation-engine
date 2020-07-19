@@ -32,6 +32,3 @@ scoreboard players add $_get_search _anim 1
 scoreboard players add $_id_search _anim 1
 tag @e[tag=anim_main_menu_sel,tag=anim_main] remove anim_main_menu_sel 
 execute if score $_get_search _anim matches ..7 run function anim_edit:gui/main/run/menu3/get/loop
-
-#>Gamerule
-function anim_edit:gamerule
