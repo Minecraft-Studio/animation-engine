@@ -1,6 +1,5 @@
 scoreboard players set $show_menu _anim 6
 scoreboard players set $page _anim 1
-scoreboard players reset $_done _anim
 kill @e[type=armor_stand,tag=anim_menu,tag=!anim_menu_main]
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"Editor","color":"gray","underlined":true}',Tags:["anim_menu","anim_menu0","anim_menu_unsel"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBaseplate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"1","color":"aqua"}',Tags:["anim_menu","anim_menu1"]}
