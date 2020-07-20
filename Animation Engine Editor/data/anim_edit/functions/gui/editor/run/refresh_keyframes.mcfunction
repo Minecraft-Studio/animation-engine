@@ -24,6 +24,7 @@ execute as @p[tag=anim_user] at @s unless score $_tmp_anim_exists _anim matches 
 data modify entity @e[type=armor_stand,tag=anim_menu1,limit=1] CustomName set value '{"text":"Err","color":"red"}'
 execute as @p[tag=anim_user] at @s run data modify entity @e[type=armor_stand,tag=anim_menu1,limit=1] CustomName set from block ~ ~ ~ Text1
 execute as @p[tag=anim_user] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ air
+scoreboard players operation @e[tag=anim_editor,tag=anim_editor_r1] _anim_editor_row = $_tmp_anim_page _anim
 scoreboard players add $_tmp_anim_page _anim 1
 scoreboard players reset $_tmp_anim_exists _anim
 execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_tmp_anim_page _anim run scoreboard players set $_tmp_anim_exists _anim 1 
@@ -32,6 +33,7 @@ execute as @p[tag=anim_user] at @s unless score $_tmp_anim_exists _anim matches 
 data modify entity @e[type=armor_stand,tag=anim_menu2,limit=1] CustomName set value '{"text":"Err","color":"red"}'
 execute as @p[tag=anim_user] at @s run data modify entity @e[type=armor_stand,tag=anim_menu2,limit=1] CustomName set from block ~ ~ ~ Text1
 execute as @p[tag=anim_user] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ air
+scoreboard players operation @e[tag=anim_editor,tag=anim_editor_r2] _anim_editor_row = $_tmp_anim_page _anim
 scoreboard players add $_tmp_anim_page _anim 1
 scoreboard players reset $_tmp_anim_exists _anim
 execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_tmp_anim_page _anim run scoreboard players set $_tmp_anim_exists _anim 1 
@@ -40,6 +42,7 @@ execute as @p[tag=anim_user] at @s unless score $_tmp_anim_exists _anim matches 
 data modify entity @e[type=armor_stand,tag=anim_menu3,limit=1] CustomName set value '{"text":"Err","color":"red"}'
 execute as @p[tag=anim_user] at @s run data modify entity @e[type=armor_stand,tag=anim_menu3,limit=1] CustomName set from block ~ ~ ~ Text1
 execute as @p[tag=anim_user] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ air
+scoreboard players operation @e[tag=anim_editor,tag=anim_editor_r3] _anim_editor_row = $_tmp_anim_page _anim
 scoreboard players add $_tmp_anim_page _anim 1
 scoreboard players reset $_tmp_anim_exists _anim
 execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_tmp_anim_page _anim run scoreboard players set $_tmp_anim_exists _anim 1 
@@ -48,6 +51,7 @@ execute as @p[tag=anim_user] at @s unless score $_tmp_anim_exists _anim matches 
 data modify entity @e[type=armor_stand,tag=anim_menu4,limit=1] CustomName set value '{"text":"Err","color":"red"}'
 execute as @p[tag=anim_user] at @s run data modify entity @e[type=armor_stand,tag=anim_menu4,limit=1] CustomName set from block ~ ~ ~ Text1
 execute as @p[tag=anim_user] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ air
+scoreboard players operation @e[tag=anim_editor,tag=anim_editor_r4] _anim_editor_row = $_tmp_anim_page _anim
 scoreboard players add $_tmp_anim_page _anim 1
 scoreboard players reset $_tmp_anim_exists _anim
 execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_tmp_anim_page _anim run scoreboard players set $_tmp_anim_exists _anim 1 
@@ -56,6 +60,7 @@ execute as @p[tag=anim_user] at @s unless score $_tmp_anim_exists _anim matches 
 data modify entity @e[type=armor_stand,tag=anim_menu5,limit=1] CustomName set value '{"text":"Err","color":"red"}'
 execute as @p[tag=anim_user] at @s run data modify entity @e[type=armor_stand,tag=anim_menu5,limit=1] CustomName set from block ~ ~ ~ Text1
 execute as @p[tag=anim_user] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ air
+scoreboard players operation @e[tag=anim_editor,tag=anim_editor_r5] _anim_editor_row = $_tmp_anim_page _anim
 scoreboard players add $_tmp_anim_page _anim 1
 scoreboard players reset $_tmp_anim_exists _anim
 execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_tmp_anim_page _anim run scoreboard players set $_tmp_anim_exists _anim 1 
@@ -64,6 +69,7 @@ execute as @p[tag=anim_user] at @s unless score $_tmp_anim_exists _anim matches 
 data modify entity @e[type=armor_stand,tag=anim_menu6,limit=1] CustomName set value '{"text":"Err","color":"red"}'
 execute as @p[tag=anim_user] at @s run data modify entity @e[type=armor_stand,tag=anim_menu6,limit=1] CustomName set from block ~ ~ ~ Text1
 execute as @p[tag=anim_user] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ air
+scoreboard players operation @e[tag=anim_editor,tag=anim_editor_r6] _anim_editor_row = $_tmp_anim_page _anim
 scoreboard players add $_tmp_anim_page _anim 1
 scoreboard players reset $_tmp_anim_exists _anim
 execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_tmp_anim_page _anim run scoreboard players set $_tmp_anim_exists _anim 1 
@@ -72,6 +78,7 @@ execute as @p[tag=anim_user] at @s unless score $_tmp_anim_exists _anim matches 
 data modify entity @e[type=armor_stand,tag=anim_menu7,limit=1] CustomName set value '{"text":"Err","color":"red"}'
 execute as @p[tag=anim_user] at @s run data modify entity @e[type=armor_stand,tag=anim_menu7,limit=1] CustomName set from block ~ ~ ~ Text1
 execute as @p[tag=anim_user] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ air
+scoreboard players operation @e[tag=anim_editor,tag=anim_editor_r7] _anim_editor_row = $_tmp_anim_page _anim
 
 scoreboard players reset $_tmp_anim_exists _anim
 scoreboard players reset $_tmp_anim_page _anim

@@ -1,9 +1,9 @@
 #start the load, search loop
 data modify storage anim:editor search set from storage anim:editor keyframes
 scoreboard players operation $page_max _anim = $page _anim
-scoreboard players set 19 _anim 19
-scoreboard players operation $page_max _anim += 19 _anim
-scoreboard players reset 19 _anim
+scoreboard players add $page_max _anim 19
+scoreboard players operation $anim_page_max _anim = $anim_page _anim
+scoreboard players add $anim_page_max _anim 6
 # remove tags
 tag @e[type=armor_stand,tag=anim_editor] add anim_editor0
 tag @e[type=armor_stand,tag=anim_editor] remove anim_editor1
