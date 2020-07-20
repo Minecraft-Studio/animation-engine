@@ -16,3 +16,5 @@ execute as @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu92] run function a
 execute as @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor_r1] run function anim_edit:gui/editor/run/select/sel1
 
 execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu91] run function anim_edit:gui/editor/run/search/compile/start
+
+execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu90] run function anim_edit:gui/editor/run/save_and_close
