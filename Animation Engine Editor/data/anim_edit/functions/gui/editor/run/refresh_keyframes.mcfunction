@@ -97,4 +97,10 @@ scoreboard players reset $_tmp_old_pg_ _anim
 scoreboard players reset $_tmp_old_pg _anim
 execute unless score $_sel_col _anim matches 0..19 run scoreboard players reset $_sel_row _anim
 execute unless score $_sel_col _anim matches 0..19 run scoreboard players reset $_sel_col _anim
+execute as @e[tag=anim_menu] if score @s _anim_editor_row = $_sel_row _anim run scoreboard players set $_tmp_key_in_row_range _anim 1
+execute unless score $_tmp_key_in_row_range _anim matches 1 run scoreboard players reset $_sel_row _anim
+execute unless score $_tmp_key_in_row_range _anim matches 1 run scoreboard players reset $_sel_col _anim
+scoreboard players reset $_tmp_key_in_row_range _anim
+execute unless score $_sel_col _anim matches 0..19 run scoreboard players reset $_sel_row _anim
+execute unless score $_sel_col _anim matches 0..19 run scoreboard players reset $_sel_col _anim
 function anim_edit:gui/editor/run/search/load_all_keyframes/start
