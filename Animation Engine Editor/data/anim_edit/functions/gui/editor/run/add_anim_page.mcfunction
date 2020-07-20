@@ -2,5 +2,6 @@
 scoreboard players set $_no_deselect _anim 1
 execute as @e[type=armor_stand,tag=anim_menu,tag=anim_editor,tag=anim_editor_sel,limit=1] run function anim_edit:gui/editor/run/save_keyframe
 
+scoreboard players set $_refresh_api _anim 1
 scoreboard players add $anim_page _anim 1
 function anim_edit:gui/editor/run/refresh_keyframes
