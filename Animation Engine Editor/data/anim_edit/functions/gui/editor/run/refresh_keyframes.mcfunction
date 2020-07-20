@@ -85,6 +85,10 @@ scoreboard players reset $_tmp_anim_page _anim
 
 scoreboard players reset $_sign_placed _anim
 
+# Reset icons for pages
+execute as @e[tag=anim_menu87] run function anim_edit:gui/editor/reset
+execute as @e[tag=anim_menu93] run function anim_edit:gui/editor/reset
+
 function anim_edit:gui/editor/run/refresh_page
 scoreboard players operation $_tmp_old_pg_ _anim = $_tmp_old_pg _anim
 scoreboard players operation $_tmp_old_pg_ _anim -= $page _anim
