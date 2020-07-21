@@ -62,8 +62,8 @@ execute if score $_no_deselect _anim matches 2 run tag @s remove anim_editor_sel
 #Reload all keyframes
 scoreboard players operation $_old_sel_col _anim = $_sel_col _anim
 scoreboard players operation $_old_sel_row _anim = $_sel_row _anim
-execute if score $_no_deselect _anim matches 2 run scoreboard players reset $_sel_col _anim
-execute if score $_no_deselect _anim matches 2 run scoreboard players reset $_sel_row _anim
+execute unless score $_no_deselect _anim matches 2 run scoreboard players reset $_sel_col _anim
+execute unless score $_no_deselect _anim matches 2 run scoreboard players reset $_sel_row _anim
 function anim_edit:gui/editor/run/search/load_all_keyframes/start
 scoreboard players operation $_sel_row _anim = $_old_sel_row _anim
 scoreboard players operation $_sel_col _anim = $_old_sel_col _anim

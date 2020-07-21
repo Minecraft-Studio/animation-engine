@@ -1,7 +1,7 @@
 
 tp @e[type=armor_stand,tag=anim_menu0] ~ ~2.1 ~
 execute positioned ^1.2 ^ ^ run tp @e[type=armor_stand,tag=anim_menu_1] ~ ~2.1 ~
-execute positioned ^-1.4 ^ ^ run tp @e[type=armor_stand,tag=anim_menu90] ~ ~2.1 ~
+execute positioned ^-1.8 ^ ^ run tp @e[type=armor_stand,tag=anim_menu90] ~ ~2.1 ~
 execute positioned ^-1.795 ^ ^ run tp @e[type=armor_stand,tag=anim_menu8] ~ ~1.8 ~
 execute positioned ^2.1 ^ ^ run tp @e[type=armor_stand,tag=anim_menu9] ~ ~1.8 ~
 execute as @e[type=armor_stand,tag=anim_menu_endpoint] at @s if entity @e[tag=anim_menu89,distance=...8] run data modify entity @s CustomNameVisible set value 0b
@@ -41,7 +41,7 @@ execute if entity @e[tag=anim_editor,tag=anim_sel_menu] run function anim_edit:g
 execute if entity @e[type=armor_stand,tag=anim_editor_sel] run function anim_edit:gui/editor/run/text/custom_check
 
 execute positioned ^-1.5 ^ ^ run tp @e[type=armor_stand,tag=anim_menu91] ~ ~-.9 ~
-execute positioned ^-0.475 ^ ^ run tp @e[type=armor_stand,tag=anim_menu92] ~ ~-.9 ~
+execute positioned ^-0.867 ^ ^ run tp @e[type=armor_stand,tag=anim_menu92] ~ ~2.1 ~
 
 execute positioned ^-2.1500 ^ ^ run tp @e[type=armor_stand,tag=anim_menu1] ~ ~1.5 ~
 execute positioned ^-1.8000 ^ ^ run tp @e[type=armor_stand,tag=anim_menu10] ~ ~1.5 ~
