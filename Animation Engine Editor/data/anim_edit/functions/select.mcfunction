@@ -1,10 +1,12 @@
-scoreboard players set $menu_look _anim 0
-execute as @p[tag=anim_user] at @s positioned ^ ^ ^2 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
-execute as @p[tag=anim_user] at @s positioned ^ ^ ^3 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
-execute as @p[tag=anim_user] at @s positioned ^ ^ ^4 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
-execute as @p[tag=anim_user] at @s positioned ^ ^ ^5 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
-execute if score $menu_look _anim matches 0 as @e[type=armor_stand,tag=anim_menu_main] at @s run tp @e[type=slime,tag=anim_selector] ~ ~ ~
-execute unless score $sett_link _anim matches 0 as @p[tag=anim_user] at @s if score $menu_look _anim matches 1 anchored eyes positioned ^ ^ ^2 run tp @e[type=slime,tag=anim_selector] ~ ~-0.25 ~
+# scoreboard players set $menu_look _anim 0
+# execute as @p[tag=anim_user] at @s positioned ^ ^ ^2 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
+# execute as @p[tag=anim_user] at @s positioned ^ ^ ^3 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
+# execute as @p[tag=anim_user] at @s positioned ^ ^ ^4 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
+# execute as @p[tag=anim_user] at @s positioned ^ ^ ^5 if entity @e[type=armor_stand,tag=anim_menu,distance=..1.5] run scoreboard players set $menu_look _anim 1
+# execute if score $menu_look _anim matches 0 as @e[type=armor_stand,tag=anim_menu_main] at @s run tp @e[type=slime,tag=anim_selector] ~ ~ ~
+# execute unless score $sett_link _anim matches 0 as @p[tag=anim_user] at @s if score $menu_look _anim matches 1 anchored eyes positioned ^ ^ ^2 run tp @e[type=slime,tag=anim_selector] ~ ~-0.25 ~
+execute as @e[type=armor_stand,tag=anim_menu_main] at @s run tp @e[type=slime,tag=anim_selector] ~ ~ ~
+execute as @e[type=armor_stand,tag=anim_sel_menu] at @s run tp @e[type=slime,tag=anim_selector] ~ ~.15 ~
 execute if score $sett_link _anim matches 0 as @e[type=armor_stand,tag=anim_menu_main] at @s unless entity @p[tag=anim_user,distance=..5] run tp @e[type=slime,tag=anim_selector] ~ ~ ~
 execute if score $sett_link _anim matches 0 as @e[type=armor_stand,tag=anim_menu_main] at @s if entity @p[tag=anim_user,distance=..5] as @p[tag=anim_user] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=slime,tag=anim_selector] ~ ~-0.25 ~
 execute if score $show_menu _anim matches 7 as @e[type=armor_stand,tag=anim_sel_menu] run function anim_edit:gui/editor/reset
