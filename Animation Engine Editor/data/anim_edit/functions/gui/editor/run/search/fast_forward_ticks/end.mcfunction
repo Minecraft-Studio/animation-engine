@@ -1,4 +1,4 @@
-execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_sel,limit=1] _anim_ida run function anim:end_animation
+execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida run function anim:end_animation
 scoreboard players reset $_fast_tick _anim
 scoreboard players reset $_fast_time_left _anim
 scoreboard players reset $_fast_loop _anim
