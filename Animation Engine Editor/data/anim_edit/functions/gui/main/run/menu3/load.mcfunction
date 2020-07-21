@@ -4,7 +4,7 @@ tag @e[tag=anim_main_select] remove anim_main_select
 tag @e[tag=anim_part_menu] remove anim_part_menu
 execute unless score $main_page _anim matches -2147483648..2147483647 run scoreboard players set $main_page _anim 1
 #>Title
-tellraw @p[tag=anim_user] ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMenu","underlined":true},{"text":" "},{"nbt":"ver","storage":"anim:editor","color":"aqua"},"\n"]
+tellraw @p[tag=anim_user] ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMenu","underlined":true},{"text":" "},{"nbt":"ver","storage":"anim:editor","color":"aqua"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/main/run/menu3/close"}},"\n"]
 tellraw @p[tag=anim_user] {"text":"Select anim model:","color":"gray"}
 #>Render Anim Models
 function anim_edit:gui/main/run/menu3/get/start
