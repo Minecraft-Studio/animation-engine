@@ -9,4 +9,6 @@ data modify storage anim:editor keyframes set from storage anim:editor anim_data
 execute store result score $animation_id _anim run data get storage anim:editor anim_data.id
 scoreboard players reset $selected_animation _anim
 #>Opens Editor
+data modify entity @e[tag=anim_main_select,limit=1] Marker set value 1b
+data modify entity @e[tag=anim_main_select,limit=1] Glowing set value 0b
 function anim_edit:editor

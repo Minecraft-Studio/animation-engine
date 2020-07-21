@@ -13,14 +13,14 @@ bossbar set _anim_prgbar name ["",{"text":"Compiling... ","color":"yellow"},{"te
 
 #calc number of ticks
 scoreboard players add $_get_tick _anim 1
-execute if score $_get_tick _anim > $comp_max_t _anim run scoreboard players add $_get_part _anim 1
-execute if score $_get_tick _anim > $comp_max_t _anim run scoreboard players set $_get_tick _anim 1
 # FIX: ADD PART SUPPORT, FOR NOW NOTHING ABOUT IT
 # To add part support, it will make compile array for each part stored in chestplate tag.
 function anim_edit:gui/editor/run/search/get_tick_data/start
 
 data remove storage anim:editor result_comp_tick
 execute if data storage anim:editor result_get run function anim_edit:gui/editor/run/search/compile/compile_found
+
+execute if score $_get_tick _anim > $comp_max_t _anim run function anim_edit:gui/editor/run/search/compile/save
 
 scoreboard players add $_comp_loop _anim 1
 execute unless score $_comp_kleft _anim matches 1.. run function anim_edit:gui/editor/run/search/compile/end

@@ -191,4 +191,4 @@ data remove storage anim:editor result_comp_tick
 function anim_edit:gui/editor/run/search/compile/remove_tick/start
 
 # If it's the last keyframe, just add it to compile array (nothing to calculate)
-execute if score $_comp_kleft _anim matches 1 run data modify storage anim:editor result_comp append from storage anim:editor result_comp_tick_old
+# execute if score $_comp_kleft _anim matches 1 run data modify storage anim:editor result_comp append from storage anim:editor result_comp_tick_old
