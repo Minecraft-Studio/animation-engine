@@ -1,5 +1,4 @@
 #bossbar
-
 scoreboard players operation $_fast_time_left _anim = $_key_col _anim
 scoreboard players operation $_fast_time_left _anim -= $_fast_tick _anim
 scoreboard players operation $_fast_time_left _anim /= $sett_compile _anim
