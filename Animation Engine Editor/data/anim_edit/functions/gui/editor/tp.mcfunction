@@ -7,18 +7,17 @@ execute positioned ^2.1 ^ ^ run tp @e[type=armor_stand,tag=anim_menu9] ~ ~1.8 ~
 execute as @e[type=armor_stand,tag=anim_menu_endpoint] at @s if entity @e[tag=anim_menu89,distance=...8] run data modify entity @s CustomNameVisible set value 0b
 execute as @e[type=armor_stand,tag=anim_menu_endpoint] at @s unless entity @e[tag=anim_menu89,distance=...8] run data modify entity @s CustomNameVisible set value 1b
 
-execute positioned ^-2.2 ^ ^ run tp @e[type=armor_stand,tag=anim_menu80] ~ ~-0.6 ~
-execute positioned ^-1.9 ^ ^ run tp @e[type=armor_stand,tag=anim_menu94] ~ ~-0.6 ~
-execute positioned ^-1.275 ^ ^ run tp @e[type=armor_stand,tag=anim_menu95] ~ ~-0.6 ~
-execute positioned ^-.7 ^ ^ run tp @e[type=armor_stand,tag=anim_menu85] ~ ~-0.6 ~
-execute positioned ^-.4 ^ ^ run tp @e[type=armor_stand,tag=anim_menu83] ~ ~-0.6 ~
-execute positioned ^-.15 ^ ^ run tp @e[type=armor_stand,tag=anim_menu81] ~ ~-0.6 ~
-execute positioned ^.3 ^ ^ run tp @e[type=armor_stand,tag=anim_menu86] ~ ~-0.6 ~
-execute positioned ^0.75 ^ ^ run tp @e[type=armor_stand,tag=anim_menu82] ~ ~-0.6 ~
-execute positioned ^1.025 ^ ^ run tp @e[type=armor_stand,tag=anim_menu84] ~ ~-0.6 ~
-execute positioned ^1.4 ^ ^ run tp @e[type=armor_stand,tag=anim_menu88] ~ ~-0.6 ~
-execute positioned ^1.75 ^ ^ run tp @e[type=armor_stand,tag=anim_menu87] ~ ~-0.6 ~
-execute positioned ^2.0 ^ ^ run tp @e[type=armor_stand,tag=anim_menu93] ~ ~-0.6 ~
+execute positioned ^-1.6 ^ ^ run tp @e[type=armor_stand,tag=anim_menu80] ~ ~-0.6 ~
+execute positioned ^-1.3 ^ ^ run tp @e[type=armor_stand,tag=anim_menu94] ~ ~-0.6 ~
+execute positioned ^-1.0 ^ ^ run tp @e[type=armor_stand,tag=anim_menu85] ~ ~-0.6 ~
+execute positioned ^-.7 ^ ^ run tp @e[type=armor_stand,tag=anim_menu83] ~ ~-0.6 ~
+execute positioned ^-.45 ^ ^ run tp @e[type=armor_stand,tag=anim_menu81] ~ ~-0.6 ~
+tp @e[type=armor_stand,tag=anim_menu86] ~ ~-0.6 ~
+execute positioned ^.45 ^ ^ run tp @e[type=armor_stand,tag=anim_menu82] ~ ~-0.6 ~
+execute positioned ^.725 ^ ^ run tp @e[type=armor_stand,tag=anim_menu84] ~ ~-0.6 ~
+execute positioned ^1.1 ^ ^ run tp @e[type=armor_stand,tag=anim_menu88] ~ ~-0.6 ~
+execute positioned ^1.55 ^ ^ run tp @e[type=armor_stand,tag=anim_menu87] ~ ~-0.6 ~
+execute positioned ^1.8 ^ ^ run tp @e[type=armor_stand,tag=anim_menu93] ~ ~-0.6 ~
 
 execute at @e[type=armor_stand,tag=anim_menu0] run tp @e[type=armor_stand,tag=anim_menu89] ~ ~-.3 ~
 execute at @e[type=armor_stand,tag=anim_editor_sel,tag=anim_editor_r1] positioned ~ ~0.3 ~ run tp @e[type=armor_stand,tag=anim_menu89] ~ ~ ~
