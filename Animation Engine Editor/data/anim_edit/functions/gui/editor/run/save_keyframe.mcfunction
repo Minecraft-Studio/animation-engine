@@ -55,14 +55,18 @@ scoreboard players reset $_emp_extra9 _anim
 scoreboard players reset $_emp_extra0 _anim
 scoreboard players reset $_keyframe_empty _anim
 # doesn't reset if $_no_deselect _anim is set to 1
-execute if score $_no_deselect _anim matches 1 run data remove storage anim:editor current_keyframe
-scoreboard players reset $_no_deselect _anim
+execute if score $_no_deselect _anim matches 1..2 run data remove storage anim:editor current_keyframe
 
-tag @s remove anim_editor_sel
+execute if score $_no_deselect _anim matches 2 run tag @s remove anim_editor_sel
 
 #Reload all keyframes
 scoreboard players operation $_old_sel_col _anim = $_sel_col _anim
-scoreboard players reset $_sel_col _anim
+scoreboard players operation $_old_sel_row _anim = $_sel_row _anim
+execute if score $_no_deselect _anim matches 2 run scoreboard players reset $_sel_col _anim
+execute if score $_no_deselect _anim matches 2 run scoreboard players reset $_sel_row _anim
 function anim_edit:gui/editor/run/search/load_all_keyframes/start
+scoreboard players operation $_sel_row _anim = $_old_sel_row _anim
 scoreboard players operation $_sel_col _anim = $_old_sel_col _anim
 scoreboard players reset $_old_sel_col _anim
+scoreboard players reset $_old_sel_row _anim
+scoreboard players reset $_no_deselect _anim

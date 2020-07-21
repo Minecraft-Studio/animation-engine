@@ -18,3 +18,8 @@ execute as @e[type=armor_stand,tag=anim_sel_menu,tag=anim_editor] run function a
 execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu91] run function anim_edit:gui/editor/run/search/compile/start
 
 execute if entity @e[type=armor_stand,tag=anim_sel_menu,tag=anim_menu90] run function anim_edit:gui/editor/run/save_and_close
+
+execute unless score $editor_play _anim matches 1.. if entity @e[tag=anim_sel_menu,tag=anim_menu80] run function anim_edit:gui/editor/run/play
+execute unless score $editor_play _anim matches 1.. if entity @e[tag=anim_sel_menu,tag=anim_menu94] run function anim_edit:gui/editor/run/play_from_sel
+execute if score $editor_play _anim matches 1.. if entity @e[tag=anim_sel_menu,tag=anim_menu80] run function anim_edit:gui/editor/run/pause_play
+execute if score $editor_play _anim matches 1.. if entity @e[tag=anim_sel_menu,tag=anim_menu94] run function anim_edit:gui/editor/run/stop_play

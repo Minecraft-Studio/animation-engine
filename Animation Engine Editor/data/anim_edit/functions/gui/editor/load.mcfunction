@@ -169,8 +169,8 @@ summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBase
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"[Settings]","color":"gray"}',Tags:["anim_menu","anim_menu_1"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"1","color":"gray"}',Tags:["anim_menu","anim_menu8","anim_menu_endpoint","anim_menu_unsel"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"20","color":"gray"}',Tags:["anim_menu","anim_menu9","anim_menu_endpoint","anim_menu_unsel"]}
-summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"▶","color":"gray"}',Tags:["anim_menu","anim_menu80"]}
-summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"|▶","color":"gray"}',Tags:["anim_menu","anim_menu94"]}
+summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"▶","color":"gray"}',Tags:["anim_menu","anim_menu80","anim_menu_play"]}
+summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"|▶","color":"gray"}',Tags:["anim_menu","anim_menu94","anim_menu_play"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"<","color":"yellow"}',Tags:["anim_menu","anim_menu81"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":">","color":"yellow"}',Tags:["anim_menu","anim_menu82"]}
 summon armor_stand ~ ~ ~ {Marker:1,NoAI:1,NoGravity:1,Invisible:1,Small:1,NoBasePlate:1,Invulnerable:1,Silent:1,DisabledSlots:2039583,CustomNameVisible:1b,CustomName:'{"text":"<<","color":"#ffc72e"}',Tags:["anim_menu","anim_menu83"]}
@@ -219,4 +219,4 @@ execute as @e[type=armor_stand,tag=anim_editor_r6] run scoreboard players set @s
 execute as @e[type=armor_stand,tag=anim_editor_r7] run scoreboard players set @s _anim_editor_row 7
 
 #load all keyframes
-function anim_edit:gui/editor/run/search/load_all_keyframes/start
+function anim_edit:gui/editor/run/refresh_keyframes

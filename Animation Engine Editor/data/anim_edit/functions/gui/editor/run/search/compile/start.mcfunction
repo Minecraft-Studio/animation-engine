@@ -1,4 +1,5 @@
 #Save the keyframe
+execute if score $_api_endcomp _anim matches 3..4 run scoreboard players set $_no_deselect _anim 2
 execute unless score $_api_endcomp _anim matches 1..2 as @e[type=armor_stand,tag=anim_menu,tag=anim_editor,tag=anim_editor_sel,limit=1] run function anim_edit:gui/editor/run/save_keyframe
 #Backup, if enabled
 execute if score $sett_bckp _anim matches 1 run function anim_edit:gui/editor/run/backup
