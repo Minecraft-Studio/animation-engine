@@ -20,7 +20,7 @@ function anim_edit:gui/editor/run/search/get_tick_data/start
 data remove storage anim:editor result_comp_tick
 execute if data storage anim:editor result_get run function anim_edit:gui/editor/run/search/compile/compile_found
 
-execute if score $_get_tick _anim > $comp_max_t _anim run function anim_edit:gui/editor/run/search/compile/save
+execute if score $_get_tick _anim >= $comp_max_t _anim run function anim_edit:gui/editor/run/search/compile/save
 
 scoreboard players add $_comp_loop _anim 1
 execute unless score $_comp_kleft _anim matches 1.. run function anim_edit:gui/editor/run/search/compile/end

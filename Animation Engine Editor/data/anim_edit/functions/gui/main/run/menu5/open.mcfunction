@@ -12,3 +12,4 @@ scoreboard players reset $selected_animation _anim
 data modify entity @e[tag=anim_main_select,limit=1] Marker set value 1b
 data modify entity @e[tag=anim_main_select,limit=1] Glowing set value 0b
 function anim_edit:editor
+function anim_edit:gamerule

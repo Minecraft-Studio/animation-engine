@@ -23,3 +23,4 @@ execute if score $_api_endcomp _anim matches 3 run scoreboard players set $edito
 execute if score $_api_endcomp _anim matches 3 as @e[tag=anim_menu_play] run function anim_edit:gui/editor/reset
 execute if score $_api_endcomp _anim matches 3 run scoreboard players reset $_api_endcomp _anim 
 execute if score $_api_endcomp _anim matches 4 run function anim_edit:gui/editor/run/search/fast_forward_ticks/start
+execute if score $_api_endcomp _anim matches 5 run function anim_edit:gui/editor/run/save_and_close2
