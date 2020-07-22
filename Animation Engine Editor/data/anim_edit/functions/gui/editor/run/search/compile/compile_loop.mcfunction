@@ -23,6 +23,7 @@ execute if data storage anim:editor result_get run function anim_edit:gui/editor
 execute if score $_get_tick _anim >= $comp_max_t _anim run function anim_edit:gui/editor/run/search/compile/save
 
 scoreboard players add $_comp_loop _anim 1
+execute unless score $_comp_kleft _anim matches 1.. run function anim_edit:gui/editor/run/search/compile/save
 execute unless score $_comp_kleft _anim matches 1.. run function anim_edit:gui/editor/run/search/compile/end
 execute if score $_comp_kleft _anim matches 1.. unless score $_comp_loop _anim > $sett_compile _anim run function anim_edit:gui/editor/run/search/compile/compile_loop
 execute if score $_comp_kleft _anim matches 1.. if score $_comp_loop _anim > $sett_compile _anim run schedule function anim_edit:gui/editor/run/search/compile/compile_loop 1t
