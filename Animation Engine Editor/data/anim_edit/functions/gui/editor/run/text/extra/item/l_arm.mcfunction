@@ -1,6 +1,6 @@
 data modify storage anim:editor current_keyframe.extra.l_arm set from entity @p[tag=anim_user] SelectedItem
 execute unless data entity @p[tag=anim_user] SelectedItem.id run data modify storage anim:editor current_keyframe.extra.l_arm set value 1
-execute as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = $_sel_ida _anim if score @s _anim_idb = $_sel_part _anim run data modify entity @s HandItems[1] set from entity @p[tag=anim_user] SelectedItem
-execute unless data entity @p[tag=anim_user] SelectedItem.id as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = $_sel_ida _anim if score @s _anim_idb = $_sel_part _anim if data storage anim:editor sel_anim_data.l_arm run data modify entity @s HandItems[1] set from storage anim:editor sel_anim_data.l_arm
-execute unless data entity @p[tag=anim_user] SelectedItem.id as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = $_sel_ida _anim if score @s _anim_idb = $_sel_part _anim unless data storage anim:editor sel_anim_data.l_arm run data remove entity @s HandItems[1].id
+execute as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim if score @s _anim_idb = $_sel_part _anim run data modify entity @s HandItems[1] set from entity @p[tag=anim_user] SelectedItem
+execute unless data entity @p[tag=anim_user] SelectedItem.id as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim if score @s _anim_idb = $_sel_part _anim if data storage anim:editor sel_anim_data.l_arm run data modify entity @s HandItems[1] set from storage anim:editor sel_anim_data.l_arm
+execute unless data entity @p[tag=anim_user] SelectedItem.id as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim if score @s _anim_idb = $_sel_part _anim unless data storage anim:editor sel_anim_data.l_arm run data remove entity @s HandItems[1].id
 function anim_edit:gui/editor/run/text/tab/rotate
