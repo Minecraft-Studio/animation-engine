@@ -247,6 +247,8 @@ execute if score @s _anim_calc matches -2147483648..2147483647 if data entity @s
 execute store result score @s _anim_pz run data get entity @s ArmorItems[2].tag.anim_result.add 1000
 execute store result score @s _anim_pz_ease run data get entity @s ArmorItems[2].tag.anim_result.ease_add 1000
 
+data remove entity @s ArmorItems[2].tag.anim_get
+data remove entity @s ArmorItems[2].tag.anim_result
 #Apply
 scoreboard objectives remove _anim_calc2
 scoreboard objectives remove _anim_calc3

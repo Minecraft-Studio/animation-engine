@@ -7,8 +7,8 @@
 # execute unless score $sett_link _anim matches 0 as @p[tag=anim_user] at @s if score $menu_look _anim matches 1 anchored eyes positioned ^ ^ ^2 run tp @e[type=slime,tag=anim_selector] ~ ~-0.25 ~
 execute as @e[type=armor_stand,tag=anim_menu_main] at @s run tp @e[type=slime,tag=anim_selector] ~ ~ ~
 execute as @e[type=armor_stand,tag=anim_sel_menu] at @s run tp @e[type=slime,tag=anim_selector] ~ ~.15 ~
-execute if score $sett_link _anim matches 0 as @e[type=armor_stand,tag=anim_menu_main] at @s unless entity @p[tag=anim_user,distance=..5] run tp @e[type=slime,tag=anim_selector] ~ ~ ~
-execute if score $sett_link _anim matches 0 as @e[type=armor_stand,tag=anim_menu_main] at @s if entity @p[tag=anim_user,distance=..5] as @p[tag=anim_user] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=slime,tag=anim_selector] ~ ~-0.25 ~
+# execute if score $sett_link _anim matches 0 as @e[type=armor_stand,tag=anim_menu_main] at @s unless entity @p[tag=anim_user,distance=..5] run tp @e[type=slime,tag=anim_selector] ~ ~ ~
+# execute if score $sett_link _anim matches 0 as @e[type=armor_stand,tag=anim_menu_main] at @s if entity @p[tag=anim_user,distance=..5] as @p[tag=anim_user] at @s anchored eyes positioned ^ ^ ^2 run tp @e[type=slime,tag=anim_selector] ~ ~-0.25 ~
 execute if score $show_menu _anim matches 7 as @e[type=armor_stand,tag=anim_sel_menu] run function anim_edit:gui/editor/reset
 tag @e[type=armor_stand,tag=anim_sel_menu] remove anim_sel_menu
 execute as @p[tag=anim_user] at @s anchored eyes unless entity @e[type=armor_stand,tag=anim_sel_menu] positioned ^ ^-0.45 ^5.5 run tag @e[type=armor_stand,tag=anim_menu,tag=!anim_menu_unsel,distance=..0.5,limit=1,sort=nearest] add anim_sel_menu
