@@ -1,5 +1,5 @@
 execute if data storage anim:runtime ver run data merge storage anim:runtime {ver_update:1b}
-data merge storage anim:runtime {ver:"v1.0a10"}
+data merge storage anim:runtime {ver:"v1.0a11"}
 scoreboard objectives add _anim dummy
 scoreboard objectives add _anim_ida dummy
 scoreboard objectives add _anim_idb dummy
