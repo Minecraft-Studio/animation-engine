@@ -1,3 +1,4 @@
+
 #>Searches for anim_main with correct ID and selects it with anim_main_menu_sel
 execute as @e[type=armor_stand,tag=anim_main] if score @s _anim_ida = $_id_search _anim run tag @s add anim_main_menu_sel
 tag @e[type=armor_stand,tag=anim_main_menu_sel] add anim_main_menu
