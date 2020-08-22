@@ -1,3 +1,4 @@
+#
 #>Summons new Anim Part if it doesn't exists
 execute unless entity @e[tag=anim_part_select] at @e[tag=anim_main_select] run function anim_edit:gui/main/run/new_part
 #>Disables Anim Model glow effect
