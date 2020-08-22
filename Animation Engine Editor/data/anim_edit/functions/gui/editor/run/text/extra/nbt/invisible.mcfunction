@@ -1,3 +1,4 @@
+execute unless data storage anim:editor current_keyframe.extra.invisible store result storage anim:editor current_keyframe.extra.invisible_prev int 1 as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_sel_row _anim run data get entity @s Invisible
 execute unless data storage anim:editor current_keyframe.extra.invisible store result storage anim:editor current_keyframe.extra.invisible int 1 as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_sel_row _anim run data get entity @s Invisible
 execute if data storage anim:editor {current_keyframe:{extra:{invisible:0}}} run data modify storage anim:editor current_keyframe.extra.invisible set value 2
 execute if data storage anim:editor {current_keyframe:{extra:{invisible:1}}} run data modify storage anim:editor current_keyframe.extra.invisible set value 0
