@@ -1,0 +1,6 @@
+execute store result score $_tmp_data _anim run data get storage anim:editor current_keyframe.rotate.rotation.x 1000
+execute store result storage anim:editor current_keyframe.rotate.rotation.x float 0.001 run scoreboard players remove $_tmp_data _anim 4000
+scoreboard players reset $_tmp_data _anim
+scoreboard players set $_set_keyframe _anim 1
+function anim_edit:gui/editor/run/text/tab/rotate
+

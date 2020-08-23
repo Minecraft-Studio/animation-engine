@@ -249,7 +249,7 @@ execute store result score @s _anim_pz_ease run data get entity @s ArmorItems[2]
 
 data remove entity @s ArmorItems[2].tag.anim_get
 data remove entity @s ArmorItems[2].tag.anim_result
-#Apply
+#Reset
 scoreboard objectives remove _anim_calc2
 scoreboard objectives remove _anim_calc3
 scoreboard objectives remove _anim_calc4

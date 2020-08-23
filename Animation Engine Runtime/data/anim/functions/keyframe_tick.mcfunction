@@ -1,12 +1,10 @@
 scoreboard players add @s _anim_tick 1
 scoreboard players remove @s _anim_tick_left 1
 
-execute unless data entity @s Pose.Head run data modify entity @s Pose.Head set value [0f,0f,0.0001f]
-execute unless data entity @s Pose.Body run data modify entity @s Pose.Body set value [0f,0f,0.0001f]
-execute unless data entity @s Pose.LeftLeg run data modify entity @s Pose.LeftLeg set value [0f,0f,0.0001f]
-execute unless data entity @s Pose.RightLeg run data modify entity @s Pose.RightLeg set value [0f,0f,0.0001f]
-execute unless data entity @s Pose.LeftArm run data modify entity @s Pose.LeftArm set value [0f,0f,0.0001f]
-execute unless data entity @s Pose.RightArm run data modify entity @s Pose.RightArm set value [0f,0f,0.0001f]
+data modify storage anim:runtime entity_data_calc set value {Pose:{Head:[0.0f,0.0f,0.0f],Body:[0.0f,0.0f,0.0f],RightArm:[0.0f,0.0f,0.0f],LeftArm:[0.0f,0.0f,0.0f],RightLeg:[0.0f,0.0f,0.0f],LeftLeg:[0.0f,0.0f,0.0f]},Rotation:[0.0f,0.0f],Pos:[0.0d,0.0d,0.0d]}
+data modify storage anim:runtime entity_data_calc.Pose merge from entity @s Pose
+data modify storage anim:runtime entity_data_calc.Pos set from entity @s Pos
+data modify storage anim:runtime entity_data_calc.Rotation set from entity @s Rotation
 
 # Head
 execute unless score @s _anim_hx matches 0 if score @s _anim_hx matches -2147483648..2147483647 run function anim:add/head/x
@@ -45,3 +43,4 @@ execute unless score @s _anim_pz matches 0 if score @s _anim_pz matches -2147483
 #If 0 load next keyframe
 execute if score @s _anim_tick_left matches ..0 unless data entity @s ArmorItems[2].tag.anim[0] run function anim:end_animation
 execute if score @s _anim_tick_left matches ..0 if data entity @s ArmorItems[2].tag.anim[0] run function anim:zero_tick
+data modify entity @s {} merge from storage anim:runtime entity_data_calc
