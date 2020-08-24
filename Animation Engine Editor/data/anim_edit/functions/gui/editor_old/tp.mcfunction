@@ -38,7 +38,7 @@ execute unless entity @e[tag=anim_editor_sel,tag=anim_sel_menu] run data modify 
 execute if entity @e[tag=anim_editor_sel] run function anim_edit:gui/editor/run/current_tick_sel_calc
 execute if entity @e[tag=anim_editor,tag=anim_sel_menu] run function anim_edit:gui/editor/run/current_tick_sel_calc
 
-execute if entity @e[type=armor_stand,tag=anim_editor_sel] run function anim_edit:gui/editor/run/text/custom_check
+execute if entity @e[type=armor_stand,tag=anim_editor_sel] run function anim_edit:gui/editor/value_editor/custom_check
 
 execute positioned ^-1.5 ^ ^ run tp @e[type=armor_stand,tag=anim_menu91] ~ ~-.9 ~
 execute positioned ^-0.867 ^ ^ run tp @e[type=armor_stand,tag=anim_menu92] ~ ~2.1 ~

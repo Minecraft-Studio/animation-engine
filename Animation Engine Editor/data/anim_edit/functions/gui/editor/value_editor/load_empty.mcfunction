@@ -16,4 +16,4 @@ execute store result storage anim:editor current_keyframe.extra.move int 1 run s
 
 scoreboard players reset $_api_endcomp _anim
 #menu
-function anim_edit:gui/editor/run/text/tab/rotate   
+function anim_edit:gui/editor/load   

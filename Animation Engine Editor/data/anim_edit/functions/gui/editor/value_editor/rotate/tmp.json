@@ -6,7 +6,7 @@
         "color": "gray",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/rotate"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/rotate"
         }
     },
     " ",
@@ -15,7 +15,7 @@
         "color": "gray",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/position"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/position"
         }
     },
     " ",
@@ -24,7 +24,7 @@
         "color": "gray",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/extra"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/extra"
         }
     },
     {
@@ -35,7 +35,7 @@
         "color": "red",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/rotate_1"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/rotate_1"
         }
     },
     " ",
@@ -44,7 +44,7 @@
         "color": "blue",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/rotate_2"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/rotate_2"
         }
     },
     " ",
@@ -53,7 +53,7 @@
         "color": "dark_purple",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/rotate_3"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/rotate_3"
         }
     },
     " ",
@@ -62,7 +62,7 @@
         "color": "light_purple",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/rotate_4"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/rotate_4"
         }
     },
     " ",
@@ -71,7 +71,7 @@
         "color": "dark_green",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/rotate_5"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/rotate_5"
         }
     },
     " ",
@@ -80,7 +80,7 @@
         "color": "green",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/rotate_6"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/rotate_6"
         }
     },
     {
@@ -89,7 +89,7 @@
         "underlined": true,
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/tab/rotate_7"
+            "value": "/function anim_edit:gui/editor/value_editor/tab/rotate_7"
         }
     },
     {
@@ -124,7 +124,7 @@
         "color": "#ffb900",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/remove_x3"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/remove_x3"
         }
     },
     " ",
@@ -133,7 +133,7 @@
         "color": "#ffc72e",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/remove_x2"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/remove_x2"
         }
     },
     " ",
@@ -142,7 +142,7 @@
         "color": "yellow",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/remove_x1"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/remove_x1"
         }
     },
     " ",
@@ -170,7 +170,7 @@
         "color": "green",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/add_x1"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/add_x1"
         }
     },
     " ",
@@ -179,7 +179,7 @@
         "color": "#45d945",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/add_x2"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/add_x2"
         }
     },
     " ",
@@ -188,7 +188,7 @@
         "color": "#3fbf3f",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/add_x3"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/add_x3"
         }
     },
     " ",
@@ -197,7 +197,7 @@
         "color": "red",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/reset_x"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/reset_x"
         },
         "hoverEvent": {
             "action": "show_text",
@@ -220,7 +220,7 @@
         "color": "#ffb900",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/remove_y3"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/remove_y3"
         }
     },
     " ",
@@ -229,7 +229,7 @@
         "color": "#ffc72e",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/remove_y2"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/remove_y2"
         }
     },
     " ",
@@ -238,7 +238,7 @@
         "color": "yellow",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/remove_y1"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/remove_y1"
         }
     },
     " ",
@@ -266,7 +266,7 @@
         "color": "green",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/add_y1"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/add_y1"
         }
     },
     " ",
@@ -275,7 +275,7 @@
         "color": "#45d945",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/add_y2"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/add_y2"
         }
     },
     " ",
@@ -284,7 +284,7 @@
         "color": "#3fbf3f",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/add_y3"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/add_y3"
         }
     },
     " ",
@@ -293,7 +293,7 @@
         "color": "red",
         "clickEvent": {
             "action": "run_command",
-            "value": "/function anim_edit:gui/editor/run/text/rotate/rotation/reset_y"
+            "value": "/function anim_edit:gui/editor/value_editor/rotate/rotation/reset_y"
         },
         "hoverEvent": {
             "action": "show_text",

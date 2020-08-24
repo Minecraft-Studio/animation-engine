@@ -3,5 +3,5 @@ execute unless data storage anim:editor current_keyframe.extra.small store resul
 execute if data storage anim:editor {current_keyframe:{extra:{small:0}}} run data modify storage anim:editor current_keyframe.extra.small set value 2
 execute if data storage anim:editor {current_keyframe:{extra:{small:1}}} run data modify storage anim:editor current_keyframe.extra.small set value 0
 execute if data storage anim:editor {current_keyframe:{extra:{small:2}}} run data modify storage anim:editor current_keyframe.extra.small set value 1
-function anim_edit:gui/editor/run/text/tab/rotate
+function anim_edit:gui/editor/load
 execute as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_sel_row _anim store result entity @s Small byte 1 run data get storage anim:editor current_keyframe.extra.small

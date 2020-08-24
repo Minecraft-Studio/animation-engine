@@ -1,0 +1,4 @@
+tellraw @p[tag=anim_user] [{"text":"Rotate Position Extra\n Head Body Right Arm Left Arm Right Leg Rotation\n / / / / / / / / / / / / / / / / / / / / / / / / / / / / /\n/ / / / / / / / / / / / / / / / / / / / / / / / / / / / /\n / / / / / / / /  ","color":"dark_gray","hoverEvent":{"action":"show_text","contents":{"text":"No keyframe selected,\nuse editor above the line","color":"gray"}}},{"text":"No keyframe selected","color":"white"},"/ / / / / / / / /\n/ / / / / / / / /",{"text":"Use the editor above","color":"white"}," / / / / / / / / /\n / / / / / / / / / / / / / / / / / / / / / / / / / / / /\n/ / / / / / / / / / / / / / / / / / / / / / / / / / / /"]
+
+#Disable gamerule sendCommandFeedback if setting enabled
+function anim_edit:gamerule
