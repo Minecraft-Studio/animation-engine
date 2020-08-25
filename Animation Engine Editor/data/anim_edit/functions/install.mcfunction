@@ -13,7 +13,7 @@ execute unless score $sett_bckp _anim matches 0.. run scoreboard players set $se
 execute unless score $sett_gamerule _anim matches 0.. run scoreboard players set $sett_gamerule _anim 1
 data modify storage anim:editor value_edit_shortcuts set value {remove3:[4000,4,0],remove2:[1000,1,0],remove1:[250,0,2,5],add1:[250,0,2,5],add2:[1000,1,0],add3:[4000,4,0]}
 data modify storage anim:editor console set value []
-#>only used by editor (for Multiplayer support), remove on unistall
+#>only used by editor (for Multiplayer support), remove on uninstall
 #FIX unistaller
 scoreboard objectives add _anim_menu dummy
 scoreboard objectives add _anim_page dummy
