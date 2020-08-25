@@ -42,7 +42,7 @@ execute if score $_tab _anim matches 10 run function anim_edit:gui/editor/value_
 
 #>Live preview
 # Get Armor Stand
-execute as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[type=armor_stand,tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_sel_row _anim run function anim_edit:gui/editor/value_editor/live_preview
+execute as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[type=armor_stand,tag=anim_model_select,limit=1] _anim_ida if score @s _anim_idb = $_sel_row _anim run function anim_edit:gui/editor/value_editor/live_preview
 
 function anim_edit:gui/editor/value_editor/menu
 #>Gamerule

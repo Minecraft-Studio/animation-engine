@@ -1,6 +1,6 @@
-data modify entity @e[tag=anim_main_select,limit=1] Marker set value 1b
-data modify entity @e[tag=anim_main_select,limit=1] Glowing set value 0b
-tag @e[tag=anim_main_select] remove anim_main_select
+data modify entity @e[tag=anim_model_select,limit=1] Marker set value 1b
+data modify entity @e[tag=anim_model_select,limit=1] Glowing set value 0b
+tag @e[tag=anim_model_select] remove anim_model_select
 tag @e[tag=anim_part_menu] remove anim_part_menu
 execute unless score @s _anim_page matches -2147483648..2147483647 run scoreboard players set @s _anim_page 1
 #>Title

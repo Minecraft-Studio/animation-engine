@@ -1,9 +1,9 @@
 #
 #>Summons new Anim Part if it doesn't exists
-execute unless entity @e[tag=anim_part_select] at @e[tag=anim_main_select] run function anim_edit:gui/main/run/new_part
+execute unless entity @e[tag=anim_part_select] at @e[tag=anim_model_select] run function anim_edit:gui/main/run/new_part
 #>Disables Anim Model glow effect
-data modify entity @e[tag=anim_main_select,limit=1] Marker set value 1b
-data modify entity @e[tag=anim_main_select,limit=1] Glowing set value 0b
+data modify entity @e[tag=anim_model_select,limit=1] Marker set value 1b
+data modify entity @e[tag=anim_model_select,limit=1] Glowing set value 0b
 #>Makes selected Anim Part glow
 data modify entity @e[tag=anim_part_select,limit=1] Marker set value 0b
 data modify entity @e[tag=anim_part_select,limit=1] Glowing set value 1b

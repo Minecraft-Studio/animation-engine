@@ -108,13 +108,13 @@ execute store result score @s _anim_rlz_ease run data get storage anim:runtime k
 # tellraw @p {"nbt":"ArmorItems[2].tag.anim[0]","entity":"@s","color":"aqua"}
 execute if data storage anim:runtime keyframe_data.position run scoreboard players operation $_ida_lookup _anim = @s _anim_ida
 execute if data storage anim:runtime keyframe_data.position.x.value store result score @s _anim_px_value run data get storage anim:runtime keyframe_data.position.x.value 1000
-execute if data storage anim:runtime keyframe_data.position.x.value store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[0] 1000
+execute if data storage anim:runtime keyframe_data.position.x.value store result score @s _anim_calc as @e[tag=anim_model] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[0] 1000
 execute if data storage anim:runtime keyframe_data.position.x.value store result storage anim:runtime entity_data_calc.Pos[0] double 0.001 run scoreboard players operation @s _anim_calc += @s _anim_px_value
 execute if data storage anim:runtime keyframe_data.position.y.value store result score @s _anim_py_value run data get storage anim:runtime keyframe_data.position.y.value 1000
-execute if data storage anim:runtime keyframe_data.position.y.value store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[1] 1000
+execute if data storage anim:runtime keyframe_data.position.y.value store result score @s _anim_calc as @e[tag=anim_model] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[1] 1000
 execute if data storage anim:runtime keyframe_data.position.y.value store result storage anim:runtime entity_data_calc.Pos[1] double 0.001 run scoreboard players operation @s _anim_calc += @s _anim_py_value
 execute if data storage anim:runtime keyframe_data.position.z.value store result score @s _anim_pz_value run data get storage anim:runtime keyframe_data.position.z.value 1000
-execute if data storage anim:runtime keyframe_data.position.z.value store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[2] 1000
+execute if data storage anim:runtime keyframe_data.position.z.value store result score @s _anim_calc as @e[tag=anim_model] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[2] 1000
 execute if data storage anim:runtime keyframe_data.position.z.value store result storage anim:runtime entity_data_calc.Pos[2] double 0.001 run scoreboard players operation @s _anim_calc += @s _anim_pz_value
 scoreboard players reset $_ida_lookup _anim
 # tellraw @p {"nbt":"Pos","entity":"@s","color":"aqua"}

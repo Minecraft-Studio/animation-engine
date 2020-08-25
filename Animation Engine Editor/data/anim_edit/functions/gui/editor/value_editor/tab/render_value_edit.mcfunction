@@ -9,7 +9,7 @@ execute if score $_tab _anim matches 7 run tellraw @s ["",{"text":"Rotate","unde
 execute if score $_tab _anim matches 8 run tellraw @s ["",{"text":"Rotate","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/value_editor/set_tab/rotate_1"}},{"text":" "},{"text":"Position","underlined":true,"color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/value_editor/set_tab/position"}},{"text":" "},{"text":"Extra","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/value_editor/set_tab/extra_1"}},"\n"]
 
 #>Get selected anim_part
-execute as @e[tag=anim_part] if score @s _anim_ida = @e[type=armor_stand,tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_sel_row _anim run tag @s add anim_value_get_from
+execute as @e[tag=anim_part] if score @s _anim_ida = @e[type=armor_stand,tag=anim_model_select,limit=1] _anim_ida if score @s _anim_idb = $_sel_row _anim run tag @s add anim_value_get_from
 #>Render X
 # get values
 execute if score $_tab _anim matches 1 as @e[tag=anim_value_get_from] store result score $_dec_val _anim run data get entity @s Pose.Head[0] 1000

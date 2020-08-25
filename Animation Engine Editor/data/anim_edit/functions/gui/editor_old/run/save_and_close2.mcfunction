@@ -1,9 +1,9 @@
 #>Save (Continued)
 scoreboard players reset $_api_endcomp _anim
 scoreboard players set $_api_save_loop _anim 1
-data modify storage anim:editor tmp_anim_from set from entity @e[tag=anim_main_select,limit=1] ArmorItems[2].tag.animations
+data modify storage anim:editor tmp_anim_from set from entity @e[tag=anim_model_select,limit=1] ArmorItems[2].tag.animations
 function anim_edit:gui/editor/run/search/compile/save_loop
-data modify entity @e[tag=anim_main_select,limit=1] ArmorItems[2].tag.animations set from storage anim:editor tmp_anim_result
+data modify entity @e[tag=anim_model_select,limit=1] ArmorItems[2].tag.animations set from storage anim:editor tmp_anim_result
 data remove storage anim:editor tmp_anim_from
 data remove storage anim:editor tmp_anim_tmp
 data remove storage anim:editor tmp_anim_result

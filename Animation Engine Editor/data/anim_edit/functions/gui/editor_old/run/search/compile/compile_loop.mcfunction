@@ -4,7 +4,7 @@ scoreboard players operation $_comp_kdone _anim = $_comp_kmax _anim
 execute store result bossbar _anim_prgbar value run scoreboard players operation $_comp_kdone _anim -= $_comp_kleft _anim
 scoreboard players operation $_comp_time_left _anim = $comp_max_t _anim
 scoreboard players reset $_comp_num_parts _anim
-execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida run scoreboard players add $_comp_num_parts _anim 1
+execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_model_select,limit=1] _anim_ida run scoreboard players add $_comp_num_parts _anim 1
 scoreboard players operation $_comp_time_left _anim *= $_comp_num_parts _anim
 scoreboard players operation $_comp_time_left _anim -= $_get_tick _anim
 scoreboard players operation $_comp_time_left _anim /= $sett_compile _anim
