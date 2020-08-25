@@ -7,7 +7,7 @@ execute if score $sett_bckp _anim matches 1 run function anim_edit:gui/editor/ru
 # setup
 bossbar add _anim_prgbar {"text":"Sorting...","color":"green"}
 bossbar set _anim_prgbar color green
-bossbar set _anim_prgbar players @p[tag=anim_user]
+bossbar set _anim_prgbar players @s
 data modify storage anim:editor search set from storage anim:editor keyframes
 scoreboard players operation $comp_page _anim = $page _anim
 scoreboard players set $comp_max_t _anim 0

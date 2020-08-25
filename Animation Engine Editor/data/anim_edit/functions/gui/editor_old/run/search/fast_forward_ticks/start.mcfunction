@@ -1,7 +1,7 @@
 #bossbar
 bossbar add _anim_prgbar_fast {"text":"Loading...","color":"gray"}
 bossbar set _anim_prgbar_fast color white
-bossbar set _anim_prgbar_fast players @p[tag=anim_user]
+bossbar set _anim_prgbar_fast players @s
 
 #get target tick
 scoreboard players operation $_key_col _anim = @e[tag=anim_editor_sel,limit=1] _anim_editor_col

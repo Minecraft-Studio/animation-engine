@@ -10,7 +10,7 @@ scoreboard players reset $_sel_col _anim
 scoreboard players reset $_sel_row _anim
 bossbar add _anim_prgbar {"text":"Deleting...","color":"red"}
 bossbar set _anim_prgbar color red
-bossbar set _anim_prgbar players @p[tag=anim_user]
+bossbar set _anim_prgbar players @s
 function anim_edit:gui/editor/run/search/delete_keyframe/loop
 #Disable gamerule sendCommandFeedback if setting enabled
 function anim_edit:gamerule

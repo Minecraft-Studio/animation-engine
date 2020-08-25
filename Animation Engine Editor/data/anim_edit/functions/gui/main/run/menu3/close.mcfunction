@@ -1,4 +1,3 @@
-tellraw @p[tag=anim_user] {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMenu closed","color":"aqua"}
-scoreboard players reset $show_menu _anim
-tag @p[tag=anim_user] remove anim_user
+tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMenu closed","color":"aqua"}
+scoreboard players reset @s _anim_menu
 function anim_edit:gamerule

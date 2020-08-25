@@ -1,4 +1,4 @@
-scoreboard players set $show_menu _anim 7
+scoreboard players set @s _anim_menu 7
 scoreboard players set $page _anim 1
 scoreboard players set $anim_page _anim 1
 kill @e[type=armor_stand,tag=anim_menu,tag=!anim_menu_main]

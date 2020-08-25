@@ -26,7 +26,7 @@ data remove storage anim:editor new_anim_name4
 data remove storage anim:editor new_anim_name5
 data remove storage anim:editor new_anim_name6
 data remove storage anim:editor new_anim_name7
-scoreboard players operation $tmp_value _anim = $main_page _anim
+scoreboard players operation $tmp_value _anim = @s _anim_page
 scoreboard players remove $tmp_value _anim 1
 scoreboard players operation $tmp_value _anim *= $7 _anim
 execute store result storage anim:editor anim_data.id int 1 run scoreboard players operation $animation_id _anim += $tmp_value _anim

@@ -1,11 +1,8 @@
 execute if data storage anim:runtime ver run data merge storage anim:runtime {ver_update:1b}
-data merge storage anim:runtime {ver:"v1.0a13"}
+data merge storage anim:runtime {ver:"v1.0a12"}
 scoreboard objectives add _anim dummy
 scoreboard objectives add _anim_ida dummy
 scoreboard objectives add _anim_idb dummy
-#>only used by editor (for Multiplayer support), remove on unistall
-scoreboard objectives add _anim_menu dummy
-#>End of objectives used by editor only
 scoreboard players set $1 _anim 1
 scoreboard players set $2 _anim 2
 scoreboard players set $1000 _anim 1000

@@ -12,7 +12,7 @@ scoreboard players reset $_api_save_loop _anim
 scoreboard players reset $__found_save _anim
 #>Close
 kill @e[tag=anim_menu]
-execute at @p[tag=anim_user] run tp @e[tag=anim_selector] ~ 0 ~
+execute at @s run tp @e[tag=anim_selector] ~ 0 ~
 kill @e[tag=anim_selector]
-scoreboard players set $show_menu _anim 5
+scoreboard players set @s _anim_menu 5
 function anim_edit:gui/main/load

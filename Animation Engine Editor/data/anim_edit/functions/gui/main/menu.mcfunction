@@ -1,5 +1,2 @@
-scoreboard players set $show_menu _anim 3
-kill @e[type=armor_stand,tag=anim_menu]
-kill @e[type=slime,tag=anim_selector]
-tag @s add anim_user
+scoreboard players set @s _anim_menu 3
 function anim_edit:gui/main/load
