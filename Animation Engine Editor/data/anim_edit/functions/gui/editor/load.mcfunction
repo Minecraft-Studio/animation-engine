@@ -1,3 +1,4 @@
+scoreboard players set @s _anim_menu 7
 #
 #>Keyframe Editor render
 #
