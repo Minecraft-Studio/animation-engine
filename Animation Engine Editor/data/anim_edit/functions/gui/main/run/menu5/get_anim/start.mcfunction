@@ -1,3 +1,4 @@
+function anim_edit:search_model
 #>Gets Animation data
 # Input: anim:editor tmp_anim_model_data; $_id_search _anim
 # Output: anim:editor anim_data

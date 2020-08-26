@@ -1,3 +1,4 @@
+function anim_edit:search_model
 scoreboard players operation $_id_search _anim = @s _anim_page
 scoreboard players remove $_id_search _anim 1
 scoreboard players operation $_id_search _anim *= $7 _anim

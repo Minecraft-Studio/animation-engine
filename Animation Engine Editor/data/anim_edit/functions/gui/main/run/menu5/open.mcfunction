@@ -1,3 +1,4 @@
+function anim_edit:search_model
 #>Selects the animation and loads it
 #>Gets the data
 scoreboard players operation $_id_search _anim = $selected_animation _anim

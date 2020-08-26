@@ -1,4 +1,6 @@
+#
 #>Deletes selected Anim Part
+function anim_edit:search_model
 execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_model_select,limit=1] _anim_ida run kill @s
 kill @e[tag=anim_model_select]
 scoreboard players set @s _anim_menu 3

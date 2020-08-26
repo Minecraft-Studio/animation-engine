@@ -1,4 +1,6 @@
+#
 #>Summons new Anim Model if it doesn't exists
+function anim_edit:search_model
 execute unless entity @e[tag=anim_model_select] at @s run function anim_edit:gui/main/run/new_model
 #>Makes selected Anim Model glow
 data modify entity @e[tag=anim_model_select,limit=1] Marker set value 0b

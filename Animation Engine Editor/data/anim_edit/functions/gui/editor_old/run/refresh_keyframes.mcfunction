@@ -1,3 +1,4 @@
+#
 #>Load data on to armor stands
 execute as @s at @s if block ~ ~ ~ air run scoreboard players set $_sign_placed _anim 1
 

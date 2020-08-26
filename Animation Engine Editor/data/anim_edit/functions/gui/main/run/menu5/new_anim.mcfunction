@@ -1,4 +1,6 @@
+#
 #>Sets Animation name and opens it 
+function anim_edit:search_model
 #>Removes currently loaded data
 data remove storage anim:editor anim_data
 #>Saves the typed name

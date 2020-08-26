@@ -18,6 +18,10 @@ data modify storage anim:editor console set value []
 scoreboard objectives add _anim_menu dummy
 scoreboard objectives add _anim_page dummy
 scoreboard objectives add _anim_row_page dummy
+scoreboard objectives add _anim_menu dummy
+scoreboard objectives add _anim_id_player dummy
+scoreboard objectives add _anim_ida_select dummy
+scoreboard objectives add _anim_idb_select dummy
 #>End of objectives used by editor only
 scoreboard players set $2 _anim 2
 scoreboard players set $7 _anim 7

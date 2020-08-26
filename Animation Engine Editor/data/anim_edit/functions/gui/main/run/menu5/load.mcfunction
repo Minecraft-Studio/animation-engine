@@ -1,4 +1,6 @@
+#
 #>Gives Anim Model glow effect
+function anim_edit:search_model
 data modify entity @e[tag=anim_model_select,limit=1] Marker set value 0b
 data modify entity @e[tag=anim_model_select,limit=1] Glowing set value 1b
 
