@@ -14,4 +14,4 @@ data remove storage anim:editor append_col
 
 scoreboard players add $_get_tick _anim 1
 scoreboard players add $_render_col _anim 1
-execute if score $_render_col _anim matches ..30 run function anim_edit:gui/editor/keyframe_editor/render_col
+execute if score $_render_col _anim matches ..40 run function anim_edit:gui/editor/keyframe_editor/render_col

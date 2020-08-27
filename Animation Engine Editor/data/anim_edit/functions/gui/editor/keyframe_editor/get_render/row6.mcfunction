@@ -20,3 +20,5 @@ execute if data storage anim:editor got_tick if data storage anim:editor got_tic
 execute unless data storage anim:editor got_tick.head unless data storage anim:editor got_tick.body unless data storage anim:editor got_tick.l_arm unless data storage anim:editor got_tick.r_arm unless data storage anim:editor got_tick.l_leg unless data storage anim:editor got_tick.r_leg unless data storage anim:editor got_tick.rotation unless data storage anim:editor got_tick.position run scoreboard players set $_key_empty _anim 1
 execute if data storage anim:editor got_tick if score @s _anim_id_player = $_got_p_id _anim unless score $_key_empty _anim matches 1 run function anim_edit:gui/editor/keyframe_editor/render_keyframe/keyframe_open/row6
 scoreboard players reset $_key_empty _anim
+execute unless score $_part_exists _anim matches 1 if data storage anim:editor got_tick run data modify storage anim:editor append_col set value '{"text":"♦","color":"dark_gray"}'
+execute unless score $_part_exists _anim matches 1 unless data storage anim:editor got_tick run data modify storage anim:editor append_col set value '{"text":"-","color":"dark_gray"}'

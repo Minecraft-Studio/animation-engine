@@ -12,6 +12,6 @@ scoreboard players reset @s _anim_anim_id
 #>Opens Editor
 data modify entity @e[tag=anim_model_select,limit=1] Marker set value 1b
 data modify entity @e[tag=anim_model_select,limit=1] Glowing set value 0b
-tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-function anim_edit:editor
+scoreboard players set @s _anim_row_page 1
+function anim_edit:gui/editor/load
 function anim_edit:gamerule

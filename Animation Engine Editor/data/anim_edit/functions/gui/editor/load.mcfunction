@@ -9,26 +9,33 @@ scoreboard players set $_get_part _anim 0
 scoreboard players operation $_get_part _anim += @s _anim_row_page
 scoreboard players set $_render_row _anim 1
 #Row 1
-execute if score @s _anim_row_page matches 2.. run data modify storage anim:editor after_render_tellraw set value ['{"text":"↑","color":"yellow","hoverEvent":[{"text":"View up\\n","color":"yellow"},{"text":"Moves rows down by 1 row on the display,\\nallowing you to view rows above the current ones displayed","color":"white"}],"clickEvent":{"action":"run_command","value":"/execute if score @s _anim_page matches 2.. run function anim_edit:gui/editor/keyframe_editor/page/up"}}']
-execute if score @s _anim_row_page matches 1 run data modify storage anim:editor after_render_tellraw set value ['{"text":"↑","color":"gray","hoverEvent":[{"text":"View up\\n","color":"yellow"},{"text":"Moves rows down by 1 row on the display,\\nallowing you to view rows above the current ones displayed","color":"white"}]}']
+execute if score @s _anim_row_page matches 2.. run data modify storage anim:editor after_render_tellraw set value ['{"text":"↑","color":"yellow","hoverEvent":{"action":"show_text","contents":[{"text":"View up\\n","color":"yellow"},{"text":"Moves rows down by 1 row on the display,\\nallowing you to view rows above the\\ncurrent ones displayed","color":"white"}]},"clickEvent":{"action":"run_command","value":"/execute if score @s _anim_row_page matches 2.. run function anim_edit:gui/editor/keyframe_editor/page/up"}}']
+execute if score @s _anim_row_page matches 1 run data modify storage anim:editor after_render_tellraw set value ['{"text":"↑","color":"gray","hoverEvent":{"action":"show_text","contents":[{"text":"View up\\n","color":"yellow"},{"text":"Moves rows down by 1 row on the display,\\nallowing you to view rows above the\\ncurrent ones displayed","color":"white"}]}}']
 function anim_edit:gui/editor/keyframe_editor/render_row
 #Row 2
 scoreboard players add $_render_row _anim 1
+scoreboard players add $_get_part _anim 1
+data modify storage anim:editor after_render_tellraw set value ['{"text":"↓","color":"yellow","hoverEvent":{"action":"show_text","contents":[{"text":"View down\\n","color":"yellow"},{"text":"Moves rows up by 1 row on the display,\\nallowing you to view rows below the\\ncurrent ones displayed","color":"white"}]},"clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/keyframe_editor/page/down"}}']
 function anim_edit:gui/editor/keyframe_editor/render_row
 #Row 3
 scoreboard players add $_render_row _anim 1
+scoreboard players add $_get_part _anim 1
 function anim_edit:gui/editor/keyframe_editor/render_row
 #Row 4
 scoreboard players add $_render_row _anim 1
+scoreboard players add $_get_part _anim 1
 function anim_edit:gui/editor/keyframe_editor/render_row
 #Row 5
 scoreboard players add $_render_row _anim 1
+scoreboard players add $_get_part _anim 1
 function anim_edit:gui/editor/keyframe_editor/render_row
 #Row 6
 scoreboard players add $_render_row _anim 1
+scoreboard players add $_get_part _anim 1
 function anim_edit:gui/editor/keyframe_editor/render_row
 #Row 7
 scoreboard players add $_render_row _anim 1
+scoreboard players add $_get_part _anim 1
 function anim_edit:gui/editor/keyframe_editor/render_row
 
 #
@@ -37,21 +44,21 @@ function anim_edit:gui/editor/keyframe_editor/render_row
 # Remove 11th notification from the list so it limits to 10
 execute store result score $_notif_length _anim run data get storage anim:editor console_length
 data modify storage anim:editor notification_dec set value []
-execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "-----"
+execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "====="
 execute if score $_notif_length _anim matches ..32 run scoreboard players add $_notif_length _anim 5
-execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "-----"
+execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "====="
 execute if score $_notif_length _anim matches ..32 run scoreboard players add $_notif_length _anim 5
-execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "-----"
+execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "====="
 execute if score $_notif_length _anim matches ..32 run scoreboard players add $_notif_length _anim 5
-execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "-----"
+execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "====="
 execute if score $_notif_length _anim matches ..32 run scoreboard players add $_notif_length _anim 5
-execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "-----"
+execute if score $_notif_length _anim matches ..32 run data modify storage anim:editor notification_dec append value "====="
 execute if score $_notif_length _anim matches ..32 run scoreboard players add $_notif_length _anim 5
-execute if score $_notif_length _anim matches ..35 run data modify storage anim:editor notification_dec append value "--"
+execute if score $_notif_length _anim matches ..35 run data modify storage anim:editor notification_dec append value "=="
 execute if score $_notif_length _anim matches ..35 run scoreboard players add $_notif_length _anim 2
-execute if score $_notif_length _anim matches ..35 run data modify storage anim:editor notification_dec append value "--"
+execute if score $_notif_length _anim matches ..35 run data modify storage anim:editor notification_dec append value "=="
 execute if score $_notif_length _anim matches ..35 run scoreboard players add $_notif_length _anim 2
-execute if score $_notif_length _anim matches ..36 run data modify storage anim:editor notification_dec append value "-"
+execute if score $_notif_length _anim matches ..36 run data modify storage anim:editor notification_dec append value "="
 execute if score $_notif_length _anim matches ..36 run scoreboard players add $_notif_length _anim 1
 scoreboard objectives add _anim_notif0 dummy
 execute store result score $_notif_lookfor _anim run data get storage anim:editor console[0][1]
@@ -83,7 +90,7 @@ execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard
 scoreboard objectives add _anim_notif9 dummy
 execute store result score $_notif_lookfor _anim run data get storage anim:editor console[9][1]
 execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif9 1
-tellraw @s [{"text":"---","color":"dark_gray","hoverEvent": {"action": "show_text","contents":[{"text":"","color":"white"},{"text":"Latest console log\n","color":"yellow"},{"selector":"@e[scores={_anim_notif0=1}]"},{"nbt":"console[0][2]","storage":"anim:editor"},{"nbt":"console[0][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif1=1}]"},{"nbt":"console[1][2]","storage":"anim:editor"},{"nbt":"console[1][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif2=1}]"},{"nbt":"console[2][2]","storage":"anim:editor"},{"nbt":"console[2][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif3=1}]"},{"nbt":"console[3][2]","storage":"anim:editor"},{"nbt":"console[3][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif4=1}]"},{"nbt":"console[4][2]","storage":"anim:editor"},{"nbt":"console[4][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif5=1}]"},{"nbt":"console[5][2]","storage":"anim:editor"},{"nbt":"console[5][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif6=1}]"},{"nbt":"console[6][2]","storage":"anim:editor"},{"nbt":"console[6][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif7=1}]"},{"nbt":"console[7][2]","storage":"anim:editor"},{"nbt":"console[7][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif8=1}]"},{"nbt":"console[8][2]","storage":"anim:editor"},{"nbt":"console[8][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif9=1}]"},{"nbt":"console[9][2]","storage":"anim:editor"},{"nbt":"console[9][0]","storage":"anim:editor","interpret":true}]}},{"selector":"@e[scores={_anim_notif0=1}]"},{"nbt":"console[0][2]","storage":"anim:editor"},{"nbt":"console[0][0]","storage":"anim:editor","interpret":true},{"nbt":"notification_dec[0]","storage":"anim:editor"},{"nbt":"notification_dec[1]","storage":"anim:editor"},{"nbt":"notification_dec[2]","storage":"anim:editor"},{"nbt":"notification_dec[3]","storage":"anim:editor"},{"nbt":"notification_dec[4]","storage":"anim:editor"},{"nbt":"notification_dec[5]","storage":"anim:editor"},{"nbt":"notification_dec[6]","storage":"anim:editor"},{"nbt":"notification_dec[7]","storage":"anim:editor"}]
+tellraw @s [{"text":"===","color":"dark_gray","hoverEvent": {"action": "show_text","contents":[{"text":"","color":"white"},{"text":"Latest console log\n","color":"yellow"},{"selector":"@e[scores={_anim_notif0=1}]"},{"nbt":"console[0][2]","storage":"anim:editor"},{"nbt":"console[0][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif1=1}]"},{"nbt":"console[1][2]","storage":"anim:editor"},{"nbt":"console[1][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif2=1}]"},{"nbt":"console[2][2]","storage":"anim:editor"},{"nbt":"console[2][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif3=1}]"},{"nbt":"console[3][2]","storage":"anim:editor"},{"nbt":"console[3][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif4=1}]"},{"nbt":"console[4][2]","storage":"anim:editor"},{"nbt":"console[4][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif5=1}]"},{"nbt":"console[5][2]","storage":"anim:editor"},{"nbt":"console[5][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif6=1}]"},{"nbt":"console[6][2]","storage":"anim:editor"},{"nbt":"console[6][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif7=1}]"},{"nbt":"console[7][2]","storage":"anim:editor"},{"nbt":"console[7][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif8=1}]"},{"nbt":"console[8][2]","storage":"anim:editor"},{"nbt":"console[8][0]","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif9=1}]"},{"nbt":"console[9][2]","storage":"anim:editor"},{"nbt":"console[9][0]","storage":"anim:editor","interpret":true}]}},{"selector":"@e[scores={_anim_notif0=1}]"},{"nbt":"console[0][2]","storage":"anim:editor"},{"nbt":"console[0][0]","storage":"anim:editor","interpret":true},{"nbt":"notification_dec[0]","storage":"anim:editor"},{"nbt":"notification_dec[1]","storage":"anim:editor"},{"nbt":"notification_dec[2]","storage":"anim:editor"},{"nbt":"notification_dec[3]","storage":"anim:editor"},{"nbt":"notification_dec[4]","storage":"anim:editor"},{"nbt":"notification_dec[5]","storage":"anim:editor"},{"nbt":"notification_dec[6]","storage":"anim:editor"},{"nbt":"notification_dec[7]","storage":"anim:editor"}]
 data remove storage anim:editor notification_dec
 scoreboard objectives remove _anim_notif0
 scoreboard objectives remove _anim_notif1
