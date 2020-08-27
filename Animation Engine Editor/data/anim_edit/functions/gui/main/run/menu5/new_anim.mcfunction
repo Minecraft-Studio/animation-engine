@@ -34,7 +34,7 @@ scoreboard players operation $tmp_value _anim *= $7 _anim
 execute store result storage anim:editor anim_data.id int 1 run scoreboard players operation $animation_id _anim += $tmp_value _anim
 data remove storage anim:editor keyframes
 scoreboard players reset $tmp_value _anim
-scoreboard players reset $selected_animation _anim
+scoreboard players reset @s _anim_anim_id
 data modify entity @e[tag=anim_model_select,limit=1] ArmorItems[2].tag.animations append from storage anim:editor anim_data
 #>Opens Editor
 data modify entity @e[tag=anim_model_select,limit=1] Marker set value 1b
