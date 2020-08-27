@@ -3,9 +3,14 @@ scoreboard players set @s _anim_menu 7
 #>Keyframe Editor render
 #
 #>Title
-tellraw @s ["",{"text":"Editor","underlined": true}," ",{"nbt":"ver","storage":"anim:editor","color":"aqua"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/main/run/menu3/close"}}]
+tellraw @s [" ",{"text":"Editor","underlined": true}," ",{"nbt":"ver","storage":"anim:editor","color":"aqua"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/editor/close"}}]
 #>Editor GUI
-
+scoreboard players set $_render_row _anim 0
+scoreboard players operation $_render_row _anim += @s _anim_row_page
+#Row 1
+execute if score @s _anim_row_page matches 2.. run data modify storage anim:editor after_render_tellraw set value '{"text":"↑","color":"yellow","hoverEvent":[{"text":"View up\\n","color":"yellow"},{"text":"Moves rows down by 1 row on the display,\\nallowing you to view rows above the current ones displayed","color":"white"}],"clickEvent":{"action":"run_command","value":"/execute if score @s _anim_page matches 2.. run function anim_edit:gui/editor/keyframe_editor/page/up"}}'
+execute if score @s _anim_row_page matches 1 run data modify storage anim:editor after_render_tellraw set value '{"text":"↑","color":"gray","hoverEvent":[{"text":"View up\\n","color":"yellow"},{"text":"Moves rows down by 1 row on the display,\\nallowing you to view rows above the current ones displayed","color":"white"}]}'
+function anim_edit:gui/editor/keyframe_editor/render_row
 
 #
 #>Notification

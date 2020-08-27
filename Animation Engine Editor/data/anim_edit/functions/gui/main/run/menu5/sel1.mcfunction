@@ -1,3 +1,4 @@
+#
 #>Selects the animation
 scoreboard players operation $_prev_sel_anim _anim = $selected_animation _anim
 scoreboard players operation $selected_animation _anim = @s _anim_page

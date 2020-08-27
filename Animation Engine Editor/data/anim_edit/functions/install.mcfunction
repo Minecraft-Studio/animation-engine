@@ -22,6 +22,7 @@ scoreboard objectives add _anim_menu dummy
 scoreboard objectives add _anim_id_player dummy
 scoreboard objectives add _anim_ida_select dummy
 scoreboard objectives add _anim_idb_select dummy
+scoreboard objectives add _anim_anim_id dummy
 #>End of objectives used by editor only
 scoreboard players set $2 _anim 2
 scoreboard players set $7 _anim 7
@@ -32,3 +33,11 @@ scoreboard players set $20 _anim 20
 execute unless data storage anim:editor ver_update run tellraw @a ["",{"text":"Animation Engine Editor has been installed! ","color":"green"},{"text":"(","color":"gray"},{"nbt":"ver","storage":"anim:editor","color":"gray"},{"text":")","color":"gray"},{"text":"\nRemember! Animation Engine is still in alpha, bugs will happen, please report them (in Settings)!","color":"gray"}]
 execute if data storage anim:editor ver_update run tellraw @a ["",{"text":"Animation Engine Editor has been updated to ","color":"green"},{"nbt":"ver","storage":"anim:editor","color":"aqua"},{"text":"\nRemember! Animation Engine is still in alpha, bugs will happen, please report them (in Settings)!","color":"gray"}]
 data remove storage anim:editor ver_update
+#define entity @e[tag=anim_model_select]
+#define entity @e[tag=anim_part_select]
+#define storage anim:editor
+#define storage anim:runtime
+#define function anim_edit:gamerule
+#define function anim_edit:search_model get anim_model_select
+#define function anim_edit:search_part get anim_model_select/anim_part_select
+#define function anim_edit:search_part_editor get anim_model_select/anim_part_select for editor
