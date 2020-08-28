@@ -3,16 +3,15 @@ data merge storage anim:editor {ver:"v1.0a12"}
 scoreboard objectives add _anim dummy
 scoreboard objectives add _anim_ida dummy
 scoreboard objectives add _anim_idb dummy
-scoreboard players set $page _anim 1
 # execute unless score $sett_link _anim matches 0.. run scoreboard players set $sett_link _anim 5
 # execute unless score $sett_look _anim matches 0.. run scoreboard players set $sett_look _anim 1
-execute unless score $sett_def_rotate _anim matches 0.. run scoreboard players set $sett_def_rotate _anim 1
-execute unless score $sett_def_move _anim matches 0.. run scoreboard players set $sett_def_move _anim 1
-execute unless score $sett_compile _anim matches 0.. run scoreboard players set $sett_compile _anim 10
-execute unless score $sett_bckp _anim matches 0.. run scoreboard players set $sett_bckp _anim 1
-execute unless score $sett_gamerule _anim matches 0.. run scoreboard players set $sett_gamerule _anim 1
-data modify storage anim:editor value_edit_shortcuts set value {remove3:[4000,4,0],remove2:[1000,1,0],remove1:[250,0,2,5],add1:[250,0,2,5],add2:[1000,1,0],add3:[4000,4,0]}
-data modify storage anim:editor console set value []
+# execute unless score $sett_def_rotate _anim matches 0.. run scoreboard players set $sett_def_rotate _anim 1
+# execute unless score $sett_def_move _anim matches 0.. run scoreboard players set $sett_def_move _anim 1
+execute unless score $sett_loop _anim matches 0.. run scoreboard players set $sett_loop _anim 50
+# execute unless score $sett_compile _anim matches 0.. run scoreboard players set $sett_compile _anim 10
+# execute unless score $sett_bckp _anim matches 0.. run scoreboard players set $sett_bckp _anim 1
+# execute unless score $sett_gamerule _anim matches 0.. run scoreboard players set $sett_gamerule _anim 1
+execute unless data storage anim:editor console run data modify storage anim:editor console set value []
 #>only used by editor (for Multiplayer support), remove on uninstall
 #FIX unistaller
 scoreboard objectives add _anim_menu dummy
@@ -23,7 +22,15 @@ scoreboard objectives add _anim_id_player dummy
 scoreboard objectives add _anim_ida_select dummy
 scoreboard objectives add _anim_idb_select dummy
 scoreboard objectives add _anim_anim_id dummy
-#>End of objectives used by editor only
+scoreboard objectives add _anim_multisel dummy
+#> Settings
+#define objective _anim_sett_def Default Transitions (for new keyframes)
+scoreboard objectives add _anim_sett_def dummy
+#define objective _anim_sett_gmrle Gamerule
+scoreboard objectives add _anim_sett_gmrle dummy
+execute unless data storage anim:editor edit_shortcuts run data modify storage anim:editor edit_shortcuts set value []
+execute unless data storage anim:editor move_shortcuts run data modify storage anim:editor move_shortcuts set value []
+#>End of objectives only used by editor
 scoreboard players set $2 _anim 2
 scoreboard players set $7 _anim 7
 scoreboard players set $10 _anim 10

@@ -9,6 +9,7 @@ execute if score $_tab _anim matches 7 run tellraw @s ["",{"text":"Rotate","unde
 execute if score $_tab _anim matches 8 run tellraw @s ["",{"text":"Rotate","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/value_editor/set_tab/rotate_1"}},{"text":" "},{"text":"Position","underlined":true,"color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/value_editor/set_tab/position"}},{"text":" "},{"text":"Extra","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/value_editor/set_tab/extra_1"}},"\n"]
 
 #>Get selected anim_part
+function anim_edit:get_edit_shortcuts
 function anim_edit:search_part_editor
 #>Render X
 # get values
