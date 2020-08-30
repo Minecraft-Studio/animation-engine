@@ -12,6 +12,11 @@ execute if score $_render_row _anim matches 7 run function anim_edit:gui/editor/
 data modify storage anim:editor row_result append from storage anim:editor append_col
 data remove storage anim:editor append_col
 
-scoreboard players add $_get_tick _anim 1
+execute if score $_render_row _anim matches 1 store result storage anim:editor col_preview_append.tick int 1 run scoreboard players add $_get_tick _anim 1
+execute if score $_render_row _anim matches 1 run function anim_edit:gui/editor/keyframe_editor/tick_to_sec
+execute if score $_render_row _anim matches 1 store result storage anim:editor col_preview_append.sec1 int 1 run scoreboard players get $_sec1 _anim
+execute if score $_render_row _anim matches 1 store result storage anim:editor col_preview_append.sec2 int 1 run scoreboard players get $_sec2 _anim
+execute if score $_render_row _anim matches 1 store result storage anim:editor col_preview_append.sec3 int 1 run scoreboard players get $_sec3 _anim
+execute if score $_render_row _anim matches 1 run data modify storage anim:editor col_preview append from storage anim:editor col_preview_append
 scoreboard players add $_render_col _anim 1
 execute if score $_render_col _anim matches ..40 run function anim_edit:gui/editor/keyframe_editor/render_col

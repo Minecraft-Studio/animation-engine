@@ -6,7 +6,7 @@ tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 # Load anim keyframes
 function anim_edit:get_anim_keyframes
 #>Title
-tellraw @s [" ",{"text":"Editor","underlined": true}," ",{"nbt":"ver","storage":"anim:editor","color":"aqua"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/editor/close"}}]
+tellraw @s ["",{"text":"Editor","underlined": true}," ",{"nbt":"ver","storage":"anim:editor","color":"aqua"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/editor/close"}}]
 #>Editor GUI
 execute unless score @s _anim_row_page matches 1.. run scoreboard players set @s _anim_row_page 1
 scoreboard players set $_get_part _anim 0
