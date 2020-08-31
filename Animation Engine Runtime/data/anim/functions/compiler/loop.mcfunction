@@ -6,6 +6,7 @@ execute if data storage anim:runtime search_data[0] run function anim:compiler/l
 execute if data storage anim:runtime compile_import.value store result storage anim:runtime compile_import.tick int 1 run scoreboard players get $_comp_tick _anim 
 #>If tick set, append it to compile
 execute if data storage anim:runtime compile_import.tick run data modify storage anim:runtime compile append from storage anim:runtime compile_import
+data modify storage anim:runtime compile_import set value {}
 
 execute unless data storage anim:runtime search_data[0] run scoreboard players add $_comp_tick _anim 1
 scoreboard players add $_comp_loop _anim 1

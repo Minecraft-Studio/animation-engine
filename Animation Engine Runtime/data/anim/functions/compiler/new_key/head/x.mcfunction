@@ -1,4 +1,7 @@
-data modify storage anim:runtime compile_data[{id:"head.x"}].graph set from storage anim:runtime got_keyframe.graph
+data modify storage anim:runtime search_graph set from storage anim:runtime graphs
+data modify storage anim:runtime get_graph set from storage anim:runtime got_keyframe.value.head.x.graph
+function anim:compiler/get_graph
+data modify storage anim:runtime compile_data[{id:"head.x"}].graph set from storage anim:runtime got_keyframe.got_graph
 execute store result score $_comp_tick1 _anim run data get storage anim:runtime compile_data[{id:"head.x"}].last_key_data.tick
 # tellraw @p [":: ",{"nbt":"compile_data[{id:\"head.x\"}]","storage": "anim:runtime","color":"gold"}]
 execute store result storage anim:runtime compile_data[{id:"head.x"}].addtick int 1 store result score $_comp_tick2 _anim run data get storage anim:runtime got_keyframe.tick
@@ -8,7 +11,7 @@ scoreboard players operation $_comp_tick2 _anim -= $_comp_tick1 _anim
 # tellraw @p ["calc: ",{"score":{"name":"$_comp_tick2","objective": "_anim"},"color":"yellow"}]
 execute store result storage anim:runtime compile_data[{id:"head.x"}].new_key_data.tick int 1 run scoreboard players add $_comp_tick2 _anim 1
 # execute store result storage anim:runtime compile_data[{id:"head.x"}].last_key_data.tick int 1 run scoreboard players set $_comp_tick2 _anim 1
-data modify storage anim:runtime compile_data[{id:"head.x"}].new_key_data.value set from storage anim:runtime got_keyframe.value.head.x
+data modify storage anim:runtime compile_data[{id:"head.x"}].new_key_data.value set from storage anim:runtime got_keyframe.value.head.x.value
 data modify storage anim:runtime compile_data[{id:"head.x"}].graph insert 0 value {x:0,y:0}
 data modify storage anim:runtime got_compile_data set from storage anim:runtime compile_data[{id:"head.x"}]
 data remove storage anim:runtime compile_import_calc

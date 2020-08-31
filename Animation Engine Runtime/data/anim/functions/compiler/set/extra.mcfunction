@@ -1,0 +1,2 @@
+execute if data storage anim:runtime got_keyframe.extra.nbt run data modify storage anim:runtime compile_import.nbt set from storage anim:runtime got_keyframe.extra.nbt
+execute if data storage anim:runtime got_keyframe.extra.items run data modify storage anim:runtime compile_import.items set from storage anim:runtime got_keyframe.extra.items
