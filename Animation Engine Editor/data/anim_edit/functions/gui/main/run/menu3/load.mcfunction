@@ -7,7 +7,7 @@ tag @e[tag=anim_model_select] remove anim_model_select
 #>Set page to 0 if it's un set
 execute unless score @s _anim_page matches -2147483648..2147483647 run scoreboard players set @s _anim_page 1
 #>Title
-tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMenu","underlined":true}," ",{"nbt":"ver","storage":"anim:editor","color":"aqua"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/main/run/menu3/close"}},"\n"]
+tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMenu","underlined":true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/main/run/menu3/close"}},"\n"]
 tellraw @s {"text":"Select anim model:","color":"gray"}
 #>Render Anim Models
 function anim_edit:gui/main/run/menu3/get/start

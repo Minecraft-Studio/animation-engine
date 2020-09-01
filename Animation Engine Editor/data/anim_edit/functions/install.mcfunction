@@ -1,5 +1,5 @@
 execute if data storage anim:editor ver run data merge storage anim:editor {ver_update:1b}
-data merge storage anim:editor {ver:"v1.0a12"}
+data merge storage anim:editor {ver:"v1.0b1"}
 scoreboard objectives add _anim dummy
 scoreboard objectives add _anim_ida dummy
 scoreboard objectives add _anim_idb dummy
@@ -37,7 +37,7 @@ scoreboard players set $100 _anim 100
 scoreboard players set $1000 _anim 1000
 scoreboard players set $20 _anim 20
 execute unless data storage anim:editor ver_update run tellraw @a ["",{"text":"Animation Engine Editor has been installed! ","color":"green"},{"text":"(","color":"gray"},{"nbt":"ver","storage":"anim:editor","color":"gray"},{"text":")","color":"gray"},{"text":"\nRemember! Animation Engine is still in alpha, bugs will happen, please report them (in Settings)!","color":"gray"}]
-execute if data storage anim:editor ver_update run tellraw @a ["",{"text":"Animation Engine Editor has been updated to ","color":"green"},{"nbt":"ver","storage":"anim:editor","color":"aqua"},{"text":"\nRemember! Animation Engine is still in alpha, bugs will happen, please report them (in Settings)!","color":"gray"}]
+execute if data storage anim:editor ver_update run tellraw @a ["",{"text":"Animation Engine Editor has been updated to ","color":"green"},{"nbt":"ver","storage":"anim:editor","color":"green"},{"text":"\nRemember! Animation Engine is still in alpha, bugs will happen, please report them (in Settings)!","color":"gray"}]
 data remove storage anim:editor ver_update
 #define entity @e[tag=anim_model_select]
 #define entity @e[tag=anim_part_select]
