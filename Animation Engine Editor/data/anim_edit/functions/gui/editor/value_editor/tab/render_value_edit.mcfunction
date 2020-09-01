@@ -13,15 +13,32 @@ function anim_edit:get_edit_shortcuts
 function anim_edit:search_part_editor
 #>Render X
 # get values
-execute if score $_tab _anim matches 1 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Head[0] 1000
-execute if score $_tab _anim matches 2 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Body[0] 1000
-execute if score $_tab _anim matches 3 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightArm[0] 1000
-execute if score $_tab _anim matches 4 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftArm[0] 1000
-execute if score $_tab _anim matches 5 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightLeg[0] 1000
-execute if score $_tab _anim matches 6 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftLeg[0] 1000
-execute if score $_tab _anim matches 7 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Rotation[0] 1000
-execute if score $_tab _anim matches 8 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pos[0] 1000
-# coord
+execute if score $_tab _anim matches 1 unless data storage anim:editor open_keyframes[0].value.head.x.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Head[0] 1000
+execute if score $_tab _anim matches 1 if data storage anim:editor open_keyframes[0].value.head.x.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.head.x.value 1000
+execute if score $_tab _anim matches 1 if data storage anim:editor open_keyframes[0].value.head.x.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 2 unless data storage anim:editor open_keyframes[0].value.body.x.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Body[0] 1000
+execute if score $_tab _anim matches 2 if data storage anim:editor open_keyframes[0].value.body.x.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.body.x.value 1000
+execute if score $_tab _anim matches 2 if data storage anim:editor open_keyframes[0].value.body.x.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 3 unless data storage anim:editor open_keyframes[0].value.r_arm.x.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightArm[0] 1000
+execute if score $_tab _anim matches 3 if data storage anim:editor open_keyframes[0].value.r_arm.x.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.r_arm.x.value 1000
+execute if score $_tab _anim matches 3 if data storage anim:editor open_keyframes[0].value.r_arm.x.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 4 unless data storage anim:editor open_keyframes[0].value.l_arm.x.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftArm[0] 1000
+execute if score $_tab _anim matches 4 if data storage anim:editor open_keyframes[0].value.l_arm.x.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.l_arm.x.value 1000
+execute if score $_tab _anim matches 4 if data storage anim:editor open_keyframes[0].value.l_arm.x.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 5 unless data storage anim:editor open_keyframes[0].value.r_leg.x.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightLeg[0] 1000
+execute if score $_tab _anim matches 5 if data storage anim:editor open_keyframes[0].value.r_leg.x.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.r_leg.x.value 1000
+execute if score $_tab _anim matches 5 if data storage anim:editor open_keyframes[0].value.r_leg.x.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 6 unless data storage anim:editor open_keyframes[0].value.l_leg.x.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftLeg[0] 1000
+execute if score $_tab _anim matches 6 if data storage anim:editor open_keyframes[0].value.l_leg.x.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.l_leg.x.value 1000
+execute if score $_tab _anim matches 6 if data storage anim:editor open_keyframes[0].value.l_leg.x.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 7 unless data storage anim:editor open_keyframes[0].value.rotation.x.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Rotation[0] 1000
+execute if score $_tab _anim matches 7 if data storage anim:editor open_keyframes[0].value.rotation.x.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.rotation.x.value 1000
+execute if score $_tab _anim matches 7 if data storage anim:editor open_keyframes[0].value.rotation.x.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 8 unless data storage anim:editor open_keyframes[0].value.pos.x.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pos[0] 1000
+execute if score $_tab _anim matches 8 if data storage anim:editor open_keyframes[0].value.pos.x.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.pos.x.value 1000
+execute if score $_tab _anim matches 8 if data storage anim:editor open_keyframes[0].value.pos.x.value run scoreboard players set $_value_set _anim 1
+# interpret
+
 data modify storage anim:editor value_edit_shortcuts.coord set value '{"text":"\\n x ","color":"red"}'
 # render
 function anim_edit:gui/editor/value_editor/tab/render_value_edit2
@@ -32,15 +49,31 @@ scoreboard players reset $_dec_val4 _anim
 
 #>Render Y
 # get values
-execute if score $_tab _anim matches 1 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Head[1] 1000
-execute if score $_tab _anim matches 2 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Body[1] 1000
-execute if score $_tab _anim matches 3 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightArm[1] 1000
-execute if score $_tab _anim matches 4 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftArm[1] 1000
-execute if score $_tab _anim matches 5 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightLeg[1] 1000
-execute if score $_tab _anim matches 6 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftLeg[1] 1000
-execute if score $_tab _anim matches 7 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Rotation[1] 1000
-execute if score $_tab _anim matches 8 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pos[1] 1000
-# coord
+execute if score $_tab _anim matches 1 unless data storage anim:editor open_keyframes[0].value.head.y.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Head[1] 1000
+execute if score $_tab _anim matches 1 if data storage anim:editor open_keyframes[0].value.head.y.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.head.y.value 1000
+execute if score $_tab _anim matches 1 if data storage anim:editor open_keyframes[0].value.head.y.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 2 unless data storage anim:editor open_keyframes[0].value.body.y.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Body[1] 1000
+execute if score $_tab _anim matches 2 if data storage anim:editor open_keyframes[0].value.body.y.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.body.y.value 1000
+execute if score $_tab _anim matches 2 if data storage anim:editor open_keyframes[0].value.body.y.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 3 unless data storage anim:editor open_keyframes[0].value.r_arm.y.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightArm[1] 1000
+execute if score $_tab _anim matches 3 if data storage anim:editor open_keyframes[0].value.r_arm.y.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.r_arm.y.value 1000
+execute if score $_tab _anim matches 3 if data storage anim:editor open_keyframes[0].value.r_arm.y.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 4 unless data storage anim:editor open_keyframes[0].value.l_arm.y.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftArm[1] 1000
+execute if score $_tab _anim matches 4 if data storage anim:editor open_keyframes[0].value.l_arm.y.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.l_arm.y.value 1000
+execute if score $_tab _anim matches 4 if data storage anim:editor open_keyframes[0].value.l_arm.y.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 5 unless data storage anim:editor open_keyframes[0].value.r_leg.y.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightLeg[1] 1000
+execute if score $_tab _anim matches 5 if data storage anim:editor open_keyframes[0].value.r_leg.y.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.r_leg.y.value 1000
+execute if score $_tab _anim matches 5 if data storage anim:editor open_keyframes[0].value.r_leg.y.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 6 unless data storage anim:editor open_keyframes[0].value.l_leg.y.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftLeg[1] 1000
+execute if score $_tab _anim matches 6 if data storage anim:editor open_keyframes[0].value.l_leg.y.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.l_leg.y.value 1000
+execute if score $_tab _anim matches 6 if data storage anim:editor open_keyframes[0].value.l_leg.y.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 7 unless data storage anim:editor open_keyframes[0].value.rotation.y.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Rotation[1] 1000
+execute if score $_tab _anim matches 7 if data storage anim:editor open_keyframes[0].value.rotation.y.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.rotation.y.value 1000
+execute if score $_tab _anim matches 7 if data storage anim:editor open_keyframes[0].value.rotation.y.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 8 unless data storage anim:editor open_keyframes[0].value.pos.y.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pos[1] 1000
+execute if score $_tab _anim matches 8 if data storage anim:editor open_keyframes[0].value.pos.y.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.pos.y.value 1000
+execute if score $_tab _anim matches 8 if data storage anim:editor open_keyframes[0].value.pos.y.value run scoreboard players set $_value_set _anim 1
+# interpret
 data modify storage anim:editor value_edit_shortcuts.coord set value '{"text":"\\n y ","color":"green"}'
 # render
 function anim_edit:gui/editor/value_editor/tab/render_value_edit2
@@ -51,14 +84,28 @@ scoreboard players reset $_dec_val4 _anim
 
 #>Render Z
 # get values
-execute if score $_tab _anim matches 1 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Head[2] 1000
-execute if score $_tab _anim matches 2 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Body[2] 1000
-execute if score $_tab _anim matches 3 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightArm[2] 1000
-execute if score $_tab _anim matches 4 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftArm[2] 1000
-execute if score $_tab _anim matches 5 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightLeg[2] 1000
-execute if score $_tab _anim matches 6 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftLeg[2] 1000
-execute if score $_tab _anim matches 8 as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pos[2] 1000
-# coord
+execute if score $_tab _anim matches 1 unless data storage anim:editor open_keyframes[0].value.head.z.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Head[2] 1000
+execute if score $_tab _anim matches 1 if data storage anim:editor open_keyframes[0].value.head.z.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.head.z.value 1000
+execute if score $_tab _anim matches 1 if data storage anim:editor open_keyframes[0].value.head.z.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 2 unless data storage anim:editor open_keyframes[0].value.body.z.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.Body[2] 1000
+execute if score $_tab _anim matches 2 if data storage anim:editor open_keyframes[0].value.body.z.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.body.z.value 1000
+execute if score $_tab _anim matches 2 if data storage anim:editor open_keyframes[0].value.body.z.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 3 unless data storage anim:editor open_keyframes[0].value.r_arm.z.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightArm[2] 1000
+execute if score $_tab _anim matches 3 if data storage anim:editor open_keyframes[0].value.r_arm.z.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.r_arm.z.value 1000
+execute if score $_tab _anim matches 3 if data storage anim:editor open_keyframes[0].value.r_arm.z.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 4 unless data storage anim:editor open_keyframes[0].value.l_arm.z.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftArm[2] 1000
+execute if score $_tab _anim matches 4 if data storage anim:editor open_keyframes[0].value.l_arm.z.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.l_arm.z.value 1000
+execute if score $_tab _anim matches 4 if data storage anim:editor open_keyframes[0].value.l_arm.z.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 5 unless data storage anim:editor open_keyframes[0].value.r_leg.z.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.RightLeg[2] 1000
+execute if score $_tab _anim matches 5 if data storage anim:editor open_keyframes[0].value.r_leg.z.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.r_leg.z.value 1000
+execute if score $_tab _anim matches 5 if data storage anim:editor open_keyframes[0].value.r_leg.z.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 6 unless data storage anim:editor open_keyframes[0].value.l_leg.z.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pose.LeftLeg[2] 1000
+execute if score $_tab _anim matches 6 if data storage anim:editor open_keyframes[0].value.l_leg.z.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.l_leg.z.value 1000
+execute if score $_tab _anim matches 6 if data storage anim:editor open_keyframes[0].value.l_leg.z.value run scoreboard players set $_value_set _anim 1
+execute if score $_tab _anim matches 8 unless data storage anim:editor open_keyframes[0].value.pos.z.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pos[2] 1000
+execute if score $_tab _anim matches 8 if data storage anim:editor open_keyframes[0].value.pos.z.value store result score $_dec_val _anim run data get storage anim:editor open_keyframes[0].value.pos.z.value 1000
+execute if score $_tab _anim matches 8 if data storage anim:editor open_keyframes[0].value.pos.z.value run scoreboard players set $_value_set _anim 1
+# interpret
 data modify storage anim:editor value_edit_shortcuts.coord set value '{"text":"\\n z ","color":"blue"}'
 # render
 execute unless score $_tab _anim matches 7 run function anim_edit:gui/editor/value_editor/tab/render_value_edit2
