@@ -1,3 +1,4 @@
+function anim_edit:kill_nbt_as
 scoreboard players set @s _anim_menu 7
 tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 #
@@ -6,7 +7,7 @@ tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 # Load anim keyframes
 function anim_edit:get_anim_keyframes
 #>Title
-tellraw @s ["",{"text":"Editor","underlined": true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/editor/close"}}]
+tellraw @s ["",{"text":"Editor","underlined": true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"}," ",{"text":"[Settings]","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/settings/load"}}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/editor/close"}}]
 #>Editor GUI
 execute unless score @s _anim_row_page matches 1.. run scoreboard players set @s _anim_row_page 1
 scoreboard players set $_get_part _anim 0
@@ -125,9 +126,10 @@ scoreboard objectives remove _anim_notif9
 #
 function anim_edit:gui/editor/keyframe_editor/get_sel_keyframes
 execute unless score $_tab _anim matches 1..10 run scoreboard players set $_tab _anim 1
-execute if score $_tab _anim matches 1..8 run function anim_edit:gui/editor/value_editor/tab/render_value_edit
-execute if score $_tab _anim matches 9 run function anim_edit:gui/editor/value_editor/tab/extra
-execute if score $_tab _anim matches 10 run function anim_edit:gui/editor/value_editor/tab/extra_2
+execute if score $open_keyframes _anim matches 0 run function anim_edit:gui/editor/value_editor/tab/non_selected
+execute if score $open_keyframes _anim matches 1.. if score $_tab _anim matches 1..8 run function anim_edit:gui/editor/value_editor/tab/render_value_edit
+execute if score $open_keyframes _anim matches 1.. if score $_tab _anim matches 9 run function anim_edit:gui/editor/value_editor/tab/extra
+execute if score $open_keyframes _anim matches 1.. if score $_tab _anim matches 10 run function anim_edit:gui/editor/value_editor/tab/extra_2
 
 #>Live preview
 # Get Armor Stand

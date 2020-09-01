@@ -1,3 +1,4 @@
+function anim_edit:kill_nbt_as
 execute if score @s _anim_menu matches 3 if score $runtime_exists _anim matches 1 run function anim_edit:gui/main/run/menu3/load
 execute if score @s _anim_menu matches 4 if score $runtime_exists _anim matches 1 run function anim_edit:gui/main/run/menu4/load
 execute if score @s _anim_menu matches 5 if score $runtime_exists _anim matches 1 run function anim_edit:gui/main/run/menu5/load

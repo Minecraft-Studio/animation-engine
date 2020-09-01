@@ -11,3 +11,4 @@ data remove storage anim:editor search_for_opened_keyframes[0]
 
 execute if data storage anim:editor search_for_opened_keyframes[0] run function anim_edit:gui/editor/keyframe_editor/get_sel_keyframes
 data remove storage anim:editor search_for_opened_keyframes
+execute store result score $open_keyframes _anim run data get storage anim:editor open_keyframes

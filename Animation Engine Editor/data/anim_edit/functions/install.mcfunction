@@ -30,12 +30,13 @@ scoreboard objectives add _anim_sett_gmrle dummy
 execute unless data storage anim:editor edit_shortcuts run data modify storage anim:editor edit_shortcuts set value []
 execute unless data storage anim:editor move_shortcuts run data modify storage anim:editor move_shortcuts set value []
 #>End of objectives only used by editor
+scoreboard players set $-1 _anim -1
 scoreboard players set $2 _anim 2
 scoreboard players set $7 _anim 7
 scoreboard players set $10 _anim 10
+scoreboard players set $20 _anim 20
 scoreboard players set $100 _anim 100
 scoreboard players set $1000 _anim 1000
-scoreboard players set $20 _anim 20
 execute unless data storage anim:editor ver_update run tellraw @a ["",{"text":"Animation Engine Editor has been installed! ","color":"green"},{"text":"(","color":"gray"},{"nbt":"ver","storage":"anim:editor","color":"gray"},{"text":")","color":"gray"},{"text":"\nRemember! Animation Engine is still in beta, bugs will happen, please report them (in Settings)!","color":"gray"}]
 execute if data storage anim:editor ver_update run tellraw @a ["",{"text":"Animation Engine Editor has been updated to ","color":"green"},{"nbt":"ver","storage":"anim:editor","color":"aqua"},{"text":"\nRemember! Animation Engine is still in beta, bugs will happen, please report them (in Settings)!","color":"gray"}]
 data remove storage anim:editor ver_update

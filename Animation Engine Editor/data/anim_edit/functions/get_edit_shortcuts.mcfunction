@@ -1,5 +1,5 @@
 #
-#>Gets settings for moving ticks in keyframe editor
+#>Gets settings for adding values in value editor
 # Input:
 # Output: anim:editor value_edit_shortcuts
 scoreboard players reset $_got_p_od _anim
