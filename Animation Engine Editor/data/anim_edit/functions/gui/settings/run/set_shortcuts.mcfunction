@@ -8,8 +8,7 @@ execute if data entity @e[tag=anim_custom_nbt_tp,tag=anim_settings,limit=1] Armo
 tellraw @p {"nbt":"ArmorItems[2].tag","entity":"@e[tag=anim_custom_nbt_tp,tag=anim_settings,limit=1]","color":"blue"}
 tellraw @p {"score":{"name":"$_dec_val","objective":"_anim"},"color":"yellow"}
 tellraw @p {"score":{"name":"$_dec_val","objective":"_anim"},"color":"gold"}
-execute if data entity @e[tag=anim_custom_nbt_tp,tag=anim_settings,limit=1] ArmorItems[2].tag.m if score $_dec_val _anim matches 0.. run scoreboard players operation $_dec_val _anim *= $-1 _anim
-execute if data entity @e[tag=anim_custom_nbt_tp,tag=anim_settings,limit=1] ArmorItems[2].tag.p if score $_dec_val _anim matches ..0 run scoreboard players operation $_dec_val _anim *= $-1 _anim
+execute if data entity @e[tag=anim_custom_nbt_tp,tag=anim_settings,limit=1] ArmorItems[2].tag if score $_dec_val _anim matches ..0 run scoreboard players operation $_dec_val _anim *= $-1 _anim
 
 scoreboard players operation $_dec_val_ _anim = $_dec_val _anim
 tellraw @p {"score":{"name":"$_dec_val_","objective":"_anim"},"color":"green"}

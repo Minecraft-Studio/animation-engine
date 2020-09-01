@@ -15,9 +15,9 @@ execute if score $_got_p_id _anim = $_p_id _anim store result storage anim:edito
 execute if score $_got_p_id _anim = $_p_id _anim store result storage anim:editor import_edit_shortcuts[2] int 1 run scoreboard players get $_dec_val2 _anim
 execute if score $_got_p_id _anim = $_p_id _anim store result storage anim:editor import_edit_shortcuts[3] int 1 run scoreboard players get $_dec_val3 _anim
 execute if score $_got_p_id _anim = $_p_id _anim store result storage anim:editor import_edit_shortcuts[4] int 1 run scoreboard players get $_dec_val4 _anim
+execute if score $_got_p_id _anim = $_p_id _anim unless score $_dec_val4 _anim matches 0.. run data remove storage anim:editor import_edit_shortcuts[4]
+execute if score $_got_p_id _anim = $_p_id _anim unless score $_dec_val3 _anim matches 0.. run data remove storage anim:editor import_edit_shortcuts[3]
 execute if score $_got_p_id _anim = $_p_id _anim run tellraw @p {"nbt":"import_edit_shortcuts","storage":"anim:editor","color":"red"}
-execute if score $_got_p_id _anim = $_p_id _anim if score $_dec_val3 _anim matches 0 if score $_dec_val4 _anim matches 0 run data remove storage anim:editor import_edit_shortcuts[3]
-execute if score $_got_p_id _anim = $_p_id _anim if score $_dec_val4 _anim matches 0 run data remove storage anim:editor import_edit_shortcuts[4]
 execute if score $_got_p_id _anim = $_p_id _anim if data entity @e[tag=anim_custom_nbt_tp,tag=anim_settings,limit=1] ArmorItems[2].tag.m.remove3 run data modify storage anim:editor search_edit_shortcuts[0].remove3 set from storage anim:editor import_edit_shortcuts
 execute if score $_got_p_id _anim = $_p_id _anim if data entity @e[tag=anim_custom_nbt_tp,tag=anim_settings,limit=1] ArmorItems[2].tag.m.remove2 run data modify storage anim:editor search_edit_shortcuts[0].remove2 set from storage anim:editor import_edit_shortcuts
 execute if score $_got_p_id _anim = $_p_id _anim if data entity @e[tag=anim_custom_nbt_tp,tag=anim_settings,limit=1] ArmorItems[2].tag.m.remove1 run data modify storage anim:editor search_edit_shortcuts[0].remove1 set from storage anim:editor import_edit_shortcuts
