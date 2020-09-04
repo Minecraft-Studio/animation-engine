@@ -21,10 +21,7 @@ scoreboard objectives add _anim_id_player dummy
 scoreboard objectives add _anim_ida_select dummy
 scoreboard objectives add _anim_idb_select dummy
 scoreboard objectives add _anim_anim_id dummy
-scoreboard objectives add _anim_multisel dummy
-#> Settings
-#define objective _anim_sett_def Default Transitions (for new keyframes)
-scoreboard objectives add _anim_sett_def dummy
+#> Settings..
 #define objective _anim_sett_gmrle Gamerule
 scoreboard objectives add _anim_sett_gmrle dummy
 execute unless data storage anim:editor edit_shortcuts run data modify storage anim:editor edit_shortcuts set value []

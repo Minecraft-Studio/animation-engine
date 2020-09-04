@@ -1,7 +1,7 @@
 #
 #>Get list of selected keyframes
-#Input: @s;
-#Output: anim:editor open_keyframes
+# Input: @s;
+# Output: anim:editor open_keyframes
 scoreboard players reset $_got_p_id _anim
 execute unless data storage anim:editor search_for_opened_keyframes[0] run data modify storage anim:editor open_keyframes set value []
 execute unless data storage anim:editor search_for_opened_keyframes[0] run data modify storage anim:editor search_for_opened_keyframes set from storage anim:editor selected_keyframes

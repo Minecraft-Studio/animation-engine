@@ -10,5 +10,5 @@ execute store result score $_got_id _anim run data get storage anim:editor searc
 execute if score $_got_id _anim = @s _anim_anim_id run data modify storage anim:editor anim_data set from storage anim:editor search_anim_data[0]
 data remove storage anim:editor search_anim_data[0]
 
-execute if data storage anim:editor search_anim_data[0] unless data storage anim:editor anim_data run function anim_edit:get_edit_shortcuts
+execute if data storage anim:editor search_anim_data[0] unless data storage anim:editor anim_data run function anim_edit:get_anim_keyframes
 data remove storage anim:editor search_anim_data
