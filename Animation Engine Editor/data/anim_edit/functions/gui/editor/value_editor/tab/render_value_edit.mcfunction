@@ -51,9 +51,12 @@ execute if score @s _anim_tab matches 7 if data storage anim:editor current_keyf
 execute if score @s _anim_tab matches 7 if data storage anim:editor current_keyframe.value.rotation.x.value run scoreboard players set $_value_set _anim 1
 execute if score @s _anim_tab matches 7 if data storage anim:editor current_keyframe.value.rotation.x.value run data modify storage anim:editor sel_graph set from storage anim:editor current_keyframe.value.rotation.x.graph
 execute if score @s _anim_tab matches 8 unless data storage anim:editor current_keyframe.value.pos.x.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pos[0] 1000
+execute if score @s _anim_tab matches 8 unless data storage anim:editor current_keyframe.value.pos.x.value as @e[tag=anim_model_select] store result score $_main_pos_val _anim run data get entity @s Pos[0] 1000
+execute if score @s _anim_tab matches 8 unless data storage anim:editor current_keyframe.value.pos.x.value run scoreboard players operation $_dec_val _anim -= $_main_pos_val _anim
 execute if score @s _anim_tab matches 8 if data storage anim:editor current_keyframe.value.pos.x.value store result score $_dec_val _anim run data get storage anim:editor current_keyframe.value.pos.x.value 1000
 execute if score @s _anim_tab matches 8 if data storage anim:editor current_keyframe.value.pos.x.value run scoreboard players set $_value_set _anim 1
 execute if score @s _anim_tab matches 8 if data storage anim:editor current_keyframe.value.pos.x.value run data modify storage anim:editor sel_graph set from storage anim:editor current_keyframe.value.pos.x.graph
+scoreboard players reset $_main_pos_val _anim
 # interpret
 
 data modify storage anim:editor value_edit_shortcuts.coord set value '{"text":"\\n x ","color":"red"}'
@@ -96,9 +99,12 @@ execute if score @s _anim_tab matches 7 if data storage anim:editor current_keyf
 execute if score @s _anim_tab matches 7 if data storage anim:editor current_keyframe.value.rotation.y.value run scoreboard players set $_value_set _anim 1
 execute if score @s _anim_tab matches 7 if data storage anim:editor current_keyframe.value.rotation.y.value run data modify storage anim:editor sel_graph set from storage anim:editor current_keyframe.value.rotation.y.graph
 execute if score @s _anim_tab matches 8 unless data storage anim:editor current_keyframe.value.pos.y.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pos[1] 1000
+execute if score @s _anim_tab matches 8 unless data storage anim:editor current_keyframe.value.pos.y.value as @e[tag=anim_model_select] store result score $_main_pos_val _anim run data get entity @s Pos[1] 1000
+execute if score @s _anim_tab matches 8 unless data storage anim:editor current_keyframe.value.pos.y.value run scoreboard players operation $_dec_val _anim -= $_main_pos_val _anim
 execute if score @s _anim_tab matches 8 if data storage anim:editor current_keyframe.value.pos.y.value store result score $_dec_val _anim run data get storage anim:editor current_keyframe.value.pos.y.value 1000
 execute if score @s _anim_tab matches 8 if data storage anim:editor current_keyframe.value.pos.y.value run scoreboard players set $_value_set _anim 1
 execute if score @s _anim_tab matches 8 if data storage anim:editor current_keyframe.value.pos.y.value run data modify storage anim:editor sel_graph set from storage anim:editor current_keyframe.value.pos.y.graph
+scoreboard players reset $_main_pos_val _anim
 # interpret
 
 data modify storage anim:editor value_edit_shortcuts.coord set value '{"text":"\\n y ","color":"green"}'
@@ -137,9 +143,12 @@ execute if score @s _anim_tab matches 6 if data storage anim:editor current_keyf
 execute if score @s _anim_tab matches 6 if data storage anim:editor current_keyframe.value.l_leg.z.value run scoreboard players set $_value_set _anim 1
 execute if score @s _anim_tab matches 6 if data storage anim:editor current_keyframe.value.l_leg.z.value run data modify storage anim:editor sel_graph set from storage anim:editor current_keyframe.value.l_leg.z.graph
 execute if score @s _anim_tab matches 8 unless data storage anim:editor current_keyframe.value.pos.z.value as @e[tag=anim_part_select] store result score $_dec_val _anim run data get entity @s Pos[2] 1000
+execute if score @s _anim_tab matches 8 unless data storage anim:editor current_keyframe.value.pos.z.value as @e[tag=anim_model_select] store result score $_main_pos_val _anim run data get entity @s Pos[2] 1000
+execute if score @s _anim_tab matches 8 unless data storage anim:editor current_keyframe.value.pos.z.value run scoreboard players operation $_dec_val _anim -= $_main_pos_val _anim
 execute if score @s _anim_tab matches 8 if data storage anim:editor current_keyframe.value.pos.z.value store result score $_dec_val _anim run data get storage anim:editor current_keyframe.value.pos.z.value 1000
 execute if score @s _anim_tab matches 8 if data storage anim:editor current_keyframe.value.pos.z.value run scoreboard players set $_value_set _anim 1
 execute if score @s _anim_tab matches 8 if data storage anim:editor current_keyframe.value.pos.z.value run data modify storage anim:editor sel_graph set from storage anim:editor current_keyframe.value.pos.z.graph
+scoreboard players reset $_main_pos_val _anim
 # interpret
 
 data modify storage anim:editor value_edit_shortcuts.coord set value '{"text":"\\n z ","color":"blue"}'
