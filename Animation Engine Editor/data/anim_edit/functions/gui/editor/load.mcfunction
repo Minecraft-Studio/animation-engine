@@ -75,49 +75,9 @@ execute if score $_notif_length _anim matches ..35 run data modify storage anim:
 execute if score $_notif_length _anim matches ..35 run scoreboard players add $_notif_length _anim 2
 execute if score $_notif_length _anim matches ..36 run data modify storage anim:editor notification_dec append value "="
 execute if score $_notif_length _anim matches ..36 run scoreboard players add $_notif_length _anim 1
-scoreboard objectives add _anim_notif0 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[0].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif0 1
-scoreboard objectives add _anim_notif1 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[1].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif1 1
-scoreboard objectives add _anim_notif2 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[2].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif2 1
-scoreboard objectives add _anim_notif3 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[3].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif3 1
-scoreboard objectives add _anim_notif4 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[4].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif4 1
-scoreboard objectives add _anim_notif5 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[5].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif5 1
-scoreboard objectives add _anim_notif6 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[6].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif6 1
-scoreboard objectives add _anim_notif7 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[7].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif7 1
-scoreboard objectives add _anim_notif8 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[8].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif8 1
-scoreboard objectives add _anim_notif9 dummy
-execute store result score $_notif_lookfor _anim run data get storage anim:editor console[9].id
-execute as @a if score $_notif_lookfor _anim = @s _anim_id_player run scoreboard players set @s _anim_notif9 1
-tellraw @s [{"text":"===","color":"dark_gray","hoverEvent": {"action": "show_text","contents":[{"text":"","color":"white"},{"text":"Latest console log\n","color":"yellow"},{"selector":"@e[scores={_anim_notif0=1}]"},{"nbt":"console[0].text","storage":"anim:editor"},{"nbt":"console[0].log","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif1=1}]"},{"nbt":"console[1].text","storage":"anim:editor"},{"nbt":"console[1].log","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif2=1}]"},{"nbt":"console[2].text","storage":"anim:editor"},{"nbt":"console[2].log","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif3=1}]"},{"nbt":"console[3].text","storage":"anim:editor"},{"nbt":"console[3].log","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif4=1}]"},{"nbt":"console[4].text","storage":"anim:editor"},{"nbt":"console[4].log","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif5=1}]"},{"nbt":"console[5].text","storage":"anim:editor"},{"nbt":"console[5].log","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif6=1}]"},{"nbt":"console[6].text","storage":"anim:editor"},{"nbt":"console[6].log","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif7=1}]"},{"nbt":"console[7].text","storage":"anim:editor"},{"nbt":"console[7].log","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif8=1}]"},{"nbt":"console[8].text","storage":"anim:editor"},{"nbt":"console[8].log","storage":"anim:editor","interpret":true},"\n",{"selector":"@e[scores={_anim_notif9=1}]"},{"nbt":"console[9].text","storage":"anim:editor"},{"nbt":"console[9].log","storage":"anim:editor","interpret":true}]}},{"selector":"@e[scores={_anim_notif0=1}]"},{"nbt":"console[0].text","storage":"anim:editor"},{"nbt":"console[0].log","storage":"anim:editor","interpret":true},{"nbt":"notification_dec[0]","storage":"anim:editor"},{"nbt":"notification_dec[1]","storage":"anim:editor"},{"nbt":"notification_dec[2]","storage":"anim:editor"},{"nbt":"notification_dec[3]","storage":"anim:editor"},{"nbt":"notification_dec[4]","storage":"anim:editor"},{"nbt":"notification_dec[5]","storage":"anim:editor"},{"nbt":"notification_dec[6]","storage":"anim:editor"},{"nbt":"notification_dec[7]","storage":"anim:editor"}]
+tellraw @s [{"text":"===","color":"dark_gray","hoverEvent": {"action": "show_text","contents":[{"text":"","color":"white"},{"text":"Latest console log\n","color":"yellow"},{"nbt":"console[0].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[1].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[2].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[3].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[4].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[5].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[6].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[7].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[8].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[9].log","storage":"anim:editor","interpret":true}]}},{"nbt":"console[0].log","storage":"anim:editor","interpret":true},{"nbt":"notification_dec[0]","storage":"anim:editor"},{"nbt":"notification_dec[1]","storage":"anim:editor"},{"nbt":"notification_dec[2]","storage":"anim:editor"},{"nbt":"notification_dec[3]","storage":"anim:editor"},{"nbt":"notification_dec[4]","storage":"anim:editor"},{"nbt":"notification_dec[5]","storage":"anim:editor"},{"nbt":"notification_dec[6]","storage":"anim:editor"},{"nbt":"notification_dec[7]","storage":"anim:editor"}]
 data remove storage anim:editor console[10]
 data remove storage anim:editor notification_dec
-scoreboard objectives remove _anim_notif0
-scoreboard objectives remove _anim_notif1
-scoreboard objectives remove _anim_notif2
-scoreboard objectives remove _anim_notif3
-scoreboard objectives remove _anim_notif4
-scoreboard objectives remove _anim_notif5
-scoreboard objectives remove _anim_notif6
-scoreboard objectives remove _anim_notif7
-scoreboard objectives remove _anim_notif8
-scoreboard objectives remove _anim_notif9
 
 #
 #>Value Editor render
@@ -135,7 +95,7 @@ scoreboard players reset $_custom_as_exists _anim
 # Get Armor Stand
 function anim_edit:search_part_editor
 #FIX: Multiselect support
-execute as @e[tag=anim_part_select] if score @s _anim_idb = $_sel_row _anim run function anim_edit:gui/editor/value_editor/live_preview
+execute as @e[tag=anim_part_select] if score @s _anim_idb = @s _anim_editor_row run function anim_edit:gui/editor/value_editor/live_preview
 
 function anim_edit:gui/editor/value_editor/menu
 #>Gamerule
