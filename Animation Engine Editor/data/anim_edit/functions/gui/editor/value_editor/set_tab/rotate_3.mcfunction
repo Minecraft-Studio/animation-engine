@@ -1,2 +1,2 @@
-scoreboard players set $_tab _anim 3
+scoreboard players set @s _anim_tab 3
 function anim_edit:gui/editor/load

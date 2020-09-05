@@ -124,11 +124,12 @@ scoreboard objectives remove _anim_notif9
 #
 scoreboard players reset $_key_selected _anim
 execute if score @s _anim_editor_col matches 1.. if score @s _anim_editor_row matches 1.. run scoreboard players set $_key_selected _anim 1
-execute unless score $_tab _anim matches 1..10 run scoreboard players set $_tab _anim 1
+execute unless score @s _anim_tab matches 1..10 run scoreboard players set @s _anim_tab 1
 execute unless score $_key_selected _anim matches 1 run function anim_edit:gui/editor/value_editor/tab/non_selected
-execute if score $_key_selected _anim matches 1 if score $_tab _anim matches 1..8 run function anim_edit:gui/editor/value_editor/tab/render_value_edit
-execute if score $_key_selected _anim matches 1 if score $_tab _anim matches 9 run function anim_edit:gui/editor/value_editor/tab/extra
-execute if score $_key_selected _anim matches 1 if score $_tab _anim matches 10 run function anim_edit:gui/editor/value_editor/tab/extra_2
+execute if score $_key_selected _anim matches 1 if score @s _anim_tab matches 1..8 run function anim_edit:gui/editor/value_editor/tab/render_value_edit
+execute if score $_key_selected _anim matches 1 if score @s _anim_tab matches 9 run function anim_edit:gui/editor/value_editor/tab/extra
+execute if score $_key_selected _anim matches 1 if score @s _anim_tab matches 10 run function anim_edit:gui/editor/value_editor/tab/extra_2
+scoreboard players reset $_custom_as_exists _anim
 
 #>Live preview
 # Get Armor Stand

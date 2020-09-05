@@ -1,0 +1,10 @@
+scoreboard players reset $_got_tick _anim
+scoreboard players reset $_got_part _anim
+execute store result score $_got_tick _anim run data get storage anim:editor search_keyframes[0].tick
+execute store result score $_got_part _anim run data get storage anim:editor search_keyframes[0].part
+execute if score $_get_tick _anim = $_got_tick _anim if score $_get_part _anim = $_got_part _anim run scoreboard players set $_keyframe_found _anim 1
+execute if score $_get_tick _anim = $_got_tick _anim if score $_get_part _anim = $_got_part _anim run data modify storage anim:editor search_keyframes[0] set from storage anim:editor current_keyframe
+data modify storage anim:editor output_keyframes append from storage anim:editor search_keyframes[0]
+data remove storage anim:editor search_keyframes[0]
+
+execute if data storage anim:editor search_keyframes[0] run function anim_edit:set_anim_keyframe_loop
