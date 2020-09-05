@@ -1,6 +1,6 @@
 function anim_edit:get_anim_keyframes
 scoreboard players operation $_get_tick _anim = @s _anim_editor_col
-scoreboard players operation $_get_part _anim = @s _anim_editor_row
+scoreboard players operation $_get_part _anim = @s _anim_idb_select
 scoreboard players set $_delete_keyframe _anim 1
 function anim_edit:set_anim_keyframe
 scoreboard players reset $_delete_keyframe _anim

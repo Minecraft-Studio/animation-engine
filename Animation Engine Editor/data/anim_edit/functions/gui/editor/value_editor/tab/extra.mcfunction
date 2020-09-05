@@ -12,7 +12,7 @@ tellraw @s {"text":""}
 # scoreboard players remove $_sel_row _anim 1
 
 
-function anim_edit:search_part_editor
+function ainm_edit:search_part
 
 execute unless data storage anim:editor current_keyframe.extra.invisible store result score $_extra_nbt _anim as @e[tag=anim_part_select] run data get entity @s Invisible
 execute unless data storage anim:editor current_keyframe.extra.invisible if score $_extra_nbt _anim matches 1 run tellraw @s ["",{"text":"Invisible: ","color":"aqua","hoverEvent":{"action":"show_text","contents":["",{"text":"Makes armor stand turn invisible","color":"gray"}]}},{"text":"[ON]","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/editor/value_editor/extra/nbt/invisible"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Toggles invisibility\nCurrently not set to any value","color":"gray"}]}}]

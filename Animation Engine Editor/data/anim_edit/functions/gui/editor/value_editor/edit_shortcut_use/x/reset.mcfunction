@@ -1,6 +1,6 @@
 function anim_edit:get_anim_keyframes
 scoreboard players operation $_get_tick _anim = @s _anim_editor_col
-scoreboard players operation $_get_part _anim = @s _anim_editor_row
+scoreboard players operation $_get_part _anim = @s _anim_idb_select
 function anim_edit:get_anim_keyframe
 execute if score @s _anim_tab matches 1 run data remove storage anim:editor current_keyframe.value.head.x
 execute if score @s _anim_tab matches 2 run data remove storage anim:editor current_keyframe.value.body.x

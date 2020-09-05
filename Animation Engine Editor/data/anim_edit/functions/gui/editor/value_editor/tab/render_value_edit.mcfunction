@@ -16,9 +16,9 @@ execute if score @s _anim_tab matches 8 run tellraw @s ["",{"text":"Rotate","col
 
 #>Get selected anim_part
 function anim_edit:get_edit_shortcuts
-function anim_edit:search_part_editor
+function ainm_edit:search_part
 scoreboard players operation $_get_tick _anim = @s _anim_editor_col
-scoreboard players operation $_get_part _anim = @s _anim_editor_row
+scoreboard players operation $_get_part _anim = @s _anim_idb_select
 function anim_edit:get_anim_keyframe
 #>Render X
 # get values

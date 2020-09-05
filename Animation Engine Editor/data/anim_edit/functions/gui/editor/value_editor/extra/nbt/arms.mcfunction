@@ -1,4 +1,4 @@
-function anim_edit:search_part_editor
+function ainm_edit:search_part
 execute unless data storage anim:editor current_keyframe.extra.arms store result storage anim:editor current_keyframe.extra.arms_prev int 1 as @e[type=armor_stand,tag=anim_part_select] run data get entity @s ShowArms
 execute unless data storage anim:editor current_keyframe.extra.arms store result storage anim:editor current_keyframe.extra.arms int 1 as @e[type=armor_stand,tag=anim_part_select] run data get entity @s ShowArms
 execute if data storage anim:editor {current_keyframe:{extra:{arms:0}}} run data modify storage anim:editor current_keyframe.extra.arms set value 2

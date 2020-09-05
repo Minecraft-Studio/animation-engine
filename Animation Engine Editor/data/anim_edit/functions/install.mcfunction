@@ -21,6 +21,7 @@ scoreboard objectives add _anim_tab dummy
 scoreboard objectives add _anim_id_player dummy
 scoreboard objectives add _anim_ida_select dummy
 scoreboard objectives add _anim_idb_select dummy
+scoreboard objectives add _anim_editor_col dummy
 scoreboard objectives add _anim_anim_id dummy
 #> Settings..
 #define objective _anim_sett_gmrle Gamerule
@@ -46,4 +47,3 @@ data remove storage anim:editor ver_update
 #define function anim_edit:gamerule
 #define function anim_edit:search_model get anim_model_select
 #define function anim_edit:search_part get anim_model_select/anim_part_select
-#define function anim_edit:search_part_editor get anim_model_select/anim_part_select for editor

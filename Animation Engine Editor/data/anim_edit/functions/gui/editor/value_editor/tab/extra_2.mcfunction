@@ -5,7 +5,7 @@ tellraw @s ["",{"text":"Rotate","color":"gray","clickEvent":{"action":"run_comma
 # scoreboard players remove $_sel_row _anim 1
 
 #>Inventory
-function anim_edit:search_part_editor
+function ainm_edit:search_part
 
 #> > Head
 # If value is set

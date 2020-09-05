@@ -1,6 +1,6 @@
 function anim_edit:get_anim_keyframes
 scoreboard players operation $_get_tick _anim = @s _anim_editor_col
-scoreboard players operation $_get_part _anim = @s _anim_editor_row
+scoreboard players operation $_get_part _anim = @s _anim_idb_select
 function anim_edit:get_anim_keyframe
 function anim_edit:get_clipboard
 data modify storage anim:editor clipboards set from storage anim:editor output_clipboards

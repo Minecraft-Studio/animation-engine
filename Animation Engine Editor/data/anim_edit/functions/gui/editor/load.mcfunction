@@ -83,7 +83,7 @@ data remove storage anim:editor notification_dec
 #>Value Editor render
 #
 scoreboard players reset $_key_selected _anim
-execute if score @s _anim_editor_col matches 1.. if score @s _anim_editor_row matches 1.. run scoreboard players set $_key_selected _anim 1
+execute if score @s _anim_editor_col matches 1.. if score @s _anim_idb_select matches 1.. run scoreboard players set $_key_selected _anim 1
 execute unless score @s _anim_tab matches 1..10 run scoreboard players set @s _anim_tab 1
 execute unless score $_key_selected _anim matches 1 run function anim_edit:gui/editor/value_editor/tab/non_selected
 execute if score $_key_selected _anim matches 1 if score @s _anim_tab matches 1..8 run function anim_edit:gui/editor/value_editor/tab/render_value_edit
@@ -93,9 +93,9 @@ scoreboard players reset $_custom_as_exists _anim
 
 #>Live preview
 # Get Armor Stand
-function anim_edit:search_part_editor
+function ainm_edit:search_part
 #FIX: Multiselect support
-execute as @e[tag=anim_part_select] if score @s _anim_idb = @s _anim_editor_row run function anim_edit:gui/editor/value_editor/live_preview
+execute as @e[tag=anim_part_select] if score @s _anim_idb = @s _anim_idb_select run function anim_edit:gui/editor/value_editor/live_preview
 
 function anim_edit:gui/editor/value_editor/menu
 #>Gamerule
