@@ -93,7 +93,7 @@ scoreboard players reset $_custom_as_exists _anim
 
 #>Live preview
 # Get Armor Stand
-function ainm_edit:search_part
+function anim_edit:search_part
 #FIX: Multiselect support
 execute as @e[tag=anim_part_select] if score @s _anim_idb = @s _anim_idb_select run function anim_edit:gui/editor/value_editor/live_preview
 
