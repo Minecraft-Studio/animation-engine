@@ -10,7 +10,7 @@ tag @s add anim_console_add
 data modify storage anim:editor import_console.length set value 30
 function anim_edit:get_free_block
 execute as @e[tag=anim_free_block] at @s if block ~ ~ ~ air run scoreboard players set $_sign_placed _anim 1
-execute as @e[tag=anim_free_block] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ oak_sign{Text1:'[{"text":"","color":"red"},{"selector":"@a[tag=anim_console_add]"},{"text":" deleted a keyframe to "},{"score":{"name":"$_sel_row","objective":"_anim"}},":",{"score":{"name":"$_sel_col","objective":"_anim"}}]'}
+execute as @e[tag=anim_free_block] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ oak_sign{Text1:'[{"text":"","color":"red"},{"selector":"@a[tag=anim_console_add]"},{"text":" deleted keyframe "},{"score":{"name":"$_sel_row","objective":"_anim"}},":",{"score":{"name":"$_sel_col","objective":"_anim"}}]'}
 execute as @e[tag=anim_free_block] at @s if score $_sign_placed _anim matches 1 run data modify storage anim:editor import_console.log set from block ~ ~ ~ Text1 
 execute as @e[tag=anim_free_block] at @s if score $_sign_placed _anim matches 1 run setblock ~ ~ ~ air
 kill @e[tag=anim_free_block]
