@@ -5,7 +5,8 @@
 # API: $_delete_keyframe 1 -> delete keyframe
 execute store result storage anim:editor current_keyframe.tick int 1 run scoreboard players get $_get_tick _anim
 execute store result storage anim:editor current_keyframe.part int 1 run scoreboard players get $_get_part _anim
-data remove storage anim:editor output_keyframes
+execute unless data storage anim:editor current_keyframe.extra.invisible unless data storage anim:editor current_keyframe.extra.marker unless data storage anim:editor current_keyframe.extra.arms unless data storage anim:editor current_keyframe.extra.small unless data storage anim:editor current_keyframe.value.head.x unless data storage anim:editor current_keyframe.value.head.y unless data storage anim:editor current_keyframe.value.head.z unless data storage anim:editor current_keyframe.value.body.x unless data storage anim:editor current_keyframe.value.body.y unless data storage anim:editor current_keyframe.value.body.z unless data storage anim:editor current_keyframe.value.r_arm.x unless data storage anim:editor current_keyframe.value.r_arm.y unless data storage anim:editor current_keyframe.value.r_arm.z unless data storage anim:editor current_keyframe.value.l_arm.x unless data storage anim:editor current_keyframe.value.l_arm.y unless data storage anim:editor current_keyframe.value.l_arm.z unless data storage anim:editor current_keyframe.value.r_leg.x unless data storage anim:editor current_keyframe.value.r_leg.y unless data storage anim:editor current_keyframe.value.r_leg.z unless data storage anim:editor current_keyframe.value.l_leg.x unless data storage anim:editor current_keyframe.value.l_leg.y unless data storage anim:editor current_keyframe.value.l_leg.z unless data storage anim:editor current_keyframe.value.rotation.x unless data storage anim:editor current_keyframe.value.rotation.y unless data storage anim:editor current_keyframe.value.rotation.z unless data storage anim:editor current_keyframe.value.pos.x unless data storage anim:editor current_keyframe.value.pos.y unless data storage anim:editor current_keyframe.value.pos.z run scoreboard players set $_delete_keyframe _anim 1
+data modify storage anim:editor output_keyframes set value []
 data modify storage anim:editor search_keyframes set from storage anim:editor anim_data.keyframes
 scoreboard players reset $_keyframe_found _anim
 function anim_edit:set_anim_keyframe_loop
@@ -18,3 +19,4 @@ data remove storage anim:editor output_anim_data
 data modify storage anim:editor search_anim_data set from entity @e[tag=anim_model_select,limit=1] ArmorItems[2].tag.animations
 function anim_edit:set_anim_keyframes
 data modify entity @e[tag=anim_model_select,limit=1] ArmorItems[2].tag.animations set from storage anim:editor output_anim_data
+scoreboard players reset $_delete_keyframe _anim
