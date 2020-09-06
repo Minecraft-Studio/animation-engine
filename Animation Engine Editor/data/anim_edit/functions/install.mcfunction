@@ -26,6 +26,7 @@ scoreboard objectives add _anim_anim_id dummy
 #> Settings..
 #define objective _anim_sett_gmrle Gamerule
 scoreboard objectives add _anim_sett_gmrle dummy
+scoreboard objectives add _anim_sett_graph dummy
 execute unless data storage anim:editor edit_shortcuts run data modify storage anim:editor edit_shortcuts set value []
 execute unless data storage anim:editor move_shortcuts run data modify storage anim:editor move_shortcuts set value []
 execute unless data storage anim:editor clipboards run data modify storage anim:editor clipboards set value []
