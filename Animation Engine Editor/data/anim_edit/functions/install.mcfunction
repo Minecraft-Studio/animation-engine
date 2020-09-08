@@ -27,12 +27,14 @@ scoreboard objectives add _anim_anim_id dummy
 #define objective _anim_sett_gmrle Gamerule
 scoreboard objectives add _anim_sett_gmrle dummy
 scoreboard objectives add _anim_sett_graph dummy
+scoreboard objectives add _anim_graph_key dummy
 execute unless data storage anim:editor edit_shortcuts run data modify storage anim:editor edit_shortcuts set value []
 execute unless data storage anim:editor move_shortcuts run data modify storage anim:editor move_shortcuts set value []
 execute unless data storage anim:editor clipboards run data modify storage anim:editor clipboards set value []
 #>End of objectives only used by editor
 scoreboard players set $-1 _anim -1
 scoreboard players set $2 _anim 2
+scoreboard players set $5 _anim 5
 scoreboard players set $7 _anim 7
 scoreboard players set $10 _anim 10
 scoreboard players set $20 _anim 20
