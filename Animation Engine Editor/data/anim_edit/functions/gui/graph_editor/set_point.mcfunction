@@ -17,7 +17,8 @@ execute unless score @s _anim_graph_key matches 0 store result score $g_1_t _ani
 execute unless score @s _anim_graph_key matches 0 if data storage anim:editor search_graph[1] store result score $g_2_t _anim run data get storage anim:editor search_graph[1].x
 execute unless score @s _anim_graph_key matches 0 unless data storage anim:editor search_graph[1] run scoreboard players set $g_2_t _anim 100
 execute if score @s _anim_graph_key matches 0 run scoreboard players set $g_1_t _anim 0
-execute if score @s _anim_graph_key matches 0 store result score $g_2_t _anim run data get storage anim:editor search_graph[0].x
+execute if score @s _anim_graph_key matches 0 if data storage anim:editor search_graph[0] store result score $g_2_t _anim run data get storage anim:editor search_graph[0].x
+execute if score @s _anim_graph_key matches 0 unless data storage anim:editor search_graph[0] run scoreboard players set $g_2_t _anim 100
 
 execute unless score @s _anim_graph_key matches 0 run data modify storage anim:editor output_graph append from storage anim:editor search_graph[0]
 execute unless score @s _anim_graph_key matches 0 run data remove storage anim:editor search_graph[0]
