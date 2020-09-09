@@ -17,7 +17,7 @@ execute unless data storage anim:editor got_graph[1] run scoreboard players set 
 # tellraw @p [":!:",{"score":{"name":"$g_2_t_5","objective":"_anim"},"color":"blue"}]
 # tellraw @p [":!:",{"nbt":"got_graph","storage":"anim:editor","color":"green"}]
 # tellraw @p [":!:",{"score":{"name":"$g_2_t","objective":"_anim"}}]
-tellraw @p [":!:",{"score":{"name":"$g_2_v","objective":"_anim"}}]
+# tellraw @p [":!:",{"score":{"name":"$g_2_v","objective":"_anim"}}]
 #>Calculate
 # scoreboard players operation $g_tick _anim = $g_1_t _anim
 function anim_edit:gui/graph_editor/calc_value
