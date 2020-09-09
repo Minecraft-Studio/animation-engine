@@ -2,6 +2,7 @@
 function anim_edit:kill_nbt_as
 # reset settings graph and remove the obj if empty
 scoreboard players reset @s _anim_sett_graph
+scoreboard players reset @s _anim_graph_key
 # refresh menu to everyone (if _anim_sett_graph is 1 or higher that means settings is open)
 execute as @a[scores={_anim_menu=3}] unless score @s _anim_sett_graph matches 1.. if score $runtime_exists _anim matches 1 run function anim_edit:gui/main/run/menu3/load
 execute as @a[scores={_anim_menu=4}] unless score @s _anim_sett_graph matches 1.. if score $runtime_exists _anim matches 1 run function anim_edit:gui/main/run/menu4/load

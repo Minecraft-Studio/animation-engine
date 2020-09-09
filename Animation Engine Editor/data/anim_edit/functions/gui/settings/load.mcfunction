@@ -1,3 +1,4 @@
+scoreboard players reset @s _anim_graph_key
 scoreboard players operation $_p_id _anim = @s _anim_id_player
 execute as @e[tag=anim_settings] if score @s _anim_id_player = $_p_id _anim run scoreboard players set $_settings_as_exists _anim 1
 execute unless score $_settings_as_exists _anim matches 1 run summon armor_stand ~ ~ ~ {Tags:["anim_custom_nbt","new_anim_custom_nbt","anim_settings"],ArmorItems:[{},{},{id:"minecraft:stone",Count:1b}],Marker:1,Invisible:1}
