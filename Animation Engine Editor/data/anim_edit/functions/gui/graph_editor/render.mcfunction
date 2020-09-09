@@ -2,8 +2,6 @@ execute if score $g_prev_value _anim < $g_value _anim run scoreboard players add
 execute if score $g_prev_value _anim > $g_value _anim run scoreboard players remove $g_prev_value _anim 1
 scoreboard players operation $g_prev_value_5 _anim = $g_prev_value _anim
 scoreboard players operation $g_value_5 _anim = $g_value _anim
-execute if score $g_prev_value_5 _anim matches ..19 run scoreboard players add $g_prev_value_5 _anim 1
-execute if score $g_value_5 _anim matches ..19 run scoreboard players add $g_value_5 _anim 1
 
 execute if score $g_tick_5 _anim matches 1 run function anim_edit:gui/graph_editor/col_white/1
 execute if score $g_tick_5 _anim matches 2 run function anim_edit:gui/graph_editor/col_white/2

@@ -1,6 +1,5 @@
 scoreboard players operation $g_tick_5 _anim = $g_tick _anim
 scoreboard players operation $g_tick_5 _anim /= $5 _anim
-# execute if score $g_value _anim matches ..19 run scoreboard players add $g_value _anim 1
 #>Calculate
 scoreboard players operation $g_value_real _anim += $g_calc_value _anim
 scoreboard players operation $g_value _anim = $g_value_real _anim
