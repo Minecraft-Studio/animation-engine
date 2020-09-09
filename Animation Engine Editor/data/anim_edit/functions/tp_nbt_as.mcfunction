@@ -15,6 +15,8 @@ execute if data entity @e[tag=anim_custom_nbt_tp,tag=anim_custom,limit=1] ArmorI
 execute if data entity @e[tag=anim_custom_nbt_tp,tag=anim_custom,limit=1] ArmorItems[2].tag.custom_value.x run function anim_edit:gui/editor/value_editor/edit_shortcut_use/x/custom_value
 execute if data entity @e[tag=anim_custom_nbt_tp,tag=anim_custom,limit=1] ArmorItems[2].tag.custom_value.y run function anim_edit:gui/editor/value_editor/edit_shortcut_use/y/custom_value
 execute if data entity @e[tag=anim_custom_nbt_tp,tag=anim_custom,limit=1] ArmorItems[2].tag.custom_value.z run function anim_edit:gui/editor/value_editor/edit_shortcut_use/z/custom_value
+
+execute if data entity @e[tag=anim_custom_nbt_tp,tag=anim_settings,limit=1] ArmorItems[2].tag.new_graph run function anim_edit:gui/graph_editor/new_graph
 # reset
 data remove entity @e[tag=anim_custom_nbt_tp,tag=anim_custom,limit=1] ArmorItems[2].tag.custom_add
 data remove entity @e[tag=anim_custom_nbt_tp,tag=anim_custom,limit=1] ArmorItems[2].tag.custom_value
