@@ -1,5 +1,5 @@
 #
-#>Returns graph name using graph index in array; to get it's data use anim:get_graph
+#>Returns graph using graph index in array; to get using name use anim:get_graph
 # Input: $_get_graph;
 # Output: got_graph
 scoreboard players reset $_next_graph_exists _anim
