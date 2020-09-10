@@ -1,7 +1,6 @@
 #
 #>Compiles keyframe using graph data
-# Input:    anim:runtime compile_graph (graph data wanted to apply to keyframe);
-#           anim:runtime keyframes (keyframes to compile);
+# Input:    anim:runtime keyframes (keyframes to compile);
 #           anim:runtime graphs (graphs to use);
 # Output:   anim:runtime compile (compiled data);
 execute store result score $max_loop _anim run gamerule maxCommandChainLength 

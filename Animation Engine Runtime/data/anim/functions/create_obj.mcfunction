@@ -23,28 +23,6 @@ scoreboard objectives add _anim_px dummy
 scoreboard objectives add _anim_py dummy
 scoreboard objectives add _anim_pz dummy
 
-scoreboard objectives add _anim_hx_ease dummy
-scoreboard objectives add _anim_hy_ease dummy
-scoreboard objectives add _anim_hz_ease dummy
-scoreboard objectives add _anim_bx_ease dummy
-scoreboard objectives add _anim_by_ease dummy
-scoreboard objectives add _anim_bz_ease dummy
-scoreboard objectives add _anim_lax_ease dummy
-scoreboard objectives add _anim_lay_ease dummy
-scoreboard objectives add _anim_laz_ease dummy
-scoreboard objectives add _anim_rax_ease dummy
-scoreboard objectives add _anim_ray_ease dummy
-scoreboard objectives add _anim_raz_ease dummy
-scoreboard objectives add _anim_llx_ease dummy
-scoreboard objectives add _anim_lly_ease dummy
-scoreboard objectives add _anim_llz_ease dummy
-scoreboard objectives add _anim_rlx_ease dummy
-scoreboard objectives add _anim_rly_ease dummy
-scoreboard objectives add _anim_rlz_ease dummy
-scoreboard objectives add _anim_px_ease dummy
-scoreboard objectives add _anim_py_ease dummy
-scoreboard objectives add _anim_pz_ease dummy
-
 scoreboard objectives add _anim_px_value dummy
 scoreboard objectives add _anim_py_value dummy
 scoreboard objectives add _anim_pz_value dummy
