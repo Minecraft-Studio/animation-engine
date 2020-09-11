@@ -14,4 +14,5 @@ scoreboard players add $_comp_continue _anim 1
 execute if data storage anim:runtime keyframes[0] run scoreboard players set $_comp_continue _anim 0
 execute if score $_comp_continue _anim matches 0..1 unless score $_comp_loop _anim > $max_loop _anim run function anim:compiler/loop
 execute if score $_comp_continue _anim matches 0..1 if score $_comp_loop _anim > $max_loop _anim run function anim:compiler/set_continue
+execute unless score $_comp_continue _anim matches 0..1 if entity @s[tag=anim_compile_end_api] run function anim:compiler/end
 

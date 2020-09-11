@@ -12,4 +12,5 @@ data modify storage anim:runtime compile_data set value []
 data modify storage anim:runtime search_data set value []
 data modify storage anim:runtime compile set value []
 
+execute if data entity @s ArmorItems[2].tag.anim run data modify storage anim:runtime keyframes set from entity @s ArmorItems[2].tag.anim
 function anim:compiler/loop

@@ -3,7 +3,7 @@
 # Input: @s _anim_anim_id; anim_data
 # Output:
 scoreboard players reset $_got_id _anim
-execute store result score $_got_id _anim run data get storage anim:editor search_anim_data[0].id
+execute store result score $_got_id _anim run data get storage anim:editor search_anim_data[0].animation_id
 execute if score $_got_id _anim = @s _anim_anim_id run data modify storage anim:editor search_anim_data[0] set from storage anim:editor anim_data
 data modify storage anim:editor output_anim_data append from storage anim:editor search_anim_data[0]
 data remove storage anim:editor search_anim_data[0]

@@ -24,8 +24,8 @@ data modify storage anim:runtime keyframes[0].value.l_leg.z.value set from entit
 data modify storage anim:runtime keyframes[0].value.r_leg.x.value set from entity @s Pose.RightLeg[0]
 data modify storage anim:runtime keyframes[0].value.r_leg.y.value set from entity @s Pose.RightLeg[1]
 data modify storage anim:runtime keyframes[0].value.r_leg.z.value set from entity @s Pose.RightLeg[2]
-scoreboard players reset $calc1
-scoreboard players reset $calc2
+scoreboard players reset $calc1 _anim
+scoreboard players reset $calc2 _anim
 scoreboard players operation $ida _anim = @s _anim_ida
 execute as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[0]
 execute store result score $calc2 _anim run data get entity @s Pos[0]
