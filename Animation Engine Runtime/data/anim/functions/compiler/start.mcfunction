@@ -1,5 +1,6 @@
 #
-#>Compiles keyframe using graph data
+#>Compiles keyframe using graph data (UNUSED)
+#>Compiler is no longer used, instead it is calculating straight from the anim:zero_tick
 # Input:    anim:runtime keyframes (keyframes to compile);
 #           anim:runtime graphs (graphs to use);
 # Output:   anim:runtime compile (compiled data);

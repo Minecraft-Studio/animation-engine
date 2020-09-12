@@ -24,13 +24,13 @@ data modify storage anim:editor search_anim_data set from entity @e[tag=anim_mod
 function anim_edit:set_anim_keyframes
 data modify entity @e[tag=anim_model_select,limit=1] ArmorItems[2].tag.animations set from storage anim:editor output_anim_data
 scoreboard players reset $_delete_keyframe _anim
-#>Compile/s
-scoreboard players operation @e[tag=anim_model_select] _anim_anim_id = @s _anim_anim_id
-data modify entity @e[tag=anim_model_select,limit=1] ArmorItems[2].tag.anim set from storage anim:editor anim_data.keyframes
-tag @e[tag=anim_model_select] add anim_part_search
-execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_part_search,limit=1] _anim_ida unless data entity @s ArmorItems[2] run data modify entity @s ArmorItems[2] set value {id:"minecraft:stone",Count:1b}
-execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_part_search,limit=1] _anim_ida run tag @s add anim_compile_end_api
-execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_part_search,limit=1] _anim_ida run scoreboard players reset @s _anim
-execute as @e[tag=anim_model_select] run function anim:model_start_loop
-execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_part_search,limit=1] _anim_ida run function anim:compiler/start
-tag @e[tag=anim_part_search] remove anim_part_search
+# #>Compiles (UNUSED)
+# scoreboard players operation @e[tag=anim_model_select] _anim_anim_id = @s _anim_anim_id
+# data modify entity @e[tag=anim_model_select,limit=1] ArmorItems[2].tag.anim set from storage anim:editor anim_data.keyframes
+# tag @e[tag=anim_model_select] add anim_part_search
+# execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_part_search,limit=1] _anim_ida unless data entity @s ArmorItems[2] run data modify entity @s ArmorItems[2] set value {id:"minecraft:stone",Count:1b}
+# execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_part_search,limit=1] _anim_ida run tag @s add anim_compile_end_api
+# execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_part_search,limit=1] _anim_ida run scoreboard players reset @s _anim
+# execute as @e[tag=anim_model_select] run function anim:model_start_loop
+# execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_part_search,limit=1] _anim_ida run function anim:compiler/start
+# tag @e[tag=anim_part_search] remove anim_part_search
