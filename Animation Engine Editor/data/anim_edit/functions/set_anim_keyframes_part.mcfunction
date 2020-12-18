@@ -13,11 +13,11 @@ data modify storage anim:editor output_anim_data append from storage anim:editor
 data remove storage anim:editor search_anim_data[0]
 
 execute if data storage anim:editor search_anim_data[0] run function anim_edit:set_anim_keyframes_part
-tellraw @p {"nbt":"output_anim_data","storage":"anim:editor"}
+# tellraw @p {"nbt":"output_anim_data","storage":"anim:editor"}
 execute if data storage anim:editor output_anim_data unless score $_data_part_found _anim matches 1 store result storage anim:editor import_anim_data.part int 1 run scoreboard players get $_get_part _anim
 execute if data storage anim:editor output_anim_data unless score $_data_part_found _anim matches 1 run data modify storage anim:editor import_anim_data.data set from storage anim:editor anim_data_part
 execute if data storage anim:editor output_anim_data unless score $_data_part_found _anim matches 1 run data modify storage anim:editor output_anim_data append from storage anim:editor import_anim_data
-tellraw @p {"nbt":"output_anim_data","storage":"anim:editor"}
+# tellraw @p {"nbt":"output_anim_data","storage":"anim:editor"}
 execute if data storage anim:editor output_anim_data run data modify storage anim:editor anim_data.keyframes set from storage anim:editor output_anim_data
 data remove storage anim:editor output_anim_data
 data remove storage anim:editor search_anim_data

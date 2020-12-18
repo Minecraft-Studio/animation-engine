@@ -1,50 +1,81 @@
-#Setups anim_part for playing the selected animation
+#
+#>Setups anim_part for playing the selected animation
 # Creates needed objectives to store data
 execute unless score $anim_playing _anim matches 1.. run function anim:create_obj
 # Adds 1 to $anim_playing, this is used to keep track of number of currently playing animations, if 0 removes the objectives
 scoreboard players add $anim_playing _anim 1
 
-data modify storage anim:runtime keyframes set value [{},{}]
-data modify storage anim:runtime keyframes[1] set from entity @s ArmorItems[2].tag.anim[0]
-data modify storage anim:runtime keyframes[0].value.head.x.value set from entity @s Pose.Head[0]
-data modify storage anim:runtime keyframes[0].value.head.y.value set from entity @s Pose.Head[1]
-data modify storage anim:runtime keyframes[0].value.head.z.value set from entity @s Pose.Head[2]
-data modify storage anim:runtime keyframes[0].value.body.x.value set from entity @s Pose.Body[0]
-data modify storage anim:runtime keyframes[0].value.body.y.value set from entity @s Pose.Body[1]
-data modify storage anim:runtime keyframes[0].value.body.z.value set from entity @s Pose.Body[2]
-data modify storage anim:runtime keyframes[0].value.l_arm.x.value set from entity @s Pose.LeftArm[0]
-data modify storage anim:runtime keyframes[0].value.l_arm.y.value set from entity @s Pose.LeftArm[1]
-data modify storage anim:runtime keyframes[0].value.l_arm.z.value set from entity @s Pose.LeftArm[2]
-data modify storage anim:runtime keyframes[0].value.r_arm.x.value set from entity @s Pose.RightArm[0]
-data modify storage anim:runtime keyframes[0].value.r_arm.y.value set from entity @s Pose.RightArm[1]
-data modify storage anim:runtime keyframes[0].value.r_arm.z.value set from entity @s Pose.RightArm[2]
-data modify storage anim:runtime keyframes[0].value.l_leg.x.value set from entity @s Pose.LeftLeg[0]
-data modify storage anim:runtime keyframes[0].value.l_leg.y.value set from entity @s Pose.LeftLeg[1]
-data modify storage anim:runtime keyframes[0].value.l_leg.z.value set from entity @s Pose.LeftLeg[2]
-data modify storage anim:runtime keyframes[0].value.r_leg.x.value set from entity @s Pose.RightLeg[0]
-data modify storage anim:runtime keyframes[0].value.r_leg.y.value set from entity @s Pose.RightLeg[1]
-data modify storage anim:runtime keyframes[0].value.r_leg.z.value set from entity @s Pose.RightLeg[2]
+#>Sets up the 'first keyframe', point where it starts to anim_part's current values
+# Resets
+data modify storage anim:runtime keyframes set from entity @s ArmorItems[2].tag.anim
+
+# Loads current data onto first keyframe if found in keyframes data
+data remove storage anim:runtime import_first_keyframe
+
+execute if data storage anim:runtime keyframes[].value.head.x.value run data modify storage anim:runtime import_first_keyframe.head.x.value set from entity @s Pose.Head[0]
+execute if data storage anim:runtime keyframes[].value.head.x.value run data modify storage anim:runtime import_first_keyframe.head.x.tick set value 1
+execute if data storage anim:runtime keyframes[].value.head.y.value run data modify storage anim:runtime import_first_keyframe.head.y.value set from entity @s Pose.Head[1]
+execute if data storage anim:runtime keyframes[].value.head.y.value run data modify storage anim:runtime import_first_keyframe.head.y.tick set value 1
+execute if data storage anim:runtime keyframes[].value.head.z.value run data modify storage anim:runtime import_first_keyframe.head.z.value set from entity @s Pose.Head[2]
+execute if data storage anim:runtime keyframes[].value.head.z.value run data modify storage anim:runtime import_first_keyframe.head.z.tick set value 1
+execute if data storage anim:runtime keyframes[].value.body.x.value run data modify storage anim:runtime import_first_keyframe.body.x.value set from entity @s Pose.Body[0]
+execute if data storage anim:runtime keyframes[].value.body.x.value run data modify storage anim:runtime import_first_keyframe.body.x.tick set value 1
+execute if data storage anim:runtime keyframes[].value.body.y.value run data modify storage anim:runtime import_first_keyframe.body.y.value set from entity @s Pose.Body[1]
+execute if data storage anim:runtime keyframes[].value.body.y.value run data modify storage anim:runtime import_first_keyframe.body.y.tick set value 1
+execute if data storage anim:runtime keyframes[].value.body.z.value run data modify storage anim:runtime import_first_keyframe.body.z.value set from entity @s Pose.Body[2]
+execute if data storage anim:runtime keyframes[].value.body.z.value run data modify storage anim:runtime import_first_keyframe.body.z.tick set value 1
+execute if data storage anim:runtime keyframes[].value.l_arm.x.value run data modify storage anim:runtime import_first_keyframe.l_arm.x.value set from entity @s Pose.LeftArm[0]
+execute if data storage anim:runtime keyframes[].value.l_arm.x.value run data modify storage anim:runtime import_first_keyframe.l_arm.x.tick set value 1
+execute if data storage anim:runtime keyframes[].value.l_arm.y.value run data modify storage anim:runtime import_first_keyframe.l_arm.y.value set from entity @s Pose.LeftArm[1]
+execute if data storage anim:runtime keyframes[].value.l_arm.y.value run data modify storage anim:runtime import_first_keyframe.l_arm.y.tick set value 1
+execute if data storage anim:runtime keyframes[].value.l_arm.z.value run data modify storage anim:runtime import_first_keyframe.l_arm.z.value set from entity @s Pose.LeftArm[2]
+execute if data storage anim:runtime keyframes[].value.l_arm.z.value run data modify storage anim:runtime import_first_keyframe.l_arm.z.tick set value 1
+execute if data storage anim:runtime keyframes[].value.r_arm.x.value run data modify storage anim:runtime import_first_keyframe.r_arm.x.value set from entity @s Pose.RightArm[0]
+execute if data storage anim:runtime keyframes[].value.r_arm.x.value run data modify storage anim:runtime import_first_keyframe.r_arm.x.tick set value 1
+execute if data storage anim:runtime keyframes[].value.r_arm.y.value run data modify storage anim:runtime import_first_keyframe.r_arm.y.value set from entity @s Pose.RightArm[1]
+execute if data storage anim:runtime keyframes[].value.r_arm.y.value run data modify storage anim:runtime import_first_keyframe.r_arm.y.tick set value 1
+execute if data storage anim:runtime keyframes[].value.r_arm.z.value run data modify storage anim:runtime import_first_keyframe.r_arm.z.value set from entity @s Pose.RightArm[2]
+execute if data storage anim:runtime keyframes[].value.r_arm.z.value run data modify storage anim:runtime import_first_keyframe.r_arm.z.tick set value 1
+execute if data storage anim:runtime keyframes[].value.l_leg.x.value run data modify storage anim:runtime import_first_keyframe.l_leg.x.value set from entity @s Pose.LeftLeg[0]
+execute if data storage anim:runtime keyframes[].value.l_leg.x.value run data modify storage anim:runtime import_first_keyframe.l_leg.x.tick set value 1
+execute if data storage anim:runtime keyframes[].value.l_leg.y.value run data modify storage anim:runtime import_first_keyframe.l_leg.y.value set from entity @s Pose.LeftLeg[1]
+execute if data storage anim:runtime keyframes[].value.l_leg.y.value run data modify storage anim:runtime import_first_keyframe.l_leg.y.tick set value 1
+execute if data storage anim:runtime keyframes[].value.l_leg.z.value run data modify storage anim:runtime import_first_keyframe.l_leg.z.value set from entity @s Pose.LeftLeg[2]
+execute if data storage anim:runtime keyframes[].value.l_leg.z.value run data modify storage anim:runtime import_first_keyframe.l_leg.z.tick set value 1
+execute if data storage anim:runtime keyframes[].value.r_leg.x.value run data modify storage anim:runtime import_first_keyframe.r_leg.x.value set from entity @s Pose.RightLeg[0]
+execute if data storage anim:runtime keyframes[].value.r_leg.x.value run data modify storage anim:runtime import_first_keyframe.r_leg.x.tick set value 1
+execute if data storage anim:runtime keyframes[].value.r_leg.y.value run data modify storage anim:runtime import_first_keyframe.r_leg.y.value set from entity @s Pose.RightLeg[1]
+execute if data storage anim:runtime keyframes[].value.r_leg.y.value run data modify storage anim:runtime import_first_keyframe.r_leg.y.tick set value 1
+execute if data storage anim:runtime keyframes[].value.r_leg.z.value run data modify storage anim:runtime import_first_keyframe.r_leg.z.value set from entity @s Pose.RightLeg[2]
+execute if data storage anim:runtime keyframes[].value.r_leg.z.value run data modify storage anim:runtime import_first_keyframe.r_leg.z.tick set value 1
 scoreboard players reset $calc1 _anim
 scoreboard players reset $calc2 _anim
 scoreboard players operation $ida _anim = @s _anim_ida
-execute as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[0]
-execute store result score $calc2 _anim run data get entity @s Pos[0]
-execute store result storage anim:runtime keyframes[0].value.pos.x.value float 0.001 run scoreboard players operation $calc1 _anim -= $calc2 _anim
-execute as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[1]
-execute store result score $calc2 _anim run data get entity @s Pos[1]
-execute store result storage anim:runtime keyframes[0].value.pos.y.value float 0.001 run scoreboard players operation $calc1 _anim -= $calc2 _anim
-execute as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[2]
-execute store result score $calc2 _anim run data get entity @s Pos[2]
-execute store result storage anim:runtime keyframes[0].value.pos.z.value float 0.001 run scoreboard players operation $calc1 _anim -= $calc2 _anim
+execute if data storage anim:runtime keyframes[].value.pos.x.value as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[0]
+execute if data storage anim:runtime keyframes[].value.pos.x.value store result score $calc2 _anim run data get entity @s Pos[0]
+execute if data storage anim:runtime keyframes[].value.pos.x.value store result storage anim:runtime import_first_keyframe.pos.x.value float 0.001 run scoreboard players operation $calc1 _anim -= $calc2 _anim
+execute if data storage anim:runtime keyframes[].value.pos.x.value run data modify storage anim:runtime import_first_keyframe.pos.x.tick set value 1
+execute if data storage anim:runtime keyframes[].value.pos.y.value as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[1]
+execute if data storage anim:runtime keyframes[].value.pos.y.value store result score $calc2 _anim run data get entity @s Pos[1]
+execute if data storage anim:runtime keyframes[].value.pos.y.value store result storage anim:runtime import_first_keyframe.pos.y.value float 0.001 run scoreboard players operation $calc1 _anim -= $calc2 _anim
+execute if data storage anim:runtime keyframes[].value.pos.y.value run data modify storage anim:runtime import_first_keyframe.pos.y.tick set value 1
+execute if data storage anim:runtime keyframes[].value.pos.z.value as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[2]
+execute if data storage anim:runtime keyframes[].value.pos.z.value store result score $calc2 _anim run data get entity @s Pos[2]
+execute if data storage anim:runtime keyframes[].value.pos.z.value store result storage anim:runtime import_first_keyframe.pos.z.value float 0.001 run scoreboard players operation $calc1 _anim -= $calc2 _anim
+execute if data storage anim:runtime keyframes[].value.pos.z.value run data modify storage anim:runtime import_first_keyframe.pos.z.tick set value 1
 scoreboard players reset $ida _anim
-data modify storage anim:runtime keyframes[0].value.rotation.x.value set from entity @s Rotation[0]
-data modify storage anim:runtime keyframes[0].value.rotation.y.value set from entity @s Rotation[1]
+execute if data storage anim:runtime keyframes[].value.rotation.x.value run data modify storage anim:runtime import_first_keyframe.rotation.x.value set from entity @s Rotation[0]
+execute if data storage anim:runtime keyframes[].value.rotation.x.value run data modify storage anim:runtime import_first_keyframe.rotation.x.tick set value 1
+execute if data storage anim:runtime keyframes[].value.rotation.y.value run data modify storage anim:runtime import_first_keyframe.rotation.y.value set from entity @s Rotation[1]
+execute if data storage anim:runtime keyframes[].value.rotation.y.value run data modify storage anim:runtime import_first_keyframe.rotation.y.tick set value 1
 
-function anim:compiler/start
+# Applies data to prev_anim
+data modify entity @s ArmorItems[2].tag.prev_anim set from storage anim:runtime import_first_keyframe
 
-tellraw @s ["Compiled: ",{"nbt":"compile","storage":"anim:runtime"}]
+#>Starts loading first keyframe
+function anim:zero_tick
 
-
+#>Old functions; unused
 # scoreboard players set @s _anim_tick 0
 # scoreboard players set @s _anim_tick_left 0
 
