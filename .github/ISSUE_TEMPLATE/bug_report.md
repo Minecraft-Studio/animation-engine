@@ -11,7 +11,7 @@ assignees: vanjmali
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behavior:
+Steps to reproduce the behavior
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
@@ -19,9 +19,9 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Informations (please complete the following information):**
- - Minecraft Version [e.g. 1.16.4]
- - Version [e.g. v1.0b1]
+**More Information (please complete the following information):**
+ - Minecraft Version:
+ - Version:
 
 **Additional context**
 Add any other context about the problem here.
