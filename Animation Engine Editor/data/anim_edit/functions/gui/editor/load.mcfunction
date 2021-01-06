@@ -77,25 +77,6 @@ execute if score $_notif_length _anim matches ..35 run scoreboard players add $_
 execute if score $_notif_length _anim matches ..36 run data modify storage anim:editor notification_dec append value "="
 execute if score $_notif_length _anim matches ..36 run scoreboard players add $_notif_length _anim 1
 
-#>Live preview
-# Get Armor Stand
-function anim_edit:search_part
-#FIX: Multiselect support
-execute as @e[tag=anim_part_select] if score @s _anim_idb = @s _anim_idb_select run function anim_edit:gui/editor/value_editor/live_preview
-
-#>Display tellraw data (for instant display)
-tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-#title
-tellraw @s ["",{"text":"Editor","underlined": true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"}," ",{"text":"[Settings]","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/settings/load"}}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/editor/close"}}]
-#keyframes
-function anim_edit:gui/editor/keyframe_editor/display_row_col
-#move shortcuts
-tellraw @s {"nbt":"tellraw_data.shortcuts_move","storage":"anim:editor","interpret":true}
-#Notification
-tellraw @s [{"text":"===","color":"dark_gray","hoverEvent": {"action": "show_text","contents":[{"text":"","color":"white"},{"text":"Latest console log\n","color":"yellow"},{"nbt":"console[0].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[1].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[2].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[3].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[4].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[5].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[6].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[7].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[8].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[9].log","storage":"anim:editor","interpret":true}]}},{"nbt":"console[0].log","storage":"anim:editor","interpret":true},{"nbt":"notification_dec[0]","storage":"anim:editor"},{"nbt":"notification_dec[1]","storage":"anim:editor"},{"nbt":"notification_dec[2]","storage":"anim:editor"},{"nbt":"notification_dec[3]","storage":"anim:editor"},{"nbt":"notification_dec[4]","storage":"anim:editor"},{"nbt":"notification_dec[5]","storage":"anim:editor"},{"nbt":"notification_dec[6]","storage":"anim:editor"},{"nbt":"notification_dec[7]","storage":"anim:editor"}]
-data remove storage anim:editor console[10]
-data remove storage anim:editor notification_dec
-#value editor
 #
 #>Value Editor render
 #
@@ -109,6 +90,28 @@ execute if score $_key_selected _anim matches 1 if score @s _anim_tab matches 10
 scoreboard players reset $_custom_as_exists _anim
 
 function anim_edit:gui/editor/value_editor/menu
+
+#>Live preview
+# Get Armor Stand
+function anim_edit:search_part
+#FIX: Multiselect support
+execute as @e[tag=anim_part_select] if score @s _anim_idb = @s _anim_idb_select run function anim_edit:gui/editor/value_editor/live_preview
+
+#>Display tellraw data (for instant display) WARNING: HUGE COMMAND IN THE FUNCTION BELOW
+function anim_edit:gui/editor/keyframe_editor/render_all
+#notification remove to limit and other stuff
+data remove storage anim:editor console[10]
+data remove storage anim:editor notification_dec
+
+# tellraw @s "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+# #title
+# tellraw @s ["",{"text":"Editor","underlined": true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"}," ",{"text":"[Settings]","color":"gray","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/settings/load"}}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/editor/close"}}]
+# #keyframes
+# function anim_edit:gui/editor/keyframe_editor/display_row_col
+# #move shortcuts
+# tellraw @s {"nbt":"tellraw_data.shortcuts_move","storage":"anim:editor","interpret":true}
+# #Notification
+# tellraw @s [{"text":"===","color":"dark_gray","hoverEvent": {"action": "show_text","contents":[{"text":"","color":"white"},{"text":"Latest console log\n","color":"yellow"},{"nbt":"console[0].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[1].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[2].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[3].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[4].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[5].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[6].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[7].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[8].log","storage":"anim:editor","interpret":true},"\n",{"nbt":"console[9].log","storage":"anim:editor","interpret":true}]}},{"nbt":"console[0].log","storage":"anim:editor","interpret":true},{"nbt":"notification_dec[0]","storage":"anim:editor"},{"nbt":"notification_dec[1]","storage":"anim:editor"},{"nbt":"notification_dec[2]","storage":"anim:editor"},{"nbt":"notification_dec[3]","storage":"anim:editor"},{"nbt":"notification_dec[4]","storage":"anim:editor"},{"nbt":"notification_dec[5]","storage":"anim:editor"},{"nbt":"notification_dec[6]","storage":"anim:editor"},{"nbt":"notification_dec[7]","storage":"anim:editor"}]
 
 #>Gamerule
 function anim_edit:gamerule
