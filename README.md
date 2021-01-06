@@ -14,4 +14,4 @@ Under development
 ## Contact and support
 [Contact](https://vanjmali.com/go/contact) | [Report a bug](https://vanjmali.com/go/bug)
 
-@2020 [vanjmali](https://vanjmali.com)
+@2021 [vanjmali](https://vanjmali.com)
