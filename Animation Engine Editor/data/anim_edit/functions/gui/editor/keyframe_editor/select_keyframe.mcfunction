@@ -1,5 +1,7 @@
-scoreboard players remove $_sel_col _anim 1
-scoreboard players remove $_sel_row _anim 1
+#(this is so the numbers start from -1 (-1 row due to support of Anim Model
+# and -1 colfor support for tick 0) + page (which is usually 1 number ahead than id so it starts by -1 offset))
+scoreboard players remove $_sel_col _anim 2
+scoreboard players remove $_sel_row _anim 2
 scoreboard players operation $_sel_col _anim += @s _anim_page
 scoreboard players operation $_sel_row _anim += @s _anim_row_page
 

@@ -10,7 +10,7 @@ data modify storage anim:editor tellraw_data.keyframes set value []
 function anim_edit:get_anim_keyframes
 #>Editor GUI
 execute unless score @s _anim_row_page matches 1.. run scoreboard players set @s _anim_row_page 1
-scoreboard players set $_get_part _anim 0
+scoreboard players set $_get_part _anim -1
 scoreboard players operation $_get_part _anim += @s _anim_row_page
 scoreboard players set $_render_row _anim 1
 #Row 1

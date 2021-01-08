@@ -14,20 +14,22 @@ scoreboard players set $_render_col _anim 1
 #Calc tick preview only when it's rendering first time
 execute if score $_render_row _anim matches 1 run data modify storage anim:editor col_preview set value []
 execute if score $_render_row _anim matches 1 run data modify storage anim:editor col_preview append from storage anim:editor col_preview_append
-function anim_edit:gui/editor/keyframe_editor/render_col
 function anim_edit:search_model
-execute if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_name set value '{"color":"aqua","text":""}'
-execute if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_color set value '{"color":"aqua","text":""}'
-execute if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1 set value '{"color":"yellow","text":""}'
-execute if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1_name set from storage anim:editor row_name
-execute if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1_id set value ''
-execute unless score $_part_exists _anim matches 1 store result storage anim:editor tellraw_data.keyframes_prepare.row_number_text1_id int 1 run scoreboard players get $_get_part _anim
-execute unless score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1 set value '{"text":"No anim part with id of ","color":"gray"}'
-execute unless score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1_name set value ''
-execute unless score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_color set value '{"color":"dark_gray","text":""}'
-execute if score $_get_part _anim matches ..9 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text2 set value '  '
-execute if score $_get_part _anim matches 10..99 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text2 set value ' '
-execute if score $_get_part _anim matches 100.. run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text2 set value ''
+execute unless score $_get_part _anim matches 0 if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_name set value '{"color":"aqua","text":""}'
+execute unless score $_get_part _anim matches 0 if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_color set value '{"color":"aqua","text":""}'
+execute unless score $_get_part _anim matches 0 if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1 set value '{"color":"yellow","text":""}'
+execute unless score $_get_part _anim matches 0 if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1_name set from storage anim:editor row_name
+execute unless score $_get_part _anim matches 0 if score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1_id set value ''
+execute unless score $_get_part _anim matches 0 unless score $_part_exists _anim matches 1 store result storage anim:editor tellraw_data.keyframes_prepare.row_number_text1_id int 1 run scoreboard players get $_get_part _anim
+execute unless score $_get_part _anim matches 0 unless score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1 set value '{"text":"No anim part with id of ","color":"gray"}'
+execute unless score $_get_part _anim matches 0 unless score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1_name set value ''
+execute unless score $_get_part _anim matches 0 unless score $_part_exists _anim matches 1 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_color set value '{"color":"dark_gray","text":""}'
+execute unless score $_get_part _anim matches 0 if score $_get_part _anim matches ..9 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text2 set value '  '
+execute unless score $_get_part _anim matches 0 if score $_get_part _anim matches 10..99 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text2 set value ' '
+execute unless score $_get_part _anim matches 0 if score $_get_part _anim matches 100.. run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text2 set value ''
+execute if score $_get_part _anim matches 0 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_color set value '{"color":"aqua","text":""}'
+execute if score $_get_part _anim matches 0 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1 set value '{"color":"yellow","text":"Anim Model"}'
+function anim_edit:gui/editor/keyframe_editor/render_col
 # execute if score $_part_exists _anim matches 1 if score $_get_part _anim matches ..9 run data modify storage anim:editor row_number set value '[{"nbt":"tellraw_data.keyframes[0].row_number_digit","storage":"anim:editor","color":"aqua","hoverEvent":{"action":"show_text","contents":{"color":"yellow","nbt":"tellraw_data.keyframes[0].row_name","storage":"anim:editor","interpret":true}}},"  "]'
 # execute if score $_part_exists _anim matches 1 if score $_get_part _anim matches 10..99 run data modify storage anim:editor row_number set value '[{"nbt":"tellraw_data.keyframes[0].row_number_digit","storage":"anim:editor","color":"aqua","hoverEvent":{"action":"show_text","contents":{"color":"yellow","nbt":"tellraw_data.keyframes[0].row_name","storage":"anim:editor","interpret":true}}}," "]'
 # execute if score $_part_exists _anim matches 1 if score $_get_part _anim matches 100.. run data modify storage anim:editor row_number set value '{"nbt":"tellraw_data.keyframes[0].row_number_digit","storage":"anim:editor","color":"aqua","hoverEvent":{"action":"show_text","contents":{"color":"yellow","nbt":"tellraw_data.keyframes[0].row_name","storage":"anim:editor","interpret":true}}}'
@@ -35,7 +37,8 @@ execute if score $_get_part _anim matches 100.. run data modify storage anim:edi
 # execute unless score $_part_exists _anim matches 1 if score $_get_part _anim matches 10..99 run data modify storage anim:editor row_number set value '[{"nbt":"tellraw_data.keyframes[0].row_number_digit","storage":"anim:editor","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"No anim part with id of ","color":"gray"},{"score":{"name":"$_get_part","objective":"_anim"}}]}}," "]'
 # execute unless score $_part_exists _anim matches 1 if score $_get_part _anim matches 100.. run data modify storage anim:editor row_number set value '{"nbt":"tellraw_data.keyframes[0].row_number_digit","storage":"anim:editor","color":"dark_gray","hoverEvent":{"action":"show_text","contents":[{"text":"No anim part with id of ","color":"gray"},{"score":{"name":"$_get_part","objective":"_anim"}}]}}'
 data modify storage anim:editor tellraw_data.keyframes_prepare.row_name set from storage anim:editor row_name
-execute store result storage anim:editor tellraw_data.keyframes_prepare.row_number_digit int 1 run scoreboard players get $_get_part _anim
+execute unless score $_get_part _anim matches 0 store result storage anim:editor tellraw_data.keyframes_prepare.row_number_digit int 1 run scoreboard players get $_get_part _anim
+execute if score $_get_part _anim matches 0 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_digit set value '{"text":"M"}'
 data modify storage anim:editor tellraw_data.keyframes_prepare.row_result set from storage anim:editor row_result
 data modify storage anim:editor tellraw_data.keyframes_prepare.col_preview set from storage anim:editor col_preview
 data modify storage anim:editor tellraw_data.keyframes_prepare.after_render_tellraw set from storage anim:editor after_render_tellraw
