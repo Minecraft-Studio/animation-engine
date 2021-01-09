@@ -1,4 +1,4 @@
-#>Sets Custom Anim Model name 
+#>Sets Custom Anim Main name 
 # Converts string to JSON format using sign, unless player is not in a air block
 execute as @s at @s if block ~ ~ ~ air run scoreboard players set $_sign_placed _anim 1
 execute as @s at @s unless block ~ ~ ~ air run scoreboard players set $_curr_air _anim 1

@@ -37,7 +37,7 @@ execute unless score @s _anim_pz matches 0 if score @s _anim_pz matches -2147483
 
 # tellraw @p {"nbt":"Pose.Head","entity":"@s","color":"red"}
 # tellraw @p {"score": {"name": "@s","objective": "_anim_tick_left"},"color":"green"}
-# tellraw @p [{"score": {"name": "@s","objective": "_anim_px"},"color":"green"},{"text":" "},{"score": {"name": "@s","objective": "_anim_py"},"color":"green"},{"text":" "},{"score": {"name": "@s","objective": "_anim_pz"},"color":"green"},{"text":" "},{"nbt":"Pos[0]","entity":"@s","color":"red"},{"text":" "},{"nbt":"Pos[1]","entity":"@s","color":"red"},{"text":" "},{"nbt":"Pos[2]","entity":"@s","color":"red"},{"text":" "},{"nbt":"Pos[0]","entity":"@e[tag=anim_model,limit=1]","color":"blue"},{"text":" "},{"nbt":"Pos[1]","entity":"@e[tag=anim_model,limit=1]","color":"blue"},{"text":" "},{"nbt":"Pos[2]","entity":"@e[tag=anim_model,limit=1]","color":"blue"}]
+# tellraw @p [{"score": {"name": "@s","objective": "_anim_px"},"color":"green"},{"text":" "},{"score": {"name": "@s","objective": "_anim_py"},"color":"green"},{"text":" "},{"score": {"name": "@s","objective": "_anim_pz"},"color":"green"},{"text":" "},{"nbt":"Pos[0]","entity":"@s","color":"red"},{"text":" "},{"nbt":"Pos[1]","entity":"@s","color":"red"},{"text":" "},{"nbt":"Pos[2]","entity":"@s","color":"red"},{"text":" "},{"nbt":"Pos[0]","entity":"@e[tag=anim_main,limit=1]","color":"blue"},{"text":" "},{"nbt":"Pos[1]","entity":"@e[tag=anim_main,limit=1]","color":"blue"},{"text":" "},{"nbt":"Pos[2]","entity":"@e[tag=anim_main,limit=1]","color":"blue"}]
 
 
 #If 0 load next keyframe

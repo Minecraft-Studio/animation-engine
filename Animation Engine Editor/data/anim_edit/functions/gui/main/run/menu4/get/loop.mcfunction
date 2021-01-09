@@ -1,6 +1,6 @@
 function anim_edit:search_model
 #>Searches for anim_part with correct ID and selects it with anim_part_menu_sel
-execute as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[tag=anim_model_select,limit=1] _anim_ida if score @s _anim_idb = $_id_search _anim run tag @s add anim_part_menu_sel
+execute as @e[type=armor_stand,tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_id_search _anim run tag @s add anim_part_menu_sel
 tag @e[type=armor_stand,tag=anim_part_menu_sel] add anim_part_menu
 
 #>if needed anim_part was found add text to the list with info about the anim_part

@@ -1,8 +1,8 @@
 #
-#>Gives Anim Model glow effect
+#>Gives Anim Main glow effect
 function anim_edit:search_model
-data modify entity @e[tag=anim_model_select,limit=1] Marker set value 0b
-data modify entity @e[tag=anim_model_select,limit=1] Glowing set value 1b
+data modify entity @e[tag=anim_main_select,limit=1] Marker set value 0b
+data modify entity @e[tag=anim_main_select,limit=1] Glowing set value 1b
 
 #>Loads Anim Editor Menu
 execute unless score @s _anim_page matches -2147483648..2147483647 run scoreboard players set @s _anim_page 1
@@ -10,7 +10,7 @@ scoreboard players set @s _anim_menu 5
 #>Title
 tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnimations","underlined":true},{"text":" "},{"nbt":"ver","storage":"anim:editor","color":"green"},"\n"]
 #>Name
-tellraw @s [{"text":"Anim model name: ","color":"gray"},{"nbt":"CustomName","entity":"@e[tag=anim_model_select,limit=1]","interpret":true,"color":"green"}," ",{"text":"[Edit]","color":"yellow","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/main/run/menu5/edit"}}]
+tellraw @s [{"text":"Anim main name: ","color":"gray"},{"nbt":"CustomName","entity":"@e[tag=anim_main_select,limit=1]","interpret":true,"color":"green"}," ",{"text":"[Edit]","color":"yellow","clickEvent":{"action":"run_command","value":"/function anim_edit:gui/main/run/menu5/edit"}}]
 #>Animations List Render
 tellraw @s {"text":"\nAnimations list:","color":"gray"}
 function anim_edit:gui/main/run/menu5/get/start

@@ -2,7 +2,7 @@
 #>Confirmation for deleting Animation
 function anim_edit:search_model
 scoreboard players operation $_id_search _anim = @s _anim_anim_id
-data modify storage anim:editor tmp_anim_model_data set from entity @e[tag=anim_model_select,limit=1] ArmorItems[2].tag.animations
+data modify storage anim:editor tmp_anim_main_data set from entity @e[tag=anim_main_select,limit=1] ArmorItems[2].tag.animations
 scoreboard players set $_del_api _anim 1
 function anim_edit:gui/main/run/menu5/get_anim/start
 tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnim Part","underlined":true},{"text":" "},{"nbt":"ver","storage":"anim:editor","color":"green"},"\n"]

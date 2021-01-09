@@ -43,10 +43,10 @@ scoreboard players set $1000 _anim 1000
 execute unless data storage anim:editor ver_update run tellraw @a ["",{"text":"Animation Engine Editor has been installed! ","color":"green"},{"text":"(","color":"gray"},{"nbt":"ver","storage":"anim:editor","color":"gray"},{"text":")","color":"gray"},{"text":"\nRemember! Animation Engine is still in beta, bugs will happen, please report them (in Settings)!","color":"gray"}]
 execute if data storage anim:editor ver_update run tellraw @a ["",{"text":"Animation Engine Editor has been updated to ","color":"green"},{"nbt":"ver","storage":"anim:editor","color":"aqua"},{"text":"\nRemember! Animation Engine is still in beta, bugs will happen, please report them (in Settings)!","color":"gray"}]
 data remove storage anim:editor ver_update
-#define entity @e[tag=anim_model_select]
+#define entity @e[tag=anim_main_select]
 #define entity @e[tag=anim_part_select]
 #define storage anim:editor
 #define storage anim:runtime
 #define function anim_edit:gamerule
-#define function anim_edit:search_model get anim_model_select
-#define function anim_edit:search_part get anim_model_select/anim_part_select
+#define function anim_edit:search_model get anim_main_select
+#define function anim_edit:search_part get anim_main_select/anim_part_select

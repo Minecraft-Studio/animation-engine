@@ -6,8 +6,8 @@ function anim_edit:gui/editor/keyframe_editor/tick_to_sec
 execute store result storage anim:editor col_preview_append.sec1 int 1 run scoreboard players get $_sec1 _anim
 execute store result storage anim:editor col_preview_append.sec2 int 1 run scoreboard players get $_sec2 _anim
 execute store result storage anim:editor col_preview_append.sec3 int 1 run scoreboard players get $_sec3 _anim
-execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_model_select,limit=1] _anim_ida if score @s _anim_idb = $_get_part _anim run scoreboard players set $_part_exists _anim 1
-execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_model_select,limit=1] _anim_ida if score @s _anim_idb = $_get_part _anim run data modify storage anim:editor row_name set from entity @s CustomName
+execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_get_part _anim run scoreboard players set $_part_exists _anim 1
+execute as @e[tag=anim_part] if score @s _anim_ida = @e[tag=anim_main_select,limit=1] _anim_ida if score @s _anim_idb = $_get_part _anim run data modify storage anim:editor row_name set from entity @s CustomName
 #Get 1-20 column data
 data modify storage anim:editor row_result set value []
 scoreboard players set $_render_col _anim 1
@@ -28,7 +28,7 @@ execute unless score $_get_part _anim matches 0 if score $_get_part _anim matche
 execute unless score $_get_part _anim matches 0 if score $_get_part _anim matches 10..99 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text2 set value ' '
 execute unless score $_get_part _anim matches 0 if score $_get_part _anim matches 100.. run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text2 set value ''
 execute if score $_get_part _anim matches 0 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_color set value '{"color":"aqua","text":""}'
-execute if score $_get_part _anim matches 0 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1 set value '{"color":"yellow","text":"Anim Model"}'
+execute if score $_get_part _anim matches 0 run data modify storage anim:editor tellraw_data.keyframes_prepare.row_number_text1 set value '{"color":"yellow","text":"Anim Main"}'
 function anim_edit:gui/editor/keyframe_editor/render_col
 # execute if score $_part_exists _anim matches 1 if score $_get_part _anim matches ..9 run data modify storage anim:editor row_number set value '[{"nbt":"tellraw_data.keyframes[0].row_number_digit","storage":"anim:editor","color":"aqua","hoverEvent":{"action":"show_text","contents":{"color":"yellow","nbt":"tellraw_data.keyframes[0].row_name","storage":"anim:editor","interpret":true}}},"  "]'
 # execute if score $_part_exists _anim matches 1 if score $_get_part _anim matches 10..99 run data modify storage anim:editor row_number set value '[{"nbt":"tellraw_data.keyframes[0].row_number_digit","storage":"anim:editor","color":"aqua","hoverEvent":{"action":"show_text","contents":{"color":"yellow","nbt":"tellraw_data.keyframes[0].row_name","storage":"anim:editor","interpret":true}}}," "]'

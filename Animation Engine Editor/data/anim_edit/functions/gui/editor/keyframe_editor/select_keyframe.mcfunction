@@ -1,4 +1,4 @@
-#(this is so the numbers start from -1 (-1 row due to support of Anim Model
+#(this is so the numbers start from -1 (-1 row due to support of Anim Main
 # and -1 colfor support for tick 0) + page (which is usually 1 number ahead than id so it starts by -1 offset))
 scoreboard players remove $_sel_col _anim 2
 scoreboard players remove $_sel_row _anim 2

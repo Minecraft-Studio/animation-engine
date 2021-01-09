@@ -36,13 +36,13 @@ execute if data storage anim:editor current_keyframe.value.rotate.r_leg.y run da
 execute if data storage anim:editor current_keyframe.value.rotate.r_leg.z run data modify entity @s Pose.RightLeg[2] set from storage anim:editor current_keyframe.value.rotate.r_leg.z
 execute if data storage anim:editor current_keyframe.value.rotate.rotation.x run data modify entity @s Rotation[0] set from storage anim:editor current_keyframe.value.rotate.rotation.x
 execute if data storage anim:editor current_keyframe.value.rotate.rotation.y run data modify entity @s Rotation[1] set from storage anim:editor current_keyframe.value.rotate.rotation.y
-execute if data storage anim:editor current_keyframe.value.pos.x as @e[type=armor_stand,tag=anim_model_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[0] 1000
+execute if data storage anim:editor current_keyframe.value.pos.x as @e[type=armor_stand,tag=anim_main_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[0] 1000
 execute if data storage anim:editor current_keyframe.value.pos.x store result score $_pos_calc2 _anim run data get storage anim:editor current_keyframe.value.pos.x 1000
 execute if data storage anim:editor current_keyframe.value.pos.x store result entity @s Pos[0] double 0.001 run scoreboard players operation $_pos_calc1 _anim += $_pos_calc2 _anim
-execute if data storage anim:editor current_keyframe.value.pos.y as @e[type=armor_stand,tag=anim_model_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[1] 1000
+execute if data storage anim:editor current_keyframe.value.pos.y as @e[type=armor_stand,tag=anim_main_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[1] 1000
 execute if data storage anim:editor current_keyframe.value.pos.y store result score $_pos_calc2 _anim run data get storage anim:editor current_keyframe.value.pos.y 1000
 execute if data storage anim:editor current_keyframe.value.pos.y store result entity @s Pos[1] double 0.001 run scoreboard players operation $_pos_calc1 _anim += $_pos_calc2 _anim
-execute if data storage anim:editor current_keyframe.value.pos.z as @e[type=armor_stand,tag=anim_model_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[2] 1000
+execute if data storage anim:editor current_keyframe.value.pos.z as @e[type=armor_stand,tag=anim_main_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[2] 1000
 execute if data storage anim:editor current_keyframe.value.pos.z store result score $_pos_calc2 _anim run data get storage anim:editor current_keyframe.value.pos.z 1000
 execute if data storage anim:editor current_keyframe.value.pos.z store result entity @s Pos[2] double 0.001 run scoreboard players operation $_pos_calc1 _anim += $_pos_calc2 _anim
 execute unless data storage anim:editor current_keyframe.value.rotate.head.x run data modify entity @s Pose.Head[0] set from storage anim:editor anim_prev_key.head.x
@@ -63,13 +63,13 @@ execute unless data storage anim:editor current_keyframe.value.rotate.l_leg.z ru
 execute unless data storage anim:editor current_keyframe.value.rotate.r_leg.x run data modify entity @s Pose.RightLeg[0] set from storage anim:editor anim_prev_key.r_leg.x
 execute unless data storage anim:editor current_keyframe.value.rotate.r_leg.y run data modify entity @s Pose.RightLeg[1] set from storage anim:editor anim_prev_key.r_leg.y
 execute unless data storage anim:editor current_keyframe.value.rotate.r_leg.z run data modify entity @s Pose.RightLeg[2] set from storage anim:editor anim_prev_key.r_leg.z
-execute unless data storage anim:editor current_keyframe.value.pos.x as @e[type=armor_stand,tag=anim_model_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[0] 1000
+execute unless data storage anim:editor current_keyframe.value.pos.x as @e[type=armor_stand,tag=anim_main_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[0] 1000
 execute unless data storage anim:editor current_keyframe.value.pos.x store result score $_pos_calc2 _anim run data get storage anim:editor anim_prev_key.pos[0] 1000
 execute unless data storage anim:editor current_keyframe.value.pos.x store result entity @s Pos[0] double 0.001 run scoreboard players operation $_pos_calc1 _anim += $_pos_calc2 _anim
-execute unless data storage anim:editor current_keyframe.value.pos.y as @e[type=armor_stand,tag=anim_model_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[1] 1000
+execute unless data storage anim:editor current_keyframe.value.pos.y as @e[type=armor_stand,tag=anim_main_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[1] 1000
 execute unless data storage anim:editor current_keyframe.value.pos.y store result score $_pos_calc2 _anim run data get storage anim:editor anim_prev_key.pos[1] 1000
 execute unless data storage anim:editor current_keyframe.value.pos.y store result entity @s Pos[1] double 0.001 run scoreboard players operation $_pos_calc1 _anim += $_pos_calc2 _anim
-execute unless data storage anim:editor current_keyframe.value.pos.z as @e[type=armor_stand,tag=anim_model_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[2] 1000
+execute unless data storage anim:editor current_keyframe.value.pos.z as @e[type=armor_stand,tag=anim_main_select,limit=1] store result score $_pos_calc1 _anim run data get entity @s Pos[2] 1000
 execute unless data storage anim:editor current_keyframe.value.pos.z store result score $_pos_calc2 _anim run data get storage anim:editor anim_prev_key.pos[2] 1000
 execute unless data storage anim:editor current_keyframe.value.pos.z store result entity @s Pos[2] double 0.001 run scoreboard players operation $_pos_calc1 _anim += $_pos_calc2 _anim
 execute unless data storage anim:editor current_keyframe.value.rotate.rotation.x run data modify entity @s Rotation[0] set from storage anim:editor anim_prev_key.rotation.x

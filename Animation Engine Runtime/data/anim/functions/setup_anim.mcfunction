@@ -51,15 +51,15 @@ execute if data storage anim:runtime keyframes[].value.r_leg.z.value run data mo
 scoreboard players reset $calc1 _anim
 scoreboard players reset $calc2 _anim
 scoreboard players operation $ida _anim = @s _anim_ida
-execute if data storage anim:runtime keyframes[].value.pos.x.value as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[0]
+execute if data storage anim:runtime keyframes[].value.pos.x.value as @e[tag=anim_main] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[0]
 execute if data storage anim:runtime keyframes[].value.pos.x.value store result score $calc2 _anim run data get entity @s Pos[0]
 execute if data storage anim:runtime keyframes[].value.pos.x.value store result storage anim:runtime import_first_keyframe.pos.x.value float 0.001 run scoreboard players operation $calc1 _anim -= $calc2 _anim
 execute if data storage anim:runtime keyframes[].value.pos.x.value run data modify storage anim:runtime import_first_keyframe.pos.x.tick set value 1
-execute if data storage anim:runtime keyframes[].value.pos.y.value as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[1]
+execute if data storage anim:runtime keyframes[].value.pos.y.value as @e[tag=anim_main] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[1]
 execute if data storage anim:runtime keyframes[].value.pos.y.value store result score $calc2 _anim run data get entity @s Pos[1]
 execute if data storage anim:runtime keyframes[].value.pos.y.value store result storage anim:runtime import_first_keyframe.pos.y.value float 0.001 run scoreboard players operation $calc1 _anim -= $calc2 _anim
 execute if data storage anim:runtime keyframes[].value.pos.y.value run data modify storage anim:runtime import_first_keyframe.pos.y.tick set value 1
-execute if data storage anim:runtime keyframes[].value.pos.z.value as @e[tag=anim_model] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[2]
+execute if data storage anim:runtime keyframes[].value.pos.z.value as @e[tag=anim_main] if score @s _anim_ida = $ida _anim store result score $calc1 _anim run data get entity @s Pos[2]
 execute if data storage anim:runtime keyframes[].value.pos.z.value store result score $calc2 _anim run data get entity @s Pos[2]
 execute if data storage anim:runtime keyframes[].value.pos.z.value store result storage anim:runtime import_first_keyframe.pos.z.value float 0.001 run scoreboard players operation $calc1 _anim -= $calc2 _anim
 execute if data storage anim:runtime keyframes[].value.pos.z.value run data modify storage anim:runtime import_first_keyframe.pos.z.tick set value 1
@@ -265,7 +265,7 @@ function anim:zero_tick
 # #Setup Position
 # # Pos x setup
 # scoreboard players operation $_ida_lookup _anim = @s _anim_ida
-# execute store result score @s _anim_calc as @e[tag=anim_model] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[0] 1000
+# execute store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[0] 1000
 # execute store result score @s _anim_calc7 run data get entity @s Pos[0] 1000
 # execute store result score @s _anim_px_value run scoreboard players operation @s _anim_calc7 -= @s _anim_calc
 # # tellraw @p ["",{"score":{"name": "@s","objective": "_anim_px_value"},"color":"red"}]
@@ -274,7 +274,7 @@ function anim:zero_tick
 # scoreboard players reset @s _anim_calc7
 # # Pos y setup
 # scoreboard players operation $_ida_lookup _anim = @s _anim_ida
-# execute store result score @s _anim_calc as @e[tag=anim_model] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[1] 1000
+# execute store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[1] 1000
 # execute store result score @s _anim_calc7 run data get entity @s Pos[1] 1000
 # execute store result score @s _anim_py_value run scoreboard players operation @s _anim_calc7 -= @s _anim_calc
 # # tellraw @p ["",{"score":{"name": "@s","objective": "_anim_py_value"},"color":"red"}]
@@ -283,7 +283,7 @@ function anim:zero_tick
 # scoreboard players reset @s _anim_calc7
 # # Pos z setup
 # scoreboard players operation $_ida_lookup _anim = @s _anim_ida
-# execute store result score @s _anim_calc as @e[tag=anim_model] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[2] 1000
+# execute store result score @s _anim_calc as @e[tag=anim_main] if score @s _anim_ida = $_ida_lookup _anim run data get entity @s Pos[2] 1000
 # execute store result score @s _anim_calc7 run data get entity @s Pos[2] 1000
 # execute store result score @s _anim_pz_value run scoreboard players operation @s _anim_calc7 -= @s _anim_calc
 # # tellraw @p ["",{"score":{"name": "@s","objective": "_anim_pz_value"},"color":"red"}]
