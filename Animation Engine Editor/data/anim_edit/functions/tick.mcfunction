@@ -4,6 +4,7 @@ execute as @a[scores={_anim_menu=4}] at @s run function anim_edit:gui/main/run/m
 execute as @a[scores={_anim_menu=5}] at @s run function anim_edit:gui/main/run/menu5/tick
 execute as @a[scores={_anim_menu=6}] at @s run function anim_edit:gui/main/run/menu6/tick
 # execute as @a[scores={_anim_menu=7}] at @s as @e[type=armor_stand,tag=anim_menu,tag=anim_menu_main] at @s run function anim_edit:gui/editor/tp
+#this is disabled for now since it is no longer being used
 execute as @a[scores={_anim_menu=7}] at @s if score $editor_play _anim matches 1 run function anim_edit:gui/editor/run/play_check
 execute as @a[scores={_anim_menu=7}] at @s if score $editor_play _anim matches 1.. run function anim_edit:gui/editor/run/preview_play
 execute as @a if score @s _anim_id_player matches -2147483648..2147483647 at @s run function anim_edit:tp_nbt_as
