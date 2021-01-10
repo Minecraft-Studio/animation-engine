@@ -48,6 +48,3 @@ execute if entity @e[tag=anim_part_select,tag=anim_part_new] run tellraw @s ["",
 
 # If not new Anim Part:
 execute if entity @e[tag=anim_part_select,tag=!anim_part_new] run tellraw @s ["",{"text":"[Delete]","color":"red","hoverEvent":{"action":"show_text","contents":{"text":"Deletes anim part","color":"red"}},"clickEvent": {"action": "run_command","value": "/execute if entity @e[tag=anim_part_select,tag=!anim_part_new] run function anim_edit:gui/main/run/menu6/delete_confirm"}}," ",{"text":"[Duplicate]","color":"aqua","hoverEvent":{"action":"show_text","contents":{"text":"Duplicate anim part to a new anim part","color":"gray"}},"clickEvent": {"action": "run_command","value": "/execute if entity @e[tag=anim_part_select,tag=!anim_part_new] run function anim_edit:gui/main/run/menu6/duplicate"}}," ",{"text":"[Save]","color":"green","hoverEvent":{"action":"show_text","contents":{"text":"Saves data and goes back","color":"gray"}},"clickEvent": {"action": "run_command","value": "/execute if entity @e[tag=anim_part_select] run function anim_edit:gui/main/run/menu6/save"}}]
-
-#>Gamerule
-function anim_edit:gamerule

@@ -11,3 +11,6 @@ execute as @a[scores={_anim_menu=6}] unless score @s _anim_sett_graph matches 1.
 execute as @a[scores={_anim_menu=7}] unless score @s _anim_sett_graph matches 1.. if score $runtime_exists _anim matches 1 run function anim_edit:gui/editor/load
 
 execute unless score $runtime_exists _anim matches 1 run tellraw @a ["",{"text":"Animation Engine Runtime is not installed! Cannot use the editor without it!","color":"red"}]
+
+#>Gamerule
+function anim_edit:gamerule

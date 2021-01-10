@@ -4,8 +4,8 @@ data modify entity @e[tag=anim_main_select,limit=1] Marker set value 1b
 data modify entity @e[tag=anim_main_select,limit=1] Glowing set value 0b
 tag @e[tag=anim_main_select] remove anim_main_select
 # tag @e[tag=anim_part_menu] remove anim_part_menu
-#>Set page to 0 if it's un set
-execute unless score @s _anim_page matches -2147483648..2147483647 run scoreboard players set @s _anim_page 1
+#>Set page to 1 if it's un set / below 1
+execute unless score @s _anim_page matches 1.. run scoreboard players set @s _anim_page 1
 #>Title
 tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMenu","underlined":true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/main/run/menu3/close"}},"\n"]
 tellraw @s {"text":"Select anim main:","color":"gray"}
@@ -17,5 +17,3 @@ execute if score @s _anim_page matches 2.. run tellraw @s [{"text":"Page:","colo
 
 #>Remove selected model tag
 function anim_edit:deselect_anim
-#>Gamerule
-function anim_edit:gamerule
