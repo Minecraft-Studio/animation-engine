@@ -7,8 +7,8 @@ tag @e[tag=anim_main_select] remove anim_main_select
 #>Set page to 1 if it's un set / below 1
 execute unless score @s _anim_page matches 1.. run scoreboard players set @s _anim_page 1
 #>Title
-tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMenu","underlined":true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/main/run/menu3/close"}},"\n"]
-tellraw @s {"text":"Select anim main:","color":"gray"}
+tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMenu","underlined":true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"}," ",{"nbt":"settings_btn","storage":"anim:editor","interpret":true}," ",{"text":"[Close]","color":"red","clickEvent": {"action": "run_command","value":"/function anim_edit:gui/main/run/menu3/close"}},"\n"]
+tellraw @s {"text":"Select Anim main:","color":"gray"}
 #>Render Anim Mains
 function anim_edit:gui/main/run/menu3/get/start
 #>Current Page

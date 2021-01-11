@@ -12,7 +12,7 @@ function anim_edit:gui/main/run/ida/start
 execute unless score @s _anim_page matches -2147483648..2147483647 run scoreboard players set @s _anim_page 1
 scoreboard players set @s _anim_menu 4
 #>Title
-tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnim Main","underlined":true},{"text":" "},{"nbt":"ver","storage":"anim:editor","color":"green"},"\n"]
+tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnim main","underlined":true}," ",{"nbt":"settings_btn","storage":"anim:editor","interpret":true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"},"\n"]
 #>Name
 execute unless score $_curr_air _anim matches 1 run tellraw @s [{"text":"Anim main name: ","color":"gray","hoverEvent":{"action": "show_text","contents":{"text":"Click to set a new name","color":"gray"}},"clickEvent": {"action":"suggest_command","value":"/data modify storage anim:editor anim_main_cname set value "}},{"nbt":"CustomName","entity":"@e[tag=anim_main_select,limit=1]","interpret":true,"color":"green"}]
 execute if score $_curr_air _anim matches 1 run tellraw @s [{"text":"Anim main name: ","color":"gray","hoverEvent":{"action": "show_text","contents":{"text":"Stay in air block!","color":"red"}}},{"text":"Err","color":"red"}]
