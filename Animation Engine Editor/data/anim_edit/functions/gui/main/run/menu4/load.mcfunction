@@ -9,7 +9,7 @@ scoreboard players reset @s _anim_idb_select
 
 #>Loads Anim Editor Menu
 function anim_edit:gui/main/run/ida/start
-execute unless score @s _anim_page matches -2147483648..2147483647 run scoreboard players set @s _anim_page 1
+execute unless score @s _anim_page matches ..0 run scoreboard players set @s _anim_page 1
 scoreboard players set @s _anim_menu 4
 #>Title
 tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnim main","underlined":true}," ",{"nbt":"settings_btn","storage":"anim:editor","interpret":true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"},"\n"]

@@ -10,7 +10,7 @@ data modify entity @e[tag=anim_part_select,limit=1] Glowing set value 1b
 
 #>Loads Anim Editor Menu
 function anim_edit:gui/main/run/idb/start
-execute unless score @s _anim_page matches -2147483648..2147483647 run scoreboard players set @s _anim_page 1
+execute unless score @s _anim_page matches ..0 run scoreboard players set @s _anim_page 1
 scoreboard players set @s _anim_menu 6
 #>Title
 tellraw @s ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnim Part","underlined":true}," ",{"nbt":"settings_btn","storage":"anim:editor","interpret":true}," ",{"nbt":"ver","storage":"anim:editor","color":"green"},"\n"]
