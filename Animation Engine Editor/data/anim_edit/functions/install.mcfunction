@@ -25,6 +25,7 @@ scoreboard objectives add _anim_editor_col dummy
 scoreboard objectives add _anim_anim_id dummy
 #> Settings..
 #define objective _anim_sett_gmrle Gamerule
+scoreboard objectives add _anim_settings dummy
 scoreboard objectives add _anim_sett_gmrle dummy
 scoreboard objectives add _anim_sett_graph dummy
 scoreboard objectives add _anim_graph_key dummy
