@@ -1,0 +1,34 @@
+{
+	"devDependencies": {
+		"@types/fs-extra": "^9.0.13",
+		"@types/node": "^16.10.3"
+	},
+	"name": "animation-engine",
+	"description": "A data pack for Minecraft 1.16.5, allows animating armor stands and making your own animations in vanilla Minecraft!\r Currently under development, in alpha.",
+	"version": "0.0.0",
+	"main": "dist/index.js",
+	"scripts": {
+		"start": "npm run build && node dist/index.js",
+		"build": "npm install && tsc -p ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Minecraft-Studio/animation-engine.git"
+	},
+	"keywords": [
+		"minecraft",
+		"animation",
+		"datapack"
+	],
+	"author": "vanjmali",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Minecraft-Studio/animation-engine/issues"
+	},
+	"homepage": "https://github.com/Minecraft-Studio/animation-engine#readme",
+	"dependencies": {
+		"dotenv": "^10.0.0",
+		"fs-extra": "^10.0.0",
+		"typescript": "^4.4.3"
+	}
+}
