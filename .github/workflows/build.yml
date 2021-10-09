@@ -19,10 +19,10 @@ jobs:
 
     - name: Print ENV
       run: |
-        echo "GITHUB_RUN_NUMBER is ${{env.GITHUB_RUN_NUMBER}}"
-        echo "BUILD_TITLE is ${{env.BUILD_TITLE}}"
-        echo "SUBTRACT_BUILDS is ${{env.SUBTRACT_BUILDS}}"
-        echo "BUILD_COLOR is ${{env.BUILD_COLOR}}"
+        echo "GITHUB_RUN_NUMBER is ${{ env.GITHUB_RUN_NUMBER }}"
+        echo "BUILD_TITLE is ${{ env.BUILD_TITLE }}"
+        echo "SUBTRACT_BUILDS is ${{ env.SUBTRACT_BUILDS }}"
+        echo "BUILD_COLOR is ${{ env.BUILD_COLOR }}"
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
