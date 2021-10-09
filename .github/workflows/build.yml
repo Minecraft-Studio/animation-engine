@@ -19,7 +19,7 @@ jobs:
 
     - name: Print ENV
       run: |
-        echo "GITHUB_RUN_NUMBER is ${env:GITHUB_RUN_NUMBER}"
+        echo "GITHUB_RUN_NUMBER is ${env.GITHUB_RUN_NUMBER}"
         echo "BUILD_TITLE is ${env.BUILD_TITLE}"
         echo "SUBTRACT_BUILDS is ${env.SUBTRACT_BUILDS}"
         echo "BUILD_COLOR is ${env.BUILD_COLOR}"
@@ -36,7 +36,7 @@ jobs:
     - name: Setup env file
       run: |
         touch .env
-        echo BUILD_VERSION =${{ env.BUILD_TITLE }}${{ env:GITHUB_RUN_NUMBER - env.SUBTRACT_BUILDS }} >> .env
+        echo BUILD_VERSION =${{ env.BUILD_TITLE }}${{ env.GITHUB_RUN_NUMBER - env.SUBTRACT_BUILDS }} >> .env
         echo BUILD_COLOR =${{ env.BUILD_COLOR }} >> .env
       
 
