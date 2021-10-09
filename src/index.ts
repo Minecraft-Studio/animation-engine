@@ -33,7 +33,7 @@ const pathFoldersDatapacks = {
 
 			// Rename to version
 			if (VERSION !== "DEVELOPMENT") {
-				await fs.rename(pathFolder, `${pathFolder} v${VERSION}`);
+				await fs.rename(pathFolder, `${pathFolder} ${VERSION}`);
 			}
 		}
 	}
