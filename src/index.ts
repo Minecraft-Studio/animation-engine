@@ -12,6 +12,8 @@ const pathFoldersDatapacks = {
 	console.log("Start of generating files for project");
 
 	const VERSION = process.env.BUILD_VERSION ?? "DEVELOPMENT";
+	const GITHUB_RUN_NUMBER = Number.parseInt(process.env.GITHUB_RUN_NUMBER ?? "0");
+	const SUBTRACT_BUILDS = Number.parseInt(process.env.SUBTRACT_BUILDS ?? "0");
 	const VERSION_COLOR = process.env.BUILD_COLOR ?? "5";
 	console.log(`Version: ${VERSION}`);
 

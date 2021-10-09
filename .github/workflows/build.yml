@@ -36,7 +36,9 @@ jobs:
     - name: Setup env file
       run: |
         touch .env
-        echo BUILD_VERSION =${{ env.BUILD_TITLE }}${{ env.GITHUB_RUN_NUMBER - env.SUBTRACT_BUILDS }} >> .env
+        echo BUILD_TITLE =${{ env.BUILD_TITLE }} >> .env
+        echo GITHUB_RUN_NUMBER =${{ env.GITHUB_RUN_NUMBER }} >> .env
+        echo SUBTRACT_BUILDS =${{ env.SUBTRACT_BUILDS }} >> .env
         echo BUILD_COLOR =${{ env.BUILD_COLOR }} >> .env
       
 
