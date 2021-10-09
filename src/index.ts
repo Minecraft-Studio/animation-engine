@@ -14,6 +14,8 @@ const pathFoldersDatapacks = {
 	const VERSION = process.env.BUILD_VERSION ?? "DEVELOPMENT";
 	const VERSION_COLOR = process.env.BUILD_COLOR ?? "5";
 	console.log(`Version: ${VERSION}`);
+
+
 	for (const key in pathFoldersDatapacks) {
 		if (Object.prototype.hasOwnProperty.call(pathFoldersDatapacks, key)) {
 			const pathFolder = (pathFoldersDatapacks as any)[key] as string;
@@ -24,8 +26,14 @@ const pathFoldersDatapacks = {
 				}
 			}, null, 4));
 			await fs.copyFile(path.join(__dirname, "..", "pack.png"), path.join(pathFolder, "pack.png"));
+
+			// Rename to version
+			if (VERSION !== "DEVELOPMENT") {
+				await fs.rename(pathFolder, `${pathFolder} v${VERSION}`);
+			}
 		}
 	}
+
 
 	console.log("Generating files completed");
 })();
