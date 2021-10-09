@@ -13,7 +13,7 @@ jobs:
     env:
       SUBTRACT_BUILDS: 0
       BUILD_COLOR: c
-      BUILD_TITLE: indev
+      BUILD_TITLE: Indev
     steps:
     - uses: actions/checkout@v2
 
