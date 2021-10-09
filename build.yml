@@ -1,0 +1,87 @@
+name: NodeJS
+
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+#     - name: Install
+#       run: |
+#         npm install
+
+    - name: Setup env file
+      run: |
+        touch .env
+        echo BUILD_VERSION =${{ secrets.ENGINE_API_KEY }} >> .env
+      
+
+    - name: Build
+      run: |
+        npm start
+    
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        path: Animation Engine*/name: NodeJS
+
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+    
+    env:
+      SUBTRACT_BUILDS: 0
+      BUILD_COLOR: c
+      BUILD_TITLE: indev
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Print ENV
+      run: |
+        echo "GITHUB_RUN_NUMBER is ${env:GITHUB_RUN_NUMBER}"
+        echo "BUILD_TITLE is ${env.BUILD_TITLE}"
+        echo "SUBTRACT_BUILDS is ${env.SUBTRACT_BUILDS}"
+        echo "BUILD_COLOR is ${env.BUILD_COLOR}"
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+#     - name: Install
+#       run: |
+#         npm install
+
+    - name: Setup env file
+      run: |
+        touch .env
+        echo BUILD_VERSION =${{ env.BUILD_TITLE }}${{ env:GITHUB_RUN_NUMBER - env.SUBTRACT_BUILDS }} >> .env
+        echo BUILD_COLOR =${{ env.BUILD_COLOR }} >> .env
+      
+
+    - name: Build
+      run: |
+        npm start
+    
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        path: Animation Engine*/
