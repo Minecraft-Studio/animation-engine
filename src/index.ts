@@ -11,11 +11,13 @@ const pathFoldersDatapacks = {
 (async () => {
 	console.log("Start of generating files for project");
 
-	const VERSION = process.env.BUILD_VERSION ?? "DEVELOPMENT";
-	const GITHUB_RUN_NUMBER = Number.parseInt(process.env.GITHUB_RUN_NUMBER ?? "0");
-	const SUBTRACT_BUILDS = Number.parseInt(process.env.SUBTRACT_BUILDS ?? "0");
+	const GITHUB_RUN_NUMBER = Number.parseInt(process.env.GITHUB_RUN_NUMBER ?? "-1");
+	const SUBTRACT_BUILDS = Number.parseInt(process.env.SUBTRACT_BUILDS ?? "-1");
+	const BUILD_TITLE = process.env.BUILD_TITLE;
+	const VERSION = GITHUB_RUN_NUMBER == -1 || SUBTRACT_BUILDS == -1 || !BUILD_TITLE ? "DEVELOPMENT" : `${BUILD_TITLE}.${GITHUB_RUN_NUMBER - SUBTRACT_BUILDS}`;
 	const VERSION_COLOR = process.env.BUILD_COLOR ?? "5";
 	console.log(`Version: ${VERSION}`);
+	console.log(`Version color: ${VERSION_COLOR}`);
 
 
 	for (const key in pathFoldersDatapacks) {
